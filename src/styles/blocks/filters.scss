@@ -1,0 +1,143 @@
+.filters {
+  $self: &;
+
+  padding: 30px;
+  border: solid 1px $gray;
+  border-radius: 5px 5px 0 0;
+
+  @include max(md) {
+    padding: 20px;
+
+    form {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: -20px;
+    }
+  }
+  @include max(600) {
+    form {
+      display: block;
+      margin-left: 0;
+    }
+  }
+
+  form {
+    position: sticky;
+    top: 110px;
+
+    @include max(lg) {
+      top: 75px;
+    }
+  }
+
+  &__section {
+    padding-bottom: 23px;
+    border-bottom: solid 1px $dark;
+
+    &.no-border {
+      border-bottom: none;
+    }
+
+    @include max(md) {
+      width: calc(33.33% - 20px);
+      margin-top: 23px;
+      margin-left: 20px;
+    }
+
+    @include max(sm) {
+      width: calc(50% - 20px);
+    }
+
+    @include max(600) {
+      width: 100%;
+      margin-top: 0;
+      margin-left: 0;
+    }
+
+    & + & {
+      margin-top: 30px;
+    }
+
+    &.is-hide {
+      #{$self}__section-title {
+        &::before {
+          transform: scale(1, 1);
+        }
+      }
+    }
+
+    &-title {
+      position: relative;
+      display: block;
+      width: 100%;
+      padding: 0 16px 0 0;
+
+      font-size: 19px;
+      line-height: 1.526315789473684;
+      font-weight: 500;
+      color: $dark;
+      text-align: left;
+      appearance: none;
+      cursor: pointer;
+      transition: color 0.3s ease;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 14px;
+        right: 0;
+        width: 8px;
+        height: 4px;
+        transform: scale(1, -1);
+
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='8' height='4' viewBox='0 0 8 4' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M0 0l4 4 4-4H0z' fill='%232c60ae'/%3e%3c/svg%3e");
+      }
+
+      @include hover {
+        color: $blue;
+      }
+    }
+
+    &-main {
+      padding-top: 28px;
+      padding-bottom: 2px;
+      overflow: hidden;
+    }
+
+    &-fields {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+
+    &-field {
+      width: calc(50% - 6px);
+    }
+
+    &-checkbox {
+      & + & {
+        margin-top: 10px;
+      }
+    }
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 40px;
+
+    @include max(md) {
+      margin-top: 0;
+    }
+
+    button {
+      display: flex;
+      width: 125px;
+
+      &:first-child {
+        margin-right: 15px;
+      }
+    }
+  }
+}

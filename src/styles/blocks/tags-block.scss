@@ -1,0 +1,39 @@
+.tags-block {
+  &__title {
+    margin-bottom: 15px;
+  }
+
+  &__only-mobile {
+    display: none;
+
+    @include max(sm) {
+      display: block;
+    }
+
+    .choices {
+      display: inline-block;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -10px;
+    margin-left: -10px;
+
+    @include max(sm) {
+      display: none;
+    }
+  }
+
+  &__item {
+    margin-top: 10px;
+    margin-left: 10px;
+
+    background-color: $lightBlue2;
+
+    &--checked {
+      background-color: $dark-blue;
+    }
+  }
+}

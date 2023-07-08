@@ -1,0 +1,5 @@
+mixin certificate-preview(item)
+  a(class= (item.class ? item.class + ' certificate-preview' : 'certificate-preview'), href="#")
+    .certificate-preview__bg
+      img(src="images/certificates/" + item.img + ".jpg", srcset="images/certificates/" + item.img + '@2x.jpg 2x', width="397", height="246", alt="")
+    .certificate-preview__text!= item.text

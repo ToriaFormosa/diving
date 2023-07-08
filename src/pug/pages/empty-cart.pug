@@ -1,0 +1,30 @@
+extends ../layouts/default
+
+block vars
+  -
+    const page = {
+      title: 'Корзина'
+    };
+
+    const bc = [
+      {text: page.title}
+    ];
+
+
+
+block main
+  article.inner-page.inner-page--flex
+    header.inner-page__header
+      .container
+        +breadcrumbs(bc, 'inner-page__breadcrumbs')
+        .inner-page__header-row
+          +title('Корзина', 'h1', 'title--medium inner-page__title')
+    .inner-page__main.container
+      section.cart-empty
+        .cart-empty__image 
+          img(src="images/cart/empty-cart.svg", width="882",  height="220", alt="")
+        .cart-empty__text Корзина пуста. <br>Похоже нужно погружаться глубже в каталог...
+        .cart-empty__action 
+          +button('В каталог', 'cart-empty__btn', '', URLS.catalog)
+          +button('На главную', 'cart-empty__btn button--outline', '', URLS.home)
+

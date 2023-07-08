@@ -1,0 +1,91 @@
+.trip {
+  padding-top: 47px;
+  background-color: $gray-f5;
+
+  @include max(md) {
+    padding-top: 50px;
+  }
+
+  &__title {
+    text-align: center;
+
+    @include max(sm) {
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+
+  &__wrapper {
+    margin-top: 24px;
+    position: relative;
+
+    @include max(md) {
+      margin-top: 30px;
+    }
+  }
+
+  &__mobile-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include max(xl) {
+      margin-top: 29px;
+    }
+
+    @include max(xs) {
+      justify-content: space-between;
+    }
+
+    .trip__prev,
+    .trip__next {
+      display: none;
+
+      @include max(xl) {
+        display: block;
+      }
+    }
+  }
+
+  &__prev,
+  &__next {
+    position: absolute;
+    top: 48%;
+
+    @include max(xl) {
+      display: none;
+      position: relative;
+      top: unset;
+      bottom: 0;
+    }
+  }
+
+  &__prev {
+    left: -53px;
+
+    @include max(xl) {
+      left: 0;
+    }
+  }
+
+  &__next {
+    right: -53px;
+
+    @include max(xl) {
+      right: 0;
+    }
+  }
+
+  &__all {
+    width: 250px;
+    margin: 44px auto 0;
+    font-size: 19px;
+
+    @include max(xl) {
+      width: 130px;
+      margin: 0 30px;
+      font-size: 15px;
+      padding: 11px 15px;
+    }
+  }
+}

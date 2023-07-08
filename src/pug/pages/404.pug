@@ -1,0 +1,13 @@
+extends ../layouts/default
+
+block vars
+  -
+    const page = {
+      title: 'Ошибка 404'
+    };
+
+block main
+  section.not-found
+    .not-found__container.container
+      h1.not-found__title Ошибка 404
+      .not-found__text Страница не найдена

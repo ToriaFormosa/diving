@@ -1,0 +1,252 @@
+.shop-categories {
+  background-color: $white;
+  transition: transform 0.5s ease;
+
+  &__burger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 30px;
+    max-width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid $dark-blue;
+    cursor: pointer;
+    position: relative;
+
+    @include max(sm) {
+      display: none;
+    }
+
+    &:hover {
+      .shop-categories__menu {
+        opacity: 1;
+        pointer-events: auto;
+      }
+    }
+
+    svg {
+      stroke: $dark-blue;
+    }
+  }
+
+  &__menu {
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: -20px;
+    z-index: 10;
+    border: 1px solid $gray;
+    background-color: $white;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+
+    .shop-categories__item-wrapper {
+      padding: 0 10px;
+      cursor: default;
+
+      &:hover {
+        background-color: $gray;
+
+        .shop-categories__item span {
+          color: $gray-ph;
+        }
+
+        .shop-categories__submenu {
+          opacity: 1;
+          pointer-events: auto;
+          z-index: 1;
+        }
+      }
+    }
+
+    .shop-categories__item {
+      display: inline-flex;
+      width: 100%;
+    }
+
+    .shop-categories__item-icon {
+      width: 30px;
+    }
+  }
+
+  &__submenu {
+    min-width: 680px;
+    height: auto;
+    position: absolute;
+    top: -1px;
+    left: calc(100% - 1px);
+    border: 1px solid $gray;
+    background-color: $white;
+    padding: 49px;
+    list-style: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+
+    @include max(md) {
+      min-width: auto;
+      width: 100%;
+      max-width: 300px;
+      padding: 30px 20px;
+    }
+  }
+
+  &__submenu-inner {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include max(md) {
+      flex-direction: column;
+    }
+
+    .title {
+      width: 100%;
+      margin-bottom: 9px;
+      font-size: 19px;
+      font-weight: 700;
+      color: $gray-ph;
+    }
+
+    a {
+      display: block;
+      margin-left: 0 !important;
+      margin-top: 9px;
+      font-size: 14px;
+      color: $gray-26;
+      transition: opacity 0.3s ease;
+
+      @include hover {
+        opacity: 0.85;
+      }
+
+      &:nth-child(odd) {
+        width: 42%;
+
+        @include max(md) {
+          width: 100%;
+        }
+      }
+
+      &:nth-child(even) {
+        width: 58%;
+
+        @include max(md) {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1270px;
+    width: 100%;
+    box-sizing: border-box;
+
+    @include max(sm) {
+      padding-top: 30px;
+      padding-bottom: 24px;
+      border: solid 1px $gray;
+      border-bottom: solid 1px $gray;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+  }
+
+  &__title {
+    display: none;
+
+    @include max(sm) {
+      display: block;
+      width: 100%;
+      margin-bottom: 28px;
+    }
+  }
+
+  &__item {
+    $item: &;
+
+    display: none;
+    height: 60px;
+    padding: 0 10px;
+
+    @include max(sm) {
+      position: relative;
+      display: flex;
+      width: calc(50% - 20px);
+      margin: 0;
+      padding: 17px 12px 18px 0;
+      border: none;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 0;
+        width: 8px;
+        height: 4px;
+        transform: rotate(-90deg);
+        background-repeat: no-repeat;
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='8' height='4' viewBox='0 0 8 4' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M0 0l4 4 4-4H0z' fill='%234F5764'/%3e%3c/svg%3e");
+      }
+    }
+
+    @include max(480) {
+      width: 100%;
+    }
+
+    @include hover {
+      #{$item}-text {
+        color: $blue;
+      }
+
+      .shop-categories__submenu {
+        opacity: 1;
+        pointer-events: auto;
+      }
+    }
+
+    &:nth-child(-n+7) {
+      display: inline-flex;
+    }
+
+    &-icon {
+      margin-right: 5px;
+      align-self: center;
+
+      @include max(sm) {
+        display: flex;
+        justify-content: center;
+        width: 25px;
+        height: 25px;
+        margin-right: 8px;
+      }
+
+      svg {
+        display: block;
+        fill: $blue;
+
+        @include max(sm) {
+          width: auto;
+          height: 100%;
+        }
+      }
+    }
+
+    &-text {
+      font-size: 15px;
+      line-height: 1.2;
+      color: $gray-ph;
+      font-weight: 500;
+      align-self: center;
+      transition: color 0.3s ease;
+    }
+  }
+}

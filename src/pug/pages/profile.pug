@@ -1,0 +1,95 @@
+extends ../layouts/default
+
+block vars
+  -
+    const page = {
+      title: 'Личный кабинет'
+    };
+
+    const bc = [
+      {text: page.title}
+    ];
+
+    const navLinks = [
+      {text: 'Данные профиля', icon: {id: 'profile', w: '20', h: '20'}, url: URLS.cabinet.profile, isCurrent: true},
+      {text: 'История заказов', icon: {id: 'sand-clock', w: '13', h: '20'}, url: URLS.cabinet.history},
+      {text: 'Накопительная скидка', icon: {id: 'coupon', w: '20', h: '20'}, url: '#'},
+      {text: 'Выйти', icon: {id: 'logout', w: '20', h: '20'}, url: '#'}
+    ];
+
+
+block main
+  article.inner-page
+    header.inner-page__header
+      .container
+        +breadcrumbs(bc, 'inner-page__breadcrumbs')
+        +title('Александр Александрович Неалександров', 'h1', 'title--medium inner-page__title')
+    
+    .cabinet
+      section.cabinet__container.container
+        ul.cabinet__nav
+          each item in navLinks
+            if item.isCurrent
+              li.cabinet__nav-item.cabinet__nav-item--current
+                a.cabinet__nav-link
+                  span.cabinet__nav-icon
+                    +icon(item.icon.id)(width= item.icon.w, height= item.icon.h)
+                  | #{item.text}
+            else
+              li.cabinet__nav-item
+                a.cabinet__nav-link(href= item.url)
+                  span.cabinet__nav-icon
+                    +icon(item.icon.id)(width= item.icon.w, height= item.icon.h)
+                  | #{item.text}
+
+        .cabinet__main.cabinet__main--bg
+          form.cabinet__form(action="#", method="#") 
+            +title('Личные данные', 'div', 'title--small cabinet__form-title')
+
+            label.cabinet__form-field.field
+              span.field__hint Никнейм*
+              input(type="text", name="nickname", required)
+              
+            label.cabinet__form-field.cabinet__form-field--half.field
+              span.field__hint Ваше Имя*
+              input(type="text", name="name", required)
+              
+            label.cabinet__form-field.cabinet__form-field--half.field
+              span.field__hint Ваша фамилия
+              input(type="text", name="surname")
+              
+            label.cabinet__form-field.cabinet__form-field--half.field
+              span.field__hint Пароль*
+              input(type="password", name="name", required, value="123456")
+            
+            +button('Изменить пароль', 'cabinet__form-field button--outline')
+
+            +title('Контактная информация', 'div', 'title--small cabinet__form-title')
+            
+            label.cabinet__form-field.cabinet__form-field--half.field
+              span.field__hint Email
+              input(type="email", name="email")
+              
+            label.cabinet__form-field.cabinet__form-field--half.field
+              span.field__hint Номер телефона*
+              input(type="tel", name="name", required)
+              
+            label.cabinet__form-field.cabinet__form-field--address.field
+              span.field__hint Адрес*
+              input(type="text", name="address", required)
+              
+            label.cabinet__form-field.cabinet__form-field--house.field
+              span.field__hint Дом
+              input(type="number", name="house")
+              
+            label.cabinet__form-field.cabinet__form-field--flat.field
+              span.field__hint Квартира
+              input(type="number", name="flat")
+              
+            label.cabinet__form-field.cabinet__form-field--intercome.field
+              span.field__hint Домофон
+              input(type="number", name="intercome")
+            
+            .cabinet__form-bottom
+              +button('Сохранить настройки', 'cabinet__form-send')(type="submit")
+              

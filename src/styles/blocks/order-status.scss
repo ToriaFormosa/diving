@@ -1,0 +1,108 @@
+.order-status {
+  &__title {
+    margin-bottom: 35px;
+
+    @include max(sm) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__steps {
+    display: flex;
+    counter-reset: steps;
+
+    @include max(sm) {
+      display: block;
+    }
+  }
+
+  &__step {
+    counter-increment: steps;
+    width: 25%;
+    padding-right: 8px;
+    font-size: 15px;
+    line-height: 1.2;
+    color: $lightBlue3;
+    white-space: nowrap;
+
+    &:nth-child(odd) {
+      margin-left: -6px;
+
+      @include max(sm) {
+        margin-left: 0;
+      }
+    }
+
+    @include max(sm) {
+      width: 100%;
+      white-space: initial;
+
+      & + & {
+        margin-top: 15px;
+      }
+    }
+
+    &::before {
+      content: "0" counter(steps);
+      display: inline-block;
+      margin-right: 5px;
+    }
+
+    &--done {
+      color: $blue;
+    }
+
+    &--active {
+      font-size: 16px;
+      line-height: 1.25;
+      font-weight: 500;
+      color: $blue;
+    }
+  }
+
+  &__scale {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+
+    @include max(sm) {
+      display: none;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 10px;
+      width: 100%;
+      height: 2px;
+      background-color: $lightBlue3;
+    }
+
+    &-line {
+      position: absolute;
+      left: 0;
+      bottom: 10px;
+      z-index: 1;
+      width: 0;
+      height: 2px;
+      background-color: $blue;
+    }
+
+    &-sep {
+      width: 2px;
+      height: 24px;
+      background-color: $lightBlue3;
+      align-self: flex-end;
+
+      &--long {
+        height: 50px;
+      }
+
+      &--done {
+        background-color: $blue;
+      }
+    }
+  }
+}

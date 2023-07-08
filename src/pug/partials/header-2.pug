@@ -1,0 +1,98 @@
+header.header.header--main(class= headerClasses ? headerClasses : '')
+	.header__wrapper
+		.header__left
+			.header__profile.header__profile--mobile
+				+icon('profile')
+			.header__logos
+				a(href='/homepage.html')
+					+icon('logo-tdi')
+				a(href='/homepage.html')
+					+icon('logo-sdi')
+			.header__burger
+				+icon('burger')(width='22', height='11')
+		.container.header__container
+			ul.header__menu.header__menu--bottom
+				li.expand
+					a(href='#', target='_blank') Обучение дайвингу
+						+icon('arrow-angle')
+					ul.header__submenu
+						li.title Обучение дайвингу
+						li
+							a(href='#', target='_blank') OWD
+						li
+							a(href='#', target='_blank') Dry Suit Diver
+						li
+							a(href='#', target='_blank') Advanced Adventure Open Water
+						li
+							a(href='#', target='_blank') Ice Diver
+						li
+							a(href='#', target='_blank') Advanced Diver Development Program
+						li
+							a(href='#', target='_blank') Sidemount Diver
+						li
+							a(href='#', target='_blank') Advanced Buoyancy
+						li
+							a(href='#', target='_blank') Rescue Diver
+						li
+							a(href='#', target='_blank') Advanced Buoyancy ext
+						li
+							a(href='#', target='_blank') SDI Divemaster
+						li
+							a(href='#', target='_blank') U/W Navigation
+						li
+							a(href='#', target='_blank') Assistant Instructor
+						li
+							a(href='#', target='_blank') Deep Diver
+						li
+							a(href='#', target='_blank') Adult and Child Emergency Care
+						li
+							a(href='#', target='_blank') Night Diver
+						li
+							a(href='#', target='_blank') O2 Administrator
+				li.expand
+					a(href='#', target='_blank') Магазин
+						+icon('arrow-angle')
+					ul.header__submenu
+						li.title Магазин
+						li
+							a(href='#', target='_blank') Костюмы
+						li
+							a(href='#', target='_blank') Аксессуары
+						li
+							a(href='#', target='_blank') Такелаж
+						li
+							a(href='#', target='_blank') Фонари
+						li
+							a(href='#', target='_blank') Ребризер
+						li
+							a(href='#', target='_blank') Подводная съемка
+						li
+							a(href='#', target='_blank') Ласты
+						li
+							a(href='#', target='_blank') Катушки и буи
+						li
+							a(href='#', target='_blank') Sidemount
+				li
+					a(href='#', target='_blank') Карты сертификации
+				li
+					a(href='#', target='_blank') Клубные поездки
+			ul.header__menu
+				li
+					a(href='#', target='_blank') Акции
+				li
+					a(href='#', target='_blank') Оплата и доставка
+				li
+					a(href='#', target='_blank') Статьи
+				li
+					a(href='#', target='_blank') Контакты
+		.header__right
+			.header__lang-swither
+				a.ru.active RU
+				span.delimiter /
+				a.en(href="#") EN
+			.header__buttons
+				.header__basket
+					+icon('cart')(width='20', height='20')
+					span 0
+				.header__profile
+					+icon('profile')

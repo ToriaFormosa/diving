@@ -1,0 +1,111 @@
+extends ../layouts/default
+
+block vars
+  -
+    const page = {
+      title: 'Корзина'
+    };
+
+    const bc = [
+      {text: page.title}
+    ];
+
+    const headCells = [
+      {text: 'Товар', mod: 'product'},
+      {text: 'Цена', mod: 'price'},
+      {text: 'Количество', mod: 'quantity'},
+      {text: 'Стоимость', mod: 'amount'}
+    ];
+
+    const cartProducts = [
+      {
+        img: {n: '1', w: '116', h: '154'},
+        product: {n: 'Стивен Барски Dry Suit', a: '01234567890abc'},
+        price: '1 200₽',
+        quantity: '2',
+        amount: '2 400₽'
+      },
+      {
+        img: {n: '2', w: '100', h: '143'},
+        product: {n: 'SDI OWD', a: '01234567890abc'},
+        price: '1 222 200₽',
+        quantity: '1',
+        amount: '1 222 200₽'
+      },
+      {
+        img: {n: '3', w: '104', h: '179'},
+        product: {n: 'Кислородный баллон <br>TANK BACK PACK', a: '01234567890abc'},
+        price: '754 200₽',
+        quantity: '1',
+        amount: '754 200₽'
+      }
+    ];
+
+
+block main
+  article.inner-page
+    header.inner-page__header
+      .container
+        +breadcrumbs(bc, 'inner-page__breadcrumbs')
+        .inner-page__header-row
+          +title('Корзина (3)', 'h1', 'title--medium inner-page__title')
+          a.inner-page__header-clear-cart(href="#") Очистить корзину
+    .container 
+      section.inner-page__cart-table.cart-table
+        .cart-table__head 
+          .cart-table__row
+            each item in headCells
+              .cart-table__cell.cart-table__cell--th(class="cart-table__cell--" + item.mod)= item.text
+        .cart-table__body
+          each item in cartProducts
+            .cart-table__row
+              .cart-table__cell.cart-table__cell--image
+                img(src="images/cart/" + item.img.n + ".jpg", srcset="images/cart/" + item.img.n + "@2x.jpg", width= item.img.w, height= item.img.h, alt="Фото " + item.product.n)
+              .cart-table__cell.cart-table__cell--product
+                .cart-table__product!= item.product.n
+                .cart-table__article= item.product.a
+              .cart-table__cell.cart-table__cell--price
+                .cart-table__cell-title Цена
+                span= item.price
+              .cart-table__cell.cart-table__cell--quantity
+                .quantity
+                  button.quantity__btn(type="button", data-action="minus", aria-label="Уменьшить количество товара - " + item.product.n)
+                    +icon('minus')(width="7", height="3")
+                  input.quantity__input(type="number", name="quantity", value= item.quantity)
+                  button.quantity__btn(type="button", data-action="plus", aria-label="Увеличить количество товара - " + item.product.n)
+                    +icon('plus')(width="12", height="11")
+              .cart-table__cell.cart-table__cell--amount
+                .cart-table__cell-title Стоимость
+                span= item.amount
+              .cart-table__cell.cart-table__cell--remove 
+                button.cart-table__remove(type="button", aria-label="Удалить товар из корзины")
+                  span.cart-table__remove-icon 
+                    +icon('remove')(width="15", height="15" )
+                  span.cart-table__remove-text Удалить
+      
+      section.inner-page__cart-result.cart-result
+        header.cart-result__header 
+          h2.cart-result__title Итого
+        .cart-result__body
+          .cart-result__row
+            .cart-result__hint Предварительная стоимость:
+            .cart-result__val 999&nbsp;200₽
+          .cart-result__row
+            .cart-result__hint Доставка:
+            .cart-result__val
+              +custom-radio('delivery-type', ['Самовывоз', 'Единая ставка'], 2, '')
+          .cart-result__row.cart-result__row--address
+            .cart-result__hint Адрес доставки:
+            address.cart-result__val Ленина, д.137А, кв.&nbsp;2245, г. Москва, Московская обл, 000000.
+          .cart-result__row
+            .cart-result__val
+              a(href= URLS.cabinet.profile) Изменить адрес
+        footer.cart-result__footer 
+          .cart-result__row
+            .cart-result__hint Итого
+            .cart-result__val  999&nbsp;200₽
+          .cart-result__action
+            a.cart-result__clear(href="#") Очистить
+            +button('Оформить заказ', 'cart-result__send', '', URLS.makingOrder)
+
+

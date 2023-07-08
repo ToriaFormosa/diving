@@ -1,0 +1,32 @@
+.articles-grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -24px -12px 0;
+
+  @include max(md) {
+    margin: -10px -5px 0;
+  }
+
+  @include max(xs) {
+    margin: -10px 0 0;
+  }
+
+  &__item {
+    width: calc(33.3333% - 24px);
+    margin: 0 12px 19px;
+
+    @include max(md) {
+      width: calc(33.33% - 10px);
+      margin: 10px 5px 0;
+    }
+
+    @include max(sm) {
+      width: calc(50% - 10px);
+    }
+
+    @include max(xs) {
+      width: 100%;
+      margin: 10px 0 0;
+    }
+  }
+}

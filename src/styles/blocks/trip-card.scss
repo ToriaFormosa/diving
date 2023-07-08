@@ -1,0 +1,137 @@
+.trip-card {
+  display: flex;
+  //align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  height: 399px;
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+
+  @include max(md) {
+    justify-content: flex-start;
+    height: auto;
+  }
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(
+        270deg,
+        #1b498e 40%,
+        rgba(44, 96, 174, 0) 100%
+      );
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-right: 53px;
+    color: $white;
+
+    @include max(md) {
+      width: 100%;
+      padding: 31px 25px;
+    }
+  }
+
+  &__place {
+    font-size: 18px;
+    line-height: 32px;
+
+    @include max(md) {
+      line-height: 22px;
+    }
+  }
+
+  &__title {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 700;
+    margin-top: 5px;
+
+    @include max(md) {
+      font-size: 18px;
+      line-height: 22px;
+      margin-top: 15px;
+    }
+  }
+
+  &__date {
+    font-size: 15px;
+    line-height: 32px;
+    margin-top: 2px;
+
+    @include max(md) {
+      font-size: 14px;
+      line-height: 17px;
+      margin-top: 15px;
+    }
+  }
+
+  &__desc {
+    font-size: 14px;
+    line-height: 24px;
+    margin-top: 3px;
+    margin-bottom: auto;
+
+    @include max(md) {
+      font-size: 14px;
+      line-height: 17px;
+      margin-top: 15px;
+    }
+  }
+
+  &__price {
+    font-size: 19px;
+    margin-top: 12px;
+
+    @include max(md) {
+      margin-top: 28px;
+    }
+  }
+
+  &__more {
+    width: 170px;
+    height: auto;
+    padding: 10px 12px;
+    margin-top: 18px;
+    font-size: 15px;
+
+    @include max(md) {
+      width: 139px;
+      padding: 11px;
+      margin-top: 18px;
+    }
+
+    svg {
+      width: 12px;
+      height: 12px;
+      padding-left: 0;
+      margin-left: 5px;
+    }
+  }
+}

@@ -1,0 +1,5 @@
+mixin order-preview-item(title, text, mod)
+  - const modClass = mod ? 'order-preview__item-text--' + mod : '';
+  .order-preview__item
+    .order-preview__item-title= title
+    .order-preview__item-text(class= modClass)= text

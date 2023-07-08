@@ -1,0 +1,62 @@
+header.header(class= headerClasses || '')
+  .header__container
+    .header__logo
+      if isHomepage
+        a.header__logo-tdi
+          +icon('logo-tdi')(width="85", height="26")
+        a.header__logo-sdi
+          +icon('logo-sdi')(width="84", height="26")
+      else
+        a.header__logo-tdi(href= URLS.home)
+          +icon('logo-tdi')(width="85", height="26")
+        a.header__logo-sdi(href= URLS.home)
+          +icon('logo-sdi')(width="84", height="26")
+    .header__canvas
+      button.header__canvas-close(type="button", aria-label="Скрыть меню")
+        +icon('close')(width="14", height="14")
+      .header__main-menu.menu
+        ul.menu__list 
+          each item in MENU_1
+            - const adCl = item.submenu ? 'menu__item--expand' : '';
+            li.menu__item(class= adCl)
+              a.menu__link(href= item.url)= item.text
+                if item.submenu 
+                  +icon('arrow-angle-down')(width="8", height="4")
+              if item.submenu 
+                .menu__submenu
+                  button.menu__back(type="button", aria-label="Вернуться в основное меню")
+                    +icon('back')(width="30", height="30")
+                  .menu__submenu-title= item.text
+                  ul.menu__submenu-list 
+                    each it in item.submenu 
+                      li.menu__submenu-item 
+                        a(href= it.url)= it.text
+
+      .header__second-menu
+        button.header__second-menu-toggle(type="button", aria-label="Показать дополнительное меню")
+          +icon('burger')(width='22', height='11')
+        .menu.menu--second
+          ul.menu__list 
+            each item in MENU_2
+              li.menu__item
+                a.menu__link(href= item.url)= item.text
+
+      .header__lang-swither
+        a.ru.active RU
+        span.delimiter /
+        a.en(href="#") EN
+
+      a.header__basket(href= URLS.cart.main)
+        +icon('cart')(width='20', height='20')
+        span 0
+
+    a.header__profile(href= URLS.cabinet.profile)
+      +icon('profile')(width='20', height='20')
+
+
+
+    button.header__burger(type="button")
+      +icon('burger')(width='22', height='11')
+
+
+

@@ -1,0 +1,87 @@
+.field {
+  display: block;
+
+  &__hint {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    line-height: (17 / 14);
+    color: $gray-ph;
+  }
+
+  input,
+  textarea {
+    display: block;
+    width: 100%;
+    padding: 11px 20px 10px;
+    font-size: 14px;
+    line-height: (17 / 14);
+    color: $dark;
+    border-radius: 3px;
+    border: solid 1px $gray;
+    background-color: $white;
+    appearance: none;
+    transition: border-color 0.3s ease;
+
+    @include hover {
+      border-color: $dark;
+    }
+  }
+
+  textarea {
+    min-height: 120px;
+    resize: none;
+  }
+
+  &--valid {
+    input,
+    textarea {
+      border-color: $green;
+    }
+  }
+
+  &--error {
+    input,
+    textarea {
+      border-color: $red;
+    }
+  }
+
+  &--select {
+    .choices {
+      &::after {
+        right: 18px !important;
+      }
+
+      @include hover {
+        .choices__inner {
+          border-color: $dark;
+        }
+      }
+    }
+
+    .choices__inner {
+      min-height: 0;
+      padding: 11px 20px 10px !important;
+      font-size: 14px;
+      line-height: (17 / 14);
+      color: $dark;
+      border-radius: 3px;
+      border: solid 1px $gray;
+      background-color: $white;
+      transition: border-color 0.3s ease;
+    }
+
+    .choices__list--dropdown {
+      min-width: 0;
+      border-color: $dark;
+      border-radius: 0 0 3px 3px;
+      padding: 11px 20px 10px;
+    }
+
+    .choices__placeholder {
+      color: $dark;
+      opacity: 1;
+    }
+  }
+}

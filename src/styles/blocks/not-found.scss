@@ -1,0 +1,39 @@
+.not-found {
+  display: flex;
+  width: 100%;
+  height: calc(100vh - 90px); //48.22916666666667vw;
+  min-height: 300px;
+  background-color: #2883c0;
+  background-image: url("../images/404.svg");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__title {
+    margin-bottom: 8px;
+  }
+
+  &__title,
+  &__text {
+    font-size: 50px;
+    line-height: (60 / 50);
+    font-weight: 500;
+    color: $lightBlue3;
+    text-align: center;
+    align-self: center;
+
+    @include max(md) {
+      font-size: 40px;
+    }
+
+    @include max(xs) {
+      font-size: 24px;
+    }
+  }
+}

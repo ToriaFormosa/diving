@@ -1,0 +1,120 @@
+.contact-section {
+  padding: 72px 0;
+  background-color: $smoky;
+
+  @include max(sm) {
+    padding: 50px 0 100px;
+  }
+
+  &__container {
+    position: relative;
+    display: flex;
+
+    @include max(sm) {
+      display: block;
+    }
+  }
+
+  &__image {
+    position: absolute;
+    left: 15px;
+    top: -92px;
+    bottom: -92px;
+    width: 45.67%;
+    height: calc(100% + 184px);
+    flex-shrink: 0;
+
+    @include max(sm) {
+      display: none;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__image + &__main {
+    margin-left: calc(45.67% + 65px);
+
+    @include max(sm) {
+      margin-left: 0;
+    }
+  }
+
+  &__info {
+    width: 47.98387096774194%;
+    margin-right: 38px;
+    flex-shrink: 0;
+
+    @include max(sm) {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 36px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -15px;
+  }
+
+  &__item {
+    margin-right: 50px;
+    margin-top: 30px;
+
+    @include max(sm) {
+      margin-top: 14px;
+    }
+
+    &--full {
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+
+  &__map {
+    overflow: hidden;
+    margin-top: 32px;
+    border: solid 1px $gray;
+    border-radius: 5px;
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__main {
+  }
+
+  &__title {
+    margin-bottom: 7px;
+
+    @include max(sm) {
+      font-size: 18px;
+      line-height: 22px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 20px;
+    font-size: 17px;
+    line-height: 1.529411764705882;
+    color: $gray-ph;
+
+    @include max(sm) {
+      font-size: 15px;
+      margin-top: -7px;
+      margin-bottom: 7px;
+    }
+  }
+
+  &__form {
+  }
+}

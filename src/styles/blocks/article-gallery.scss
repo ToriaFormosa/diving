@@ -1,0 +1,20 @@
+.article-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 50px 0 14px;
+
+  a {
+    display: block;
+    width: 25%;
+
+    @include max(sm) {
+      width: 33.33%;
+    }
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}

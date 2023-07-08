@@ -1,0 +1,236 @@
+extends ../layouts/default
+
+block vars
+  -
+    const page = {
+      title: 'Кислородный баллон TANK BACK PACK'
+    };
+
+    const bc = [
+      {text: 'Магазин', url: URLS.catalog},
+      {text: page.title}
+    ];
+
+    const table = [
+      {th: 'Объем (мл)', td: '2000'},
+      {th: 'Состав смеси', td: '80% кислорода, 20% азота'},
+      {th: 'Маска в комплекте', td: 'есть'},
+      {th: 'Тип маски', td: 'мягкая'},
+      {th: 'Высота баллона (см)', td: '28.5'},
+      {th: 'Ширина баллона (см)', td: '15'},
+      {th: 'Диаметр баллона (см)', td: '6.6'},
+      {th: 'Вес (г)', td: '185'},
+      {th: 'Срок годности (мес)', td: '58'}
+    ];
+
+    const reviews = [
+      {img: '', name: 'Аноним', title: 'Рекомендую!', text: 'Таким образом начало повседневной работы по формированию позиции представляет собой интересный эксперимент проверки систем массового участия. Товарищи! укрепление и развитие структуры представляет собой интересный эксперимент проверки соответствующий условий активизации. Повседневная практика показывает, что укрепление и развитие структуры способствует подготовки и реализации новых предложений. Равным образом реализация намеченных плановых заданий влечет за собой процесс внедрения и модернизации модели развития. Задача организации, в особенности же сложившаяся структура организации обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач.' },
+      {img: 'avatar', name: 'Алекс Хазайбырген', title: 'Не рекомендую!', text: 'Задача организации, в особенности же постоянное информационно-пропагандистское обеспечение нашей деятельности представляет собой интересный эксперимент проверки форм развития. Таким образом постоянный количественный рост и сфера нашей активности обеспечивает широкому кругу (специалистов) участие в формировании форм развития.' },
+      {img: '', name: 'Аноним', title: 'Рекомендую!', text: 'Таким образом начало повседневной работы по формированию позиции представляет собой интересный эксперимент проверки систем массового участия. Товарищи! укрепление и развитие структуры представляет собой интересный эксперимент проверки соответствующий условий активизации. Повседневная практика показывает, что укрепление и развитие структуры способствует подготовки и реализации новых предложений. Равным образом реализация намеченных плановых заданий влечет за собой процесс внедрения и модернизации модели развития. Задача организации, в особенности же сложившаяся структура организации обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач.' },
+      {img: 'avatar', name: 'Алекс Хазайбырген', title: 'Не рекомендую!', text: 'Задача организации, в особенности же постоянное информационно-пропагандистское обеспечение нашей деятельности представляет собой интересный эксперимент проверки форм развития. Таким образом постоянный количественный рост и сфера нашей активности обеспечивает широкому кругу (специалистов) участие в формировании форм развития.' }
+    ];
+
+    const similar = [
+      {
+        img: {n: '5', w: '140', h: '186'},
+        title: 'SDI OWD',
+        text: 'Open Water Diver. Учебное пособие по дайвингу',
+        cl: 'products-carousel__item swiper-slide'
+      },
+      {
+        img: {n: '6', w: '171', h: '195'},
+        title: 'SDI ночной дайвинг',
+        text: 'Ночной дайвинг. Подводная навигация и погружения',
+        cl: 'products-carousel__item swiper-slide'
+      },
+      {
+        img: {n: '7', w: '106', h: '193'},
+        title: 'FRTI пособие',
+        text: 'Экстренная медицинская помощь для взрослых и детей',
+        cl: 'products-carousel__item swiper-slide'
+      },
+      {
+        img: {n: '8', w: '112', h: '201'},
+        title: 'Стивен Барски Dry Suit',
+        text: 'Дайвинг в сухом костюме. История, обзор теории, уход.',
+        cl: 'products-carousel__item swiper-slide'
+      },
+      {
+        img: {n: '1', w: '120', h: '171'},
+        title: 'SDI OWD',
+        text: 'Open Water Diver. Учебное пособие по дайвингу',
+        isOldPrice: true,
+        label: '-10%',
+        cl: 'products-carousel__item swiper-slide'
+      }
+    ];
+
+    const viewed = [
+      {
+        img: {n: '5', w: '140', h: '186'},
+        title: 'SDI OWD',
+        text: 'Open Water Diver. Учебное пособие по дайвингу',
+        cl: 'products-carousel__item swiper-slide'
+      },
+      {
+        img: {n: '6', w: '171', h: '195'},
+        title: 'SDI ночной дайвинг',
+        text: 'Ночной дайвинг. Подводная навигация и погружения',
+        cl: 'products-carousel__item swiper-slide'
+      }
+    ];
+
+block main
+  article.product-card
+    .container
+      +breadcrumbs(bc, 'product-card__breadcrumbs')
+      .product-card__main
+        +title(page.title, 'h1', 'title--large product-card__title')
+        .product-card__image
+          .product-card__photo
+            a(href="https://via.placeholder.com/640", data-fancybox)
+              img(src="images/product-card/product-full.jpg", srcset="images/product-card/product-full@2x.jpg 2x", width="495", height="545", alt="Вид слева")
+          .product-card__thumbs.swiper-container.__js_product-thumbs
+            .swiper-wrapper
+              button.product-card__thumbs-item.active.swiper-slide(type="button", data-full-image="images/product-card/product-full.jpg", data-full-image2x="images/product-card/product-full@2x.jpg 2x", data-fancybox-image="https://via.placeholder.com/640", data-alt="Вид слева")
+                img(src="images/product-card/product-thumb-1.jpg", srcset="images/product-card/product-thumb-1@2x.jpg 2x", width="93", height="93", alt="Миниатюра вид слева")
+              button.product-card__thumbs-item.swiper-slide(type="button", data-full-image="images/product-card/full-2.jpg", data-full-image2x="images/product-card/full-2@2x.jpg 2x", data-fancybox-image="https://via.placeholder.com/640", data-alt="Вид справа")
+                img(src="images/product-card/product-thumb-2.jpg", srcset="images/product-card/product-thumb-2@2x.jpg 2x", width="93", height="93", alt="Миниатюра вид справа")
+              button.product-card__thumbs-item.swiper-slide(type="button", data-full-image="images/product-card/full-3.jpg", data-full-image2x="images/product-card/full-3@2x.jpg 2x", data-fancybox-image="https://via.placeholder.com/640", data-alt="Вид сверху")
+                img(src="images/product-card/product-thumb-3.jpg", srcset="images/product-card/product-thumb-3@2x.jpg 2x", width="93", height="93", alt="Миниатюра вид сверху")
+              button.product-card__thumbs-item.swiper-slide(type="button", data-full-image="images/product-card/full-4.jpg", data-full-image2x="images/product-card/full-4@2x.jpg 2x", data-fancybox-image="https://via.placeholder.com/640", data-alt="Вид снизу")
+                img(src="images/product-card/product-thumb-4.jpg", srcset="images/product-card/product-thumb-4@2x.jpg 2x", width="93", height="93", alt="Миниатюра вид снизу")
+              // для теста переполнения //////////////////////////
+              //button.product-card__thumbs-item.swiper-slide(type="button", data-full-image="images/product-card/full-4.jpg", data-full-image2x="images/product-card/full-4@2x.jpg 2x",, data-fancybox-image="https://via.placeholder.com/640", data-alt="Вид снизу")
+                img(src="images/product-card/product-thumb-4.jpg", srcset="images/product-card/product-thumb-4@2x.jpg 2x", width="93", height="93", alt="Миниатюра вид снизу")
+              //button.product-card__thumbs-item.swiper-slide(type="button", data-full-image="images/product-card/full-4.jpg", data-full-image2x="images/product-card/full-4@2x.jpg 2x",, data-fancybox-image="https://via.placeholder.com/640", data-alt="Вид снизу")
+                img(src="images/product-card/product-thumb-4.jpg", srcset="images/product-card/product-thumb-4@2x.jpg 2x", width="93", height="93", alt="Миниатюра вид снизу")
+            
+            button.product-card__thumbs-btn.product-card__thumbs-btn--prev.__js_prev(type="button")
+              +icon('chevron-up')(width="18", height="18")
+            button.product-card__thumbs-btn.product-card__thumbs-btn--next.__js_next(type="button")
+              +icon('chevron-down')(width="18", height="18")
+
+        .product-card__info
+          .product-card__article Артикул: 01234567890abc
+          .product-card__parameters
+            .product-card__parameter.parameter
+              .parameter__title Вместимость воздуха (мл)
+              .parameter__list 
+                each item, index in ['1000', '1500', '2000', '2500']
+                  label.parameter__item
+                    if index === 2
+                      input.visually-hidden(type="radio", name="volume", value= item, checked)
+                    else 
+                      input.visually-hidden(type="radio", name="volume", value= item)
+                    span.parameter__item-main= item
+
+            .product-card__parameter.parameter.parameter--colors
+              .parameter__title Цвет
+              .parameter__list 
+                each item, index in [{n: 'Yellow', c: '#dec200'}, {n: 'Black', c: '#000000'}, {n: 'Gray', c: '#706e79'}]
+
+                  //+button('', 'parameter__item button--color', '', '#')(style="background-color: " + item.c + ";", title= item.n, aria-label= item.n + ' color')
+
+                  label.parameter__item
+                    if index === 1
+                      input.visually-hidden(type="radio", name="color", value= item, checked)
+                    else
+                      input.visually-hidden(type="radio", name="color", value= item.n)
+                    span.parameter__item-main(style="background-color: " + item.c + ";", title= item.n)= item.n
+
+
+        //.product-card__options.product-options
+
+        .product-card__bottom
+          .product-card__price
+            .product-card__price-on-request Под заказ
+          .product-card__action
+            +button('Заказать', 'button--order', 'box', '#')
+
+    .product-card__tabs.tabs
+      .tabs__container.container
+
+        .tabs__item.active
+          button(type="button", data-target="#description") 
+            span Описание товара
+        
+        .tabs__content.tab-content.active#description
+          p Новичкам и любителям дайвинга рекомендуется использовать этот продукт на глубине до 5 метров. Профессиональных дайверов рекомендуют в качестве запасных кислородных баллонов для глубины воды до 30 метров. Качественное литье из алюминиевого сплава, безопасное и долговечное.
+
+          p 
+            | Примечания:<br>
+            | Из-за разницы в освещении и настройках экрана цвет изделия может немного отличаться от цвета на фотографиях. Возможны незначительные различия в размерах из-за различных измерений вручную.
+
+          p
+            | Пакет включает в себя:<br>
+            | 1 х бензобак<br>
+            | 1 х первичная головка клапана<br>
+            | 1 х вторичная головка клапана<br>
+            | 1 х аксессуар для ремонта
+
+          p Откуда товар? Ответ: Все товары в магазине из-за границы Китая.
+
+        .tabs__item
+          button(type="button", data-target="#specifications") 
+            span Характеристики
+        
+        .tabs__content.tab-content#specifications
+          table
+            tbody
+              each tr in table
+                tr 
+                  th= tr.th 
+                  td= tr.td
+
+        .tabs__item
+          button(type="button", data-target="#reviews") 
+            span Отзывы (20)
+
+        .tabs__content.tab-content.tab-content--no-border-padding#reviews
+          each review in reviews 
+            .product-card__review.review
+              .review__author
+                .review__author-image
+                  if review.img
+                    img(src="images/product-card/" + review.img + ".jpg", srcset="images/product-card/" + review.img + "@2x.jpg 2x", width="36", height="36", alt= review.name)
+                  else 
+                    img(src="images/no-avatar.svg", width="36", height="36", alt="Нет аватара")
+                .review__author-meta 
+                  .review__author-name= review.name
+                  time.review__author-date(datetime="2021-08-12") 12.08.21
+              .review__content 
+                +title(review.title, 'div', 'title--small review__title')
+                .review__text= review.text
+          .tab-content__only-mobile 
+            +button('Все отзывы (105)', '', '', '#')
+          section.product-card__give-review.give-review
+            +title('Оставить отзыв', 'h2', 'title--small give-review__title')
+            form(action="#", method="post")
+              label
+                textarea(name="review")
+              +button('Отправить', 'give-review__send')
+
+    section.products-carousel
+      .products-carousel__container.container
+        +title('Похожие товары', 'h2', 'title--small products-carousel__title')
+        .products-carousel__swiper.swiper-container.__js_products-carousel
+          .swiper-wrapper 
+            each item in similar
+              +product-preview(item)
+          .products-carousel__navigation
+            +button('', 'products-carousel__btn button--outline button--icon __js_prev', 'chevron-left')
+            +button('', 'products-carousel__btn button--outline button--icon __js_next', 'chevron-right')
+        .products-carousel__pagination
+
+    section.products-carousel
+      .products-carousel__container.container
+        +title('Вы недавно смотрели', 'h2', 'title--small products-carousel__title')
+        .products-carousel__swiper.swiper-container.__js_products-carousel
+          .swiper-wrapper 
+            each item in viewed
+              +product-preview(item)
+          .products-carousel__navigation
+            +button('', 'products-carousel__btn button--outline button--icon __js_prev', 'chevron-left')
+            +button('', 'products-carousel__btn button--outline button--icon __js_next', 'chevron-right')
+        .products-carousel__pagination

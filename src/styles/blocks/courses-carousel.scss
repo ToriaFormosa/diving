@@ -1,0 +1,112 @@
+.courses-carousel {
+  padding: 36px 0 58px;
+  overflow: hidden;
+
+  &__container {
+  }
+
+  &__title {
+    margin-bottom: 15px;
+
+    @include max(sm) {
+      margin-bottom: 30px;
+      text-align: center;
+    }
+  }
+
+  &__swiper {
+    position: relative;
+    overflow: visible;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: 2;
+      top: 0;
+      width: 100vw;
+      height: 100%;
+      background-color: $white;
+    }
+
+    &::before {
+      left: 0;
+      transform: translateX(-100%);
+    }
+
+    &::after {
+      right: 0;
+      transform: translateX(100%);
+    }
+
+    .swiper-pagination {
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      right: 0;
+      bottom: -22px;
+      display: flex;
+      justify-content: center;
+
+      @include max(sm) {
+        bottom: 20px;
+        left: 60px;
+        right: 60px;
+      }
+
+      &.swiper-pagination-lock {
+        display: none;
+      }
+
+      &-bullet {
+        display: block;
+        width: 20px;
+        height: 2px;
+        background-color: $lightBlue;
+        cursor: pointer;
+
+        &-active {
+          background-color: $blue;
+        }
+      }
+    }
+  }
+
+  &__navigation {
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    max-width: calc(100vw - 40px);
+    width: 1360px;
+    height: 0;
+
+    @include max(sm) {
+      position: static;
+      transform: translateX(0);
+      width: 100%;
+      max-width: none;
+      margin-top: 14px;
+      height: auto;
+    }
+  }
+
+  &__btn {
+    transform: translateY(-50%);
+
+    @include max(sm) {
+      transform: translateY(0);
+    }
+
+    &.swiper-button-lock {
+      display: none;
+    }
+  }
+
+  &__item {
+    height: auto;
+  }
+}

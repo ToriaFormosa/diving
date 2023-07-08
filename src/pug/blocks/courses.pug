@@ -1,0 +1,59 @@
+section#courses.courses
+  .container
+    +title('Курсы обучения дайвингу', '', 'title--large courses__title')
+    .courses__wrapper
+      .swiper-container.__js_courses-carousel-2
+        .swiper-wrapper
+          each item in COURSES
+            +course-preview(item)
+          //-.courses-card.swiper-slide
+            .courses-card__stock Акция %
+            .courses-card__bg
+              img(src="images/homepage/courses/1.jpg", srcset="images/homepage/courses/1@2x.jpg 2x", width="397", height="478", alt="")
+            .courses-card__content
+              .courses-card__title SDI OWD
+              .courses-card__limit
+                span.year От 10 лет
+                span более 4-х часов
+              .courses-card__desc 4 теоретических занятий, 4 погружений в бассейне, экзамен, 4 погружения
+                |  в открытой  воде, аренда оборудования включена.
+              .courses-card__row
+                +button('Подробнее', 'button--outline button--icon courses-card__more', 'chevron-right', URLS.course)
+                .courses-card__price от 25 000₽
+              .courses-card__gift
+                a(href='#', target='_blank') Приобрести в подарок
+          //-.courses-card.swiper-slide
+            .courses-card__bg
+              img(src="images/homepage/courses/2.jpg", srcset="images/homepage/courses/2@2x.jpg 2x", width="397", height="325", alt="")
+            .courses-card__content
+              .courses-card__title Пробное погружение
+              .courses-card__limit
+                span.year От 10 лет
+                span более 4-х часов
+              .courses-card__desc 1 погружение с инструктором в бассейне или водоеме. Аренда полного комплекта снаряжения включена
+              .courses-card__row
+                +button('Подробнее', 'button--outline button--icon courses-card__more', 'chevron-right', URLS.course)
+                .courses-card__price 2 500₽
+              .courses-card__gift
+                a(href='#', target='_blank') Приобрести в подарок
+          //-.courses-card.swiper-slide
+            .courses-card__bg
+              img(src="images/homepage/courses/3.jpg", srcset="images/homepage/courses/3@2x.jpg 2x", width="397", height="341", alt="")
+            .courses-card__content
+              .courses-card__title SDI Advanced Adventure <br> Open Water
+              .courses-card__limit
+                span более 4-х часов
+              .courses-card__desc Теория, 5 погружений в открытой воде <br> с инструктором.
+              .courses-card__row
+                +button('Подробнее', 'button--outline button--icon courses-card__more', 'chevron-right', URLS.course)
+                .courses-card__price 12 000₽
+              .courses-card__gift
+                a(href='#', target='_blank') Приобрести в подарок
+      
+      +button('', 'button--outline button--icon slick-prev courses__prev', 'chevron-right')
+      +button('', 'button--outline button--icon slick-next courses__next', 'chevron-right')
+    .courses__note По окончании выбранного курса присваивается соответствующий сертификат международного образца
+    .courses__mobile-wrapper
+      +button('', 'button--outline button--icon slick-prev courses__prev', 'chevron-right')
+      +button('Все курсы', 'courses__btn', '', URLS.courses)
+      +button('', 'button--outline button--icon slick-next courses__next', 'chevron-right')

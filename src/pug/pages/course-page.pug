@@ -1,0 +1,232 @@
+extends ../layouts/default
+
+block vars
+  -
+    const page = {
+      title: 'Курс SDI Ice Diver'
+    };
+
+    const bc = [
+      {text: 'Курсы дайверов', url: URLS.courses},
+      {text: page.title}
+    ];
+
+    const courses = [
+      {
+        img: {n: '1', w: '397', h: '478'},
+        title: 'SDI OWD',
+        list: ['От 10 лет', 'более 4-х часов'],
+        text: '4&nbsp;теоретических занятий, 4&nbsp;погружений в&nbsp;бассейне, экзамен, 4&nbsp;погружения в&nbsp;открытой воде, аренда оборудования включена.',
+        price: {current: 'от 25 000₽', old: 'от 55 000₽'},
+        isLabel: true,
+        cl: 'courses-carousel__item swiper-slide'
+      },
+      {
+        img: {n: '2', w: '397', h: '325'},
+        title: 'Пробное погружение',
+        list: ['От 10 лет', 'более 4-х часов'],
+        text: '1&nbsp;погружение с&nbsp;инструктором в&nbsp;бассейне или водоеме. Аренда полного комплекта снаряжения включена',
+        price: {current: '2 500₽', old: ''},
+        cl: 'courses-carousel__item swiper-slide'
+      },
+      {
+        img: {n: '3', w: '397', h: '341'},
+        title: 'SDI Advanced Adventure Open Water',
+        list: ['более 4-х часов'],
+        text: 'Теория, 5&nbsp;погружений в&nbsp;открытой воде с&nbsp;инструктором.',
+        price: {current: '12 000₽', old: ''},
+        cl: 'courses-carousel__item swiper-slide'
+      },
+      /*{
+        img: {n: '4', w: '397', h: '350'},
+        title: 'TDI Basic Nitrox',
+        list: ['От 15 лет', '30 мин и больше'],
+        text: 'Теория, экзамен. Учебник или eLearning курс приобретается отдельно',
+        price: {current: '2 500₽', old: ''},
+        cl: 'courses-carousel__item swiper-slide'
+      },
+      {
+        img: {n: '5', w: '397', h: '332'},
+        title: 'SDI Sidemount Diver',
+        list: ['c 15 лет', '30 мин и больше'],
+        text: 'Теория, специфика конфигурации, 2&nbsp;погружения в&nbsp;бассейне, 4&nbsp;погружения на&nbsp;открытой воде. Аренда системы Sidemount включена, остальное оборудование...',
+        price: {current: '20 000₽', old: ''},
+        cl: 'courses-carousel__item swiper-slide'
+      }*/
+    ];
+
+    const features = [
+      {
+        icon: {id: 'textbook', w: '47', h: '61'},
+        text: '500 часов',
+        title: 'Время теории'
+      },
+      {
+        icon: {id: 'scuba-diving', w: '61', h: '61'},
+        text: '1 в бассейне',
+        title: 'Сколько погружений'
+      },
+      {
+        icon: {id: 'mortarboard', w: '71', h: '61'},
+        text: 'с 10 лет',
+        title: 'Возраст обучения'
+      },
+      {
+        icon: {id: 'open-book', w: '78', h: '61'},
+        text: 'Покупается отдельно',
+        title: 'Учебное пособие'
+      }
+    ]
+
+
+block main
+  article.inner-page
+    header.inner-page__header
+      .container
+        +breadcrumbs(bc, 'inner-page__breadcrumbs no-margin')
+    .inner-page__hero.inner-hero.inner-hero--course
+      .inner-hero__container.container
+        .inner-hero__main
+          +title(page.title, 'h1', 'title--large inner-hero__title')
+          .inner-hero__price 
+            span 5&nbsp;000₽
+            span.old - 7&nbsp;500₽
+          .inner-hero__action 
+            +button('Приобрести курс', 'inner-hero__btn', '', '#')
+            +button('Приобрести в подарок', 'button--outline inner-hero__btn', '', '#')
+
+        .inner-hero__image
+          picture
+            source(media="(max-width: 1079px)", srcset="images/course/hero-image-mobile.jpg 1x, images/course/hero-image-mobile@2x.jpg 2x")
+            img(src="images/course/hero-image.jpg", srcset="images/course/hero-image@2x.jpg 2x", alt="")
+        
+        .inner-hero__text
+          p Не&nbsp;следует, однако забывать, что реализация намеченных плановых заданий представляет собой интересный эксперимент проверки дальнейших направлений развития. Идейные соображения высшего порядка, а&nbsp;также начало повседневной работы по&nbsp;формированию позиции способствует подготовки и&nbsp;реализации форм развития.
+
+          p С&nbsp;другой стороны рамки и&nbsp;место обучения кадров способствует подготовки и&nbsp;реализации системы обучения кадров, соответствует насущным потребностям. Таким образом консультация с&nbsp;широким активом в&nbsp;значительной степени обуславливает создание системы обучения кадров, соответствует насущным потребностям.
+
+          p Таким образом новая модель организационной деятельности позволяет выполнять важные задания по&nbsp;разработке системы обучения кадров, соответствует насущным потребностям. Задача организации, в&nbsp;особенности же постоянный количественный рост и&nbsp;сфера нашей активности в&nbsp;значительной степени обуславливает создание систем массового участия. Равным образом постоянный количественный рост и&nbsp;сфера нашей активности представляет собой интересный эксперимент проверки систем массового участия. Повседневная практика показывает, что рамки и&nbsp;место обучения кадров способствует подготовки и&nbsp;реализации форм развития.
+
+
+      
+    .container
+      .inner-page__features.features.swiper-container.__js_features-carousel
+        ul.features__list.swiper-wrapper
+          each item in features
+            li.features__item.swiper-slide
+              .features__item-icon
+                +icon(item.icon.id)(width= item.icon.w, height= item.icon.h)
+              .features__item-text= item.text
+              .features__item-title= item.title
+        .swiper-pagination
+        .features__navigation
+          +button('', 'features__btn button--outline button--icon __js_prev', 'chevron-left')
+          +button('', 'features__btn button--outline button--icon __js_next', 'chevron-right')
+
+      .inner-page__description.text
+        img.alignleft(src="images/course/image.jpg", srcset="images/course/image@2x.jpg 2x", width="608", height="540", alt="")
+
+        p Не&nbsp;следует, однако забывать, что реализация намеченных плановых заданий представляет собой интересный эксперимент проверки дальнейших направлений развития. Идейные соображения высшего порядка, а&nbsp;также начало повседневной работы по&nbsp;формированию позиции способствует подготовки и&nbsp;реализации форм развития.
+
+        p С&nbsp;другой стороны рамки и&nbsp;место обучения кадров способствует подготовки и&nbsp;реализации системы обучения кадров, соответствует насущным потребностям. Таким образом консультация с&nbsp;широким активом в&nbsp;значительной степени обуславливает создание системы обучения кадров, соответствует насущным потребностям.
+
+        p Таким образом новая модель организационной деятельности позволяет выполнять важные задания по&nbsp;разработке системы обучения кадров, соответствует насущным потребностям. Задача организации, в&nbsp;особенности&nbsp;же постоянный количественный рост и&nbsp;сфера нашей активности в&nbsp;значительной степени обуславливает создание систем массового участия. Равным образом постоянный количественный рост и&nbsp;сфера нашей активности представляет собой интересный эксперимент проверки систем массового участия. Повседневная практика показывает, что рамки и&nbsp;место обучения кадров способствует подготовки и&nbsp;реализации форм развития.
+
+
+    .inner-page__contact.contact-section
+      .contact-section__container.container 
+        .contact-section__image
+          img(src="images/course/form-image.jpg", srcset="images/componentform-image@2x.jpg 2x" width="580", height="690", alt="")
+        section.contact-section__main
+          +title('Есть вопросы?', 'h2', 'title--small contact-section__title')
+          .contact-section__text Воспользуйтесь формой ниже, и мы поможем вам начать ваше путешествие
+
+          .contact-section__form.sform
+            form(action="#", method="post")
+              //- .field--valid .field--error
+              label.sform__field.sform__field--half.field
+                span.field__hint Ваше Имя*
+                input(type="text", name="name")
+              label.sform__field.sform__field--half.field
+                span.field__hint Номер телефона*
+                input(type="tel", name="phone")
+              label.sform__field.field
+                span.field__hint Email*
+                input(type="email", name="email")
+              label.sform__field.field
+                span.field__hint Что вас интересует
+                textarea(name="message")
+              .sform__bottom 
+                +button('Отправить', 'sform__send')(type="submit")
+                .sform__bottom-text Нажимая на кнопку «Отправить», вы соглашаетсь с <a href="#" target="_blank">условиями обработки персональных данных</a>
+    
+    section.inner-page__courses.inner-page__courses--negative-mb.courses-carousel
+      .container
+        +title('Предлагаем курсы', 'h2', 'title--small courses-carousel__title')
+        .courses-carousel__swiper.swiper-container.__js_courses-carousel-a
+          .swiper-wrapper 
+            each item in courses
+              +course-preview(item)
+
+          .swiper-pagination
+          .courses-carousel__navigation
+            +button('', 'products-carousel__btn button--outline button--icon __js_prev', 'chevron-left')
+            +button('', 'products-carousel__btn button--outline button--icon __js_next', 'chevron-right')
+
+    //-section#courses.courses.inner-page__courses.inner-page__courses--negative-mb
+      .container
+        +title('Предлагаем курсы', 'h2', 'title--small courses__title')
+        .courses__wrapper
+          .swiper-container.__js_courses-carousel-2
+            .swiper-wrapper
+              .courses-card.swiper-slide
+                .courses-card__stock Акция
+                  +icon('info')
+                .courses-card__bg
+                  img(src="images/homepage/courses/1.jpg", srcset="images/homepage/courses/1@2x.jpg 2x", width="397", height="478", alt="")
+                .courses-card__content
+                  .courses-card__title SDI OWD
+                  .courses-card__limit
+                    span.year От 10 лет
+                    span более 4-х часов
+                  .courses-card__desc 4 теоретических занятий, 4 погружений в бассейне, экзамен, 4 погружения
+                    |  в открытой  воде, аренда оборудования включена.
+                  .courses-card__row
+                    +button('Подробнее', 'button--outline button--icon courses-card__more', 'chevron-right', '#')
+                    .courses-card__price от 25 000₽
+                  .courses-card__gift
+                    a(href='#', target='_blank') Приобрести в подарок
+              .courses-card.swiper-slide
+                .courses-card__bg
+                  img(src="images/homepage/courses/2.jpg", srcset="images/homepage/courses/2@2x.jpg 2x", width="397", height="325", alt="")
+                .courses-card__content
+                  .courses-card__title Пробное погружение
+                  .courses-card__limit
+                    span.year От 10 лет
+                    span более 4-х часов
+                  .courses-card__desc 1 погружение с инструктором в бассейне или водоеме. Аренда полного комплекта снаряжения включена
+                  .courses-card__row
+                    +button('Подробнее', 'button--outline button--icon courses-card__more', 'chevron-right', '#')
+                    .courses-card__price 2 500₽
+                  .courses-card__gift
+                    a(href='#', target='_blank') Приобрести в подарок
+              .courses-card.swiper-slide
+                .courses-card__bg
+                  img(src="images/homepage/courses/3.jpg", srcset="images/homepage/courses/3@2x.jpg 2x", width="397", height="341", alt="")
+                .courses-card__content
+                  .courses-card__title SDI Advanced Adventure <br> Open Water
+                  .courses-card__limit
+                    span более 4-х часов
+                  .courses-card__desc Теория, 5 погружений в открытой воде <br> с инструктором.
+                  .courses-card__row
+                    +button('Подробнее', 'button--outline button--icon courses-card__more', 'chevron-right', '#')
+                    .courses-card__price 12 000₽
+                  .courses-card__gift
+                    a(href='#', target='_blank') Приобрести в подарок
+          +button('', 'button--outline button--icon slick-prev courses__prev', 'chevron-right')
+          +button('', 'button--outline button--icon slick-next courses__next', 'chevron-right')
+
+        .courses__mobile-wrapper
+          +button('', 'button--outline button--icon slick-prev courses__prev', 'chevron-right')
+          +button('Все курсы', 'courses__btn', '', '#')
+          +button('', 'button--outline button--icon slick-next courses__next', 'chevron-right')

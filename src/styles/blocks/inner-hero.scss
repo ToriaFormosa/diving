@@ -1,0 +1,247 @@
+.inner-hero {
+  padding: 50px 0 46px;
+  background-color: $smoky;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: $gray-c8;
+
+  &--course {
+    background-image: url("../images/course/hero-bg.jpg");
+
+    @include max(sm) {
+      background-image: url("../images/course/hero-bg-mobile.jpg");
+    }
+  }
+
+  &--trip {
+    background-image: url("../images/trips/hero-bg.jpg");
+
+    @include max(sm) {
+      background-image: url("../images/trips/hero-bg-mobile.jpg");
+    }
+  }
+
+  @include max(sm) {
+    padding-top: 30px;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 608px;
+
+    @include max(lg) {
+      //display: block;
+      grid-template-columns: 1fr 1fr;
+    }
+    @include max(md) {
+      //display: block;
+      //grid-template-columns: 1fr 560px;
+    }
+    @include max(640) {
+      display: block;
+    }
+
+    & > * {
+      align-self: flex-start;
+    }
+  }
+
+  &__image {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+
+    @include max(md) {
+      //display: none;
+      grid-row-start: 1;
+      grid-row-end: 2;
+
+      height: 280px;
+      margin-bottom: 30px;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__main {
+    //width: 46.775%;
+    width: 100%;
+    padding-right: 50px;
+
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+    @include max(md) {
+      width: 100%;
+      padding-right: 25px;
+      margin-bottom: 30px;
+    }
+
+    @include max(640) {
+      display: flex;
+      flex-direction: column;
+    }
+
+    @include max(xs) {
+      padding-right: 0;
+    }
+  }
+
+  &__title {
+    margin-bottom: 35px;
+
+    @include max(sm) {
+      font-size: 21px;
+      line-height: 27px;
+    }
+
+    @include max(640) {
+      order: -1;
+    }
+
+    @include max(xs) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__date {
+    margin-top: -5px;
+    margin-bottom: 30px;
+    font-size: 15px;
+    line-height: 1.2;
+    color: $gray-ph;
+
+    b {
+      font-weight: 600;
+
+      @include max(xs) {
+        display: block;
+        margin-bottom: 6px;
+      }
+    }
+
+    .share-btn {
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 20px;
+    }
+  }
+
+  &__action {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -20px;
+    //margin-bottom: 48px;
+
+    @include max(xs) {
+      flex-direction: column;
+    }
+  }
+
+  &__btn {
+    margin-top: 20px;
+    margin-right: 20px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    @include max(xs) {
+      width: auto;
+      margin-right: 0;
+      align-self: flex-start;
+    }
+
+    &.button--outline {
+      background-color: transparent;
+    }
+  }
+
+  &__price {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 34px;
+    margin-top: -8px;
+
+    font-size: 39px;
+    line-height: 1;
+    font-weight: 500;
+    color: $blue-09;
+
+    @include max(sm) {
+      font-size: 30px;
+    }
+
+    @include max(640) {
+      order: -1;
+    }
+
+    @include max(xs) {
+      margin-bottom: 20px;
+      font-size: 21px;
+    }
+
+    & > * {
+      margin-top: 8px;
+      align-self: center;
+    }
+
+    .old {
+      margin-left: 10px;
+      font-size: 31px;
+      color: $lightBlue3;
+      font-weight: 400;
+      text-decoration: line-through;
+
+      @include max(sm) {
+        font-size: 22px;
+      }
+      @include max(xs) {
+        font-size: 21px;
+      }
+    }
+  }
+
+  &__text {
+    padding-top: 48px;
+    padding-right: 50px;
+    font-size: 14px;
+    line-height: 1.857142857142857;
+    color: $gray-ph;
+
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+
+    @include max(md) {
+      //display: none;
+      grid-column-start: 1;
+      grid-column-end: 3;
+
+      padding-right: 0;
+      padding-top: 0;
+    }
+
+    @include max(sm) {
+      font-size: 15px;
+      line-height: 26px;
+    }
+
+    p + p {
+      margin-top: 26px;
+
+      @include max(sm) {
+        margin-top: 22px;
+      }
+    }
+  }
+}

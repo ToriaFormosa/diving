@@ -1,0 +1,116 @@
+.form-section {
+  max-width: 714px;
+
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 32px 50px 50px;
+    background-color: $smoky;
+
+    @include max(xs) {
+      width: calc(100% + 40px);
+      margin: 0 -20px;
+      padding: 32px 20px 50px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    color: $dark;
+    text-align: center;
+
+    @include max(xs) {
+      text-align: left;
+    }
+  }
+
+  &__field {
+    width: calc(50% - 15px);
+    margin-top: 24px;
+
+    @include max(sm) {
+      width: 100%;
+      margin-top: 18px;
+    }
+  }
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 12px;
+
+    @include max(480) {
+      flex-direction: column;
+    }
+
+    & > * {
+      margin-top: 12px;
+    }
+
+    .custom-checbox {
+      margin-right: 20px;
+
+      @include max(480) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__action {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 30px;
+
+    @include max(480) {
+      //flex-direction: column;
+    }
+  }
+
+  &__btn {
+    margin: 0 10px;
+
+    &.button--outline {
+      background-color: transparent;
+    }
+
+    /*@include max(480) {
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+
+      & + & {
+        margin-top: 18px;
+      }
+    }*/
+  }
+
+  &__link {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 14px;
+    line-height: (22 / 14);
+    color: $blue;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+
+    @include hover {
+      color: $blue-hover;
+    }
+  }
+
+  &__text {
+    @extend .title--medium;
+    margin-top: 30px;
+    text-align: center;
+    font-weight: 500;
+    color: $lightBlue3;
+
+    @include max(480) {
+      display: none;
+    }
+  }
+}

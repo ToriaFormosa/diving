@@ -1,0 +1,290 @@
+-
+  const URLS = {
+    home: 'homepage.html',
+    shop: 'shop.html', //Каталог
+    catalog: 'catalog.html', //Категория каталога
+    product: 'product-card.html', // Карточка товара
+    product2: 'product-card-2.html', // Карточка товара
+    product3: 'product-card-3.html', // Карточка товара
+    productNo: 'product-card-no.html', // Карточка товара нет в наличии
+    courses: 'courses-page.html', // Курс дайвинга
+    course: 'course-page.html', // Курс подробная
+    trips: 'trips-page.html', // Клубные поездки
+    trip: 'trip-page.html', // Клубная поездка
+    certificates: 'certificates.html', // Подарочные сертификаты
+    certification: 'certification.html', // Сертификация дайверов
+    contacts: 'contacts.html', // Контакты
+    cart: {
+      main: 'cart.html', // Корзина
+      empty: 'empty-cart.html', // Корзина / Пусто
+      makingOrder: 'making-order.html', // Оформление заказа
+    },
+    articles: 'articles-page.html', // Статьи
+    article: 'article-page.html', // Статья
+    cabinet: {
+      auth: 'login.html', // Личный кабинет / Авторизация
+      registration: 'reg.html', // Личный кабинет / Регистрация
+      profile: 'profile.html', // Личный кабинет / Данные профиля
+      history: 'orders-history.html', // Личный кабинет / История заказов
+      order: 'order.html', // Личный кабинет / Информация о заказе
+      orderAccepted: 'order-accepted.html' // Личный кабинет / Заказ принят
+    },
+    notFound: '404.html'
+  };
+  const PRODUCTS_2 = [
+    {
+      img: {n: '1', w: '120', h: '171'},
+      title: 'SDI OWD',
+      text: 'Open Water Diver. Учебное пособие по дайвингу',
+      isOldPrice: true,
+      cl: 'tutorials__item swiper-slide'
+    },
+    {
+      img: {n: '2', w: '115', h: '171'},
+      title: 'SDI ночной дайвинг',
+      text: 'Ночной дайвинг. Подводная навигация и погружения',
+      isOldPrice: true,
+      cl: 'tutorials__item swiper-slide'
+    },
+    {
+      img: {n: '3', w: '120', h: '171'},
+      title: 'FRTI пособие',
+      text: 'Экстренная медицинская помощь для взрослых и детей',
+      isOldPrice: true,
+      cl: 'tutorials__item swiper-slide'
+    },
+    {
+      img: {n: '4', w: '123', h: '171'},
+      title: 'Стивен Барски Dry Suit',
+      text: 'Дайвинг в сухом костюме. История, обзор теории, уход.',
+      isOldPrice: true,
+      cl: 'tutorials__item swiper-slide'
+    },
+    {
+      img: {n: '3', w: '120', h: '171'},
+      title: 'FRTI пособие',
+      text: 'Экстренная медицинская помощь для взрослых и детей',
+      isOldPrice: true,
+      cl: 'tutorials__item swiper-slide'
+    }
+  ];
+
+  const PRODUCTS_3 = [
+    {
+      img: {n: '9', w: '145', h: '189'},
+      title: 'SDI ночной дайвинг',
+      text: 'Open Water Diver. Учебное пособие по дайвингу',
+      isOldPrice: true,
+      cl: 'recommend__item swiper-slide'
+    },
+    {
+      img: {n: '10', w: '168', h: '146'},
+      title: 'SDI ночной дайвинг',
+      text: 'Ночной дайвинг. Подводная навигация и погружения',
+      isOldPrice: true,
+      cl: 'recommend__item swiper-slide'
+    },
+    {
+      img: {n: '11', w: '126', h: '162'},
+      title: 'SDI ночной дайвинг',
+      text: 'Ночной дайвинг. Подводная навигация и погружения',
+      isOldPrice: true,
+      cl: 'recommend__item swiper-slide'
+    },
+    {
+      img: {n: '9', w: '145', h: '189'},
+      title: 'SDI ночной дайвинг',
+      text: 'Ночной дайвинг. Подводная навигация и погружения',
+      isOldPrice: true,
+      cl: 'recommend__item swiper-slide'
+    }
+  ];
+
+  const CLUB_SYMBOLS_PRODUCTS = [
+    {
+      img: {n: '5', w: '140', h: '186'},
+      title: 'SDI OWD',
+      text: 'Open Water Diver. Учебное пособие по дайвингу',
+      isOrderIt: true,
+      cl: 'products-carousel__item swiper-slide'
+    },
+    {
+      img: {n: '6', w: '171', h: '195'},
+      title: 'SDI ночной дайвинг',
+      text: 'Ночной дайвинг. Подводная навигация и погружения',
+      cl: 'products-carousel__item swiper-slide'
+    },
+    {
+      img: {n: '7', w: '106', h: '193'},
+      title: 'FRTI пособие',
+      text: 'Экстренная медицинская помощь для взрослых и детей',
+      isOrderIt: true,
+      cl: 'products-carousel__item swiper-slide'
+    },
+    {
+      img: {n: '8', w: '112', h: '201'},
+      title: 'Стивен Барски Dry Suit',
+      text: 'Дайвинг в сухом костюме. История, обзор теории, уход.',
+      cl: 'products-carousel__item swiper-slide'
+    },
+    {
+      img: {n: '6', w: '171', h: '195'},
+      title: 'SDI ночной дайвинг',
+      text: 'Ночной дайвинг. Подводная навигация и погружения',
+      cl: 'products-carousel__item swiper-slide'
+    }
+  ];
+
+  const SUBMENU_DIVING = [
+    {text: 'OWD', url: '#'},
+    {text: 'Advanced Adventure Open Water', url: '#'},
+    {text: 'Advanced Diver Development Program', url: '#'},
+    {text: 'Advanced Buoyancy', url: '#'},
+    {text: 'Advanced Buoyancy ext', url: '#'},
+    {text: 'U/W Navigation', url: '#'},
+    {text: 'Deep Diver', url: '#'},
+    {text: 'Night Diver', url: '#'},
+    {text: 'Dry Suit Diver', url: '#'},
+    {text: 'Ice Diver', url: '#'},
+    {text: 'Sidemount Diver', url: '#'},
+    {text: 'Rescue Diver', url: '#'},
+    {text: 'SDI Divemaster', url: '#'},
+    {text: 'Assistant Instructor', url: '#'},
+    {text: 'Adult and Child Emergency Care', url: '#'},
+    {text: 'O2 Administrator', url: '#'}
+  ];
+
+  const SUBMENU_CATALOG = [
+    {text: 'Костюмы', url: URLS.catalog},
+    {text: 'Аксессуары', url: URLS.catalog},
+    {text: 'Такелаж', url: URLS.catalog},
+    {text: 'Фонари', url: URLS.catalog},
+    {text: 'Ребризер', url: URLS.catalog},
+    {text: 'Подводная съемка', url: URLS.catalog},
+    {text: 'Ласты', url: URLS.catalog},
+    {text: 'Катушки и буи', url: URLS.catalog},
+    {text: 'Sidemount', url: URLS.catalog}
+  ];
+
+  const MENU_1 = [
+    {text: 'Обучение дайвингу', url: URLS.courses, submenu: SUBMENU_DIVING},
+    {text: 'Магазин', url: URLS.shop, submenu: SUBMENU_CATALOG},
+    {text: 'Карты сертификации', url: URLS.certification},
+    {text: 'Клубные поездки', url: URLS.trips},
+  ];
+
+  const MENU_2 = [
+    {text: 'Акции', url: '#'},
+    {text: 'Оплата и доставка', url: '#'},
+    {text: 'Статьи', url: URLS.articles},
+    {text: 'Контакты', url: URLS.contacts}
+  ];
+
+  const FOOTER_SDI = [
+    {text: 'OWD', url: '#'},
+    {text: 'Ice Diver', url: '#'},
+    {text: 'Adventure Open Water', url: '#'},
+    {text: 'Sidemount Diver', url: '#'},
+    {text: 'Advanced Buoyancy', url: '#'},
+    {text: 'Rescue Diver', url: '#'},
+    {text: 'Advanced Buoyancy ext', url: '#'},
+    {text: 'SDI Divemaster', url: '#'},
+    {text: 'U/W Navigation', url: '#'},
+    {text: 'Assistant Instructor', url: '#'},
+    {text: 'Deep Diver', url: '#'},
+    {text: 'SDI Advanced SCUBA Diver certification', url: '#'},
+    {text: 'Night Diver', url: '#'},
+    {text: 'Dry Suit Diver', url: '#'}
+  ];
+
+  const FOOTER_TDI = [
+    {text: 'TDI Basic Nitrox', url: '#'}
+  ];
+
+  const FOOTER_FRTI = [
+    {text: 'Adult and Child Emergency Care', url: '#'},
+    {text: 'O2 Administrator', url: '#'}
+  ];
+
+  const FOOTER_CATALOG = [
+    {text: 'Костюмы', url: URLS.catalog},
+    {text: 'Аксессуары', url: URLS.catalog},
+    {text: 'Такелаж', url: URLS.catalog},
+    {text: 'Фонари', url: URLS.catalog},
+    {text: 'Ребризер', url: URLS.catalog},
+    {text: 'Подводная съемка', url: URLS.catalog},
+    {text: 'Ласты', url: URLS.catalog},
+    {text: 'Катушки и буи', url: URLS.catalog},
+    {text: 'Sidemount', url: URLS.catalog}
+  ];
+
+  const FOOTER_COMMON = [
+    {text: 'Подарочные сертификаты', url: URLS.certificates},
+    {text: 'Новости', url: '#'},
+    {text: 'Клубные поездки', url: URLS.trips},
+    {text: 'О нас', url: '#'},
+    {text: 'Контакты', url: URLS.contacts},
+    {text: 'Личный кабинет', url: URLS.cabinet.profile},
+    {text: 'Сертификация', url: URLS.certification}
+  ];
+
+
+  const COURSES = [
+    {
+      img: {n: '1', w: '397', h: '478'},
+      title: 'SDI OWD',
+      list: ['От 10 лет', 'более 4-х часов'],
+      text: '4&nbsp;теоретических занятий, 4&nbsp;погружений в&nbsp;бассейне, экзамен, 4&nbsp;погружения в&nbsp;открытой воде, аренда оборудования включена.',
+      price: {current: 'от 25 000₽', old: 'от 55 000₽'},
+      isLabel: true,
+      cl: 'courses__item swiper-slide'
+    },
+    {
+      img: {n: '2', w: '397', h: '325'},
+      title: 'Пробное погружение',
+      list: ['От 10 лет', 'более 4-х часов'],
+      text: '1&nbsp;погружение с&nbsp;инструктором в&nbsp;бассейне или водоеме. Аренда полного комплекта снаряжения включена',
+      price: {current: '2 500₽', old: ''},
+      cl: 'courses__item swiper-slide'
+    },
+    {
+      img: {n: '3', w: '397', h: '341'},
+      title: 'SDI Advanced Adventure Open Water',
+      list: ['более 4-х часов'],
+      text: 'Теория, 5&nbsp;погружений в&nbsp;открытой воде с&nbsp;инструктором.',
+      price: {current: '12 000₽', old: ''},
+      cl: 'courses__item swiper-slide'
+    },
+  ];
+
+  const CERTIFICATES = [
+    {
+      img: '1',
+      text: 'Скидка 15% на аксессуары при покупке костюма',
+      class: 'stock__slide swiper-slide'
+    },
+    {
+      img: '2',
+      text: 'Скидка 5% на курсы для начинающих после пробного погружения',
+      class: 'stock__slide swiper-slide'
+    },
+    {
+      img: '3',
+      text: 'Скидка 10% на SDI OWD при покупке учебника',
+      class: 'stock__slide swiper-slide'
+    },
+    
+  ];
+
+  const RECOMMEND_TABS = [
+    {text: 'Популярное', target: 'popular'},
+    {text: 'Костюмы', target: 'costumes'},
+    {text: 'Аксессуары', target: 'accessories'},
+    {text: 'Такелаж', target: 'rigging'},
+    {text: 'Фонари', target: 'lanterns'},
+    {text: 'Ребризер', target: 'rebreather'},
+    {text: 'Подводная съемка', target: 'underwater-photography'},
+    {text: 'Ласты', target: 'flippers'},
+    {text: 'Катушки и буи', target: 'coils-and-buoys'},
+    {text: 'Sidemount', target: 'sidemount'}
+  ];

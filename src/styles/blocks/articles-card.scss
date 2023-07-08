@@ -1,0 +1,95 @@
+.articles-card {
+  border: 1px solid $gray;
+  border-radius: 5px;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+
+  &__image {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 0;
+    padding-top: 62%;
+    flex-shrink: 0;
+
+    transition: opacity 0.3s ease;
+
+    @include hover {
+      opacity: 0.8;
+    }
+
+    @include max(md) {
+      padding-top: 88%;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+    padding: 23px 20px;
+
+    @include max(md) {
+      padding: 27px 25px 23px;
+    }
+  }
+
+  &__title {
+    font-size: 19px;
+    line-height: 28px;
+    font-weight: 500;
+
+    @include max(md) {
+      font-size: 16px;
+    }
+
+    br {
+      @include max(md) {
+        display: none;
+      }
+    }
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 16px;
+
+    @include max(md) {
+      margin-top: 12px;
+    }
+  }
+
+  &__more {
+    padding-left: 0;
+
+    @include max(md) {
+      font-size: 16px;
+    }
+
+    svg {
+      width: 8px;
+      height: 8px;
+      margin-left: 7px;
+    }
+  }
+
+  &__date {
+    font-size: 15px;
+    font-weight: 500;
+    color: $gray-a4;
+  }
+}

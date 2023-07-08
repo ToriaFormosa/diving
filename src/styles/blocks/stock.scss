@@ -1,0 +1,201 @@
+.stock {
+  padding: 74px 0 64px; //50px;;
+
+  @include max(md) {
+    padding: 39px 0 30px;
+  }
+
+  &--bg {
+    background-repeat: no-repeat;
+    background-image: url("../images/stock-bg.jpg");
+    background-size: cover;
+
+    @include retina {
+      background-image: url("../images/stock-bg@2x.jpg");
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -12.5px;
+
+    @include max(lg) {
+      margin: 0;
+    }
+
+    @include max(md) {
+      margin-top: 8px;
+    }
+
+    .swiper-wrapper {
+      margin-top: -24px;
+      flex-wrap: wrap;
+
+      @include max(lg) {
+        margin-top: 0;
+        flex-wrap: nowrap;
+      }
+    }
+  }
+
+  &__slide {
+    width: calc(33.3333% - 25px);
+    margin: 24px 12.5px 17px !important;
+    box-sizing: border-box;
+    height: 245px;
+
+    @include max(lg) {
+      height: auto;
+      margin: 0;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: flex-end;
+    height: 245px;
+    padding: 20px 20px 23px 0;
+    background-color: $blue;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      padding-top: 62%;
+      background: linear-gradient(
+        89.72deg,
+        #2c60ae 1.24%,
+        rgba(44, 96, 174, 0) 64.41%
+      );
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__text {
+    width: 85%;
+    padding: 15px 23px;
+    background-color: $white;
+    border-radius: 0 5px 5px 0;
+    position: relative;
+    font-size: 17px;
+    line-height: 27px;
+    font-weight: 500;
+    color: $gray-26;
+
+    @include max(lg) {
+      width: 92%;
+      padding: 15px;
+      font-size: 15px;
+      line-height: 18px;
+    }
+  }
+
+  &__more {
+    margin: 0 auto;
+    font-size: 19px;
+
+    @include max(lg) {
+      order: -1;
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+  &__nav {
+    width: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    @include max(lg) {
+      display: flex;
+      margin-top: 15px;
+    }
+
+    @include max(xs) {
+      justify-content: space-between;
+    }
+  }
+
+  &__pagination {
+    display: none;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+
+    @include max(lg) {
+      display: flex;
+      margin: 0 30px;
+    }
+
+    &.swiper-pagination-lock {
+      display: none;
+    }
+
+    .swiper-pagination-bullet {
+      display: block;
+      width: 20px;
+      height: 2px;
+      background-color: $lightBlue;
+      cursor: pointer;
+
+      &-active {
+        background-color: $blue;
+      }
+    }
+  }
+
+  &__prev,
+  &__next {
+    position: absolute;
+    top: 52%;
+
+    @include max(lg) {
+      position: relative;
+      top: unset;
+      bottom: 0;
+    }
+  }
+
+  &__prev {
+    left: -45px;
+
+    @include max(lg) {
+      left: 0;
+    }
+  }
+
+  &__next {
+    right: -45px;
+
+    @include max(lg) {
+      right: 0;
+    }
+  }
+}

@@ -1,0 +1,84 @@
+extends ../layouts/default
+
+block vars
+  -
+    const page = {
+      title: 'Личный кабинет'
+    };
+
+    const bc = [
+      {text: page.title}
+    ];
+
+    const navLinks = [
+      {text: 'Данные профиля', icon: {id: 'profile', w: '20', h: '20'}, url: URLS.cabinet.profile},
+      {text: 'История заказов', icon: {id: 'sand-clock', w: '13', h: '20'}, url: URLS.cabinet.history, isCurrent: true},
+      {text: 'Накопительная скидка', icon: {id: 'coupon', w: '20', h: '20'}, url: '#'},
+      {text: 'Выйти', icon: {id: 'logout', w: '20', h: '20'}, url: '#'}
+    ];
+
+
+
+block main
+  article.inner-page
+    header.inner-page__header
+      .container
+        +breadcrumbs(bc, 'inner-page__breadcrumbs')
+        +title('Александр Александрович Неалександров', 'h1', 'title--medium inner-page__title')
+    
+    .cabinet
+      section.cabinet__container.container
+        ul.cabinet__nav
+          each item in navLinks
+            if item.isCurrent
+              li.cabinet__nav-item.cabinet__nav-item--current
+                a.cabinet__nav-link
+                  span.cabinet__nav-icon
+                    +icon(item.icon.id)(width= item.icon.w, height= item.icon.h)
+                  | #{item.text}
+            else
+              li.cabinet__nav-item
+                a.cabinet__nav-link(href= item.url)
+                  span.cabinet__nav-icon
+                    +icon(item.icon.id)(width= item.icon.w, height= item.icon.h)
+                  | #{item.text}
+
+        .cabinet__main
+          +title('История заказов', 'h2', 'title--small cabinet__title')
+          .cabinet__row
+            .cabinet__infotext Общая сумма заказов: <b>222&nbsp;555₽</b>
+            .cabinet__infotext До накопительной скидки в 5%: <b>5₽</b>
+          // data-progress - прогресс в процентах до накоп. скидки 
+          .cabinet__discount-status.discount-status.__js_discount-status(data-progress="68")
+            .discount-status__thumb
+              img(src="images/cabinet/diver.svg", width="97", height="50" alt="")
+            .discount-status__line
+            - let count = 3;
+            - let i = 25;
+            //17 21 25
+            while i--
+              - let cl = count === 3 ? ' discount-status__sep--long' : '';
+              - cl += count === 3 && 25 - i >= 17 ? ' discount-status__sep--higher' : '';
+              span.discount-status__sep(class= cl + (25 - i === 1 ? ' discount-status__sep--active discount-status__sep--done' : ''))
+                //-= 25 - i + '--- '
+              - count ? count-- : count = 3;
+              
+            //img(src="images/cabinet/discount-scale-placeholder.svg", alt="")
+          .cabinet__infotext.cabinet__infotext--discount Обычная скидка: <b>4%</b>
+          - let orderCount = 4
+          while orderCount--
+            - const status = orderCount === 3 ? 'Ожидает оплаты' : 'Завершен';
+            .cabinet__order-preview.order-preview
+              .order-preview__main
+                +order-preview-item('№ заказа:', '12345')
+                +order-preview-item('Дата заказа:', '21.08.2021')
+                +order-preview-item('Статус заказа:', status, 'blue')
+
+                +order-preview-item('Позиций:', '156')
+                +order-preview-item('Стоимость:', '999 990₽', 'blue')
+                +order-preview-item('Покупатель:', 'Александр Неалександров')
+
+              .order-preview__action
+                +button('Подробнее', 'order-preview__btn button--outline', '', URLS.cabinet.order)
+                +button('Повторить заказ', 'order-preview__btn', '', '#')
+                a.order-preview__remove(href="#") Удалить заказ

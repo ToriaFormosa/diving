@@ -1,0 +1,332 @@
+extends ../layouts/components
+
+block vars
+  -
+    const page = {
+      title: 'Общие компоненты'
+    };
+    const bc = [
+      {text: 'Магазин', url: URLS.catalog},
+      {text: page.title}
+    ];
+
+    const PRODUCTS = [
+      {
+        img: {n: '1', w: '120', h: '171'},
+        title: 'SDI OWD',
+        text: 'Open Water Diver. Учебное пособие по дайвингу',
+        isOldPrice: true,
+        label: '-10%',
+        cl: 'products-grid__item'
+      },
+      {
+        img: {n: '2', w: '115', h: '171'},
+        title: 'SDI ночной дайвинг',
+        text: 'Ночной дайвинг. Подводная навигация и погружения ',
+        label: 'Хит',
+        cl: 'products-grid__item'
+      },
+      {
+        img: {n: '3', w: '120', h: '171'},
+        title: 'FRTI пособие',
+        text: 'Экстренная медицинская помощь для взрослых и детей',
+        label: 'New',
+        cl: 'products-grid__item'
+      },
+      {
+        img: {n: '4', w: '123', h: '171'},
+        title: 'Стивен Барски Dry Suit',
+        text: 'Дайвинг в сухом костюме. История, обзор теории, уход.',
+        cl: 'products-grid__item'
+      },
+      {
+        img: {n: '5', w: '140', h: '186'},
+        title: 'SDI OWD',
+        text: 'Open Water Diver. Учебное пособие по дайвингу',
+        isOrderIt: true,
+        cl: 'products-grid__item'
+      }
+    ];
+
+    const SIMILAR = [
+      {
+        img: {n: '5', w: '140', h: '186'},
+        title: 'SDI OWD',
+        text: 'Open Water Diver. Учебное пособие по дайвингу',
+        cl: 'products-carousel__item swiper-slide'
+      },
+      {
+        img: {n: '6', w: '171', h: '195'},
+        title: 'SDI ночной дайвинг',
+        text: 'Ночной дайвинг. Подводная навигация и погружения',
+        cl: 'products-carousel__item swiper-slide'
+      },
+      {
+        img: {n: '7', w: '106', h: '193'},
+        title: 'FRTI пособие',
+        text: 'Экстренная медицинская помощь для взрослых и детей',
+        cl: 'products-carousel__item swiper-slide'
+      },
+      {
+        img: {n: '8', w: '112', h: '201'},
+        title: 'Стивен Барски Dry Suit',
+        text: 'Дайвинг в сухом костюме. История, обзор теории, уход.',
+        cl: 'products-carousel__item swiper-slide'
+      },
+      {
+        img: {n: '1', w: '120', h: '171'},
+        title: 'SDI OWD',
+        text: 'Open Water Diver. Учебное пособие по дайвингу',
+        isOldPrice: true,
+        label: '-10%',
+        cl: 'products-carousel__item swiper-slide'
+      }
+    ];
+
+    const courses = [
+      {
+        img: {n: '1', w: '397', h: '478'},
+        title: 'SDI OWD',
+        list: ['От 10 лет', 'более 4-х часов'],
+        text: '4&nbsp;теоретических занятий, 4&nbsp;погружений в&nbsp;бассейне, экзамен, 4&nbsp;погружения в&nbsp;открытой воде, аренда оборудования включена.',
+        price: {current: 'от 25 000₽', old: 'от 55 000₽'},
+        isLabel: true,
+        cl: 'courses-grid__item'
+      },
+      {
+        img: {n: '2', w: '397', h: '325'},
+        title: 'Пробное погружение',
+        list: ['От 10 лет', 'более 4-х часов'],
+        text: '1&nbsp;погружение с&nbsp;инструктором в&nbsp;бассейне или водоеме. Аренда полного комплекта снаряжения включена',
+        price: {current: '2 500₽', old: ''},
+        cl: 'courses-grid__item'
+      },
+      {
+        img: {n: '3', w: '397', h: '341'},
+        title: 'SDI Advanced Adventure Open Water',
+        list: ['более 4-х часов'],
+        text: 'Теория, 5&nbsp;погружений в&nbsp;открытой воде с&nbsp;инструктором.',
+        price: {current: '12 000₽', old: ''},
+        cl: 'courses-grid__item'
+      },
+      {
+        img: {n: '4', w: '397', h: '350'},
+        title: 'TDI Basic Nitrox',
+        list: ['От 15 лет', '30 мин и больше'],
+        text: 'Теория, экзамен. Учебник или eLearning курс приобретается отдельно',
+        price: {current: '2 500₽', old: ''},
+        cl: 'courses-grid__item'
+      },
+      {
+        img: {n: '5', w: '397', h: '332'},
+        title: 'SDI Sidemount Diver',
+        list: ['c 15 лет', '30 мин и больше'],
+        text: 'Теория, специфика конфигурации, 2&nbsp;погружения в&nbsp;бассейне, 4&nbsp;погружения на&nbsp;открытой воде. Аренда системы Sidemount включена, остальное оборудование...',
+        price: {current: '20 000₽', old: ''},
+        cl: 'courses-grid__item'
+      }
+    ];
+
+block main
+  .components
+    .container
+      .components__block-outer
+        .components__title Типография
+        .components__block-inner
+          .components__subtitle Заголовки
+          +title('Давно выяснено, что при оценке', 'h1', 'title--large components__title-item')
+          +title('Здесь ваш текст.. Здесь ваш текст.." Многие', 'h2', 'title--medium components__title-item')
+          +title('так что поиск по ключевым словам "lorem ipsum" сразу показывает', 'h3', 'title--small components__title-item')
+          +title('редакторы HTML используют Lorem Ipsum в качестве текста по умолчанию', 'h4', 'components__title-item')
+          +title('За прошедшие годы текст Lorem Ipsum получил много версий. Некоторые версии появились по ошибке', 'h5', 'components__title-item')
+          +title('Многие думают, что Lorem Ipsum - взятый с потолка псевдо-латинский набор слов, но это не совсем так', 'h6', 'components__title-item')
+        .components__block-inner
+          .components__subtitle Наборный текст
+          .text
+            .text__block
+              +title('Заголовок 1', 'h3', 'title--small components__title-text')
+              img.float-right(src="https://via.placeholder.com/397x434", alt="")
+              p Разнообразный и богатый опыт начало повседневной работы по формированию позиции в
+                |  значительной степени обуславливает создание соответствующий условий активизации. Задача
+                |  организации, в особенности же дальнейшее развитие различных форм деятельности требуют
+                |  определения и уточнения новых предложений. Разнообразный и богатый опыт сложившаяся
+                |  структура организации в значительной степени обуславливает создание системы обучения кадров,
+                |  соответствует насущным потребностям.
+              p Разнообразный и богатый опыт сложившаяся <a href='#', target='_blank'>структура организации</a> позволяет оценить значение
+                |  соответствующий условий активизации. Идейные соображения высшего порядка, а также начало
+                |  повседневной работы по формированию позиции способствует подготовки и реализации модели
+                |  развития. Не следует, однако забывать, что реализация намеченных плановых заданий способствует
+                |  подготовки и реализации системы обучения кадров, соответствует насущным потребностям. Не
+                |  следует, однако забывать, что постоянное информационно-пропагандистское обеспечение нашей
+                |  деятельности требуют определения и уточнения дальнейших направлений развития.
+              p Разнообразный и богатый опыт консультация с широким активом представляет собой интересный
+                |  эксперимент проверки дальнейших направлений развития. Задача организации, в особенности же
+                |  консультация с широким активом позволяет выполнять важные задания по разработке модели.
+              p Значимость этих проблем настолько очевидна, что постоянный количественный рост и сфера нашей активности способствует подготовки и реализации
+                |  системы обучения кадров, соответствует насущным потребностям. С другой стороны укрепление и развитие структуры представляет собой интересный
+                |  эксперимент проверки существенных финансовых и административных условий. С другой стороны сложившаяся структура организации позволяет
+                |  оценить значение системы обучения кадров, соответствует насущным потребностям.
+            .text__block
+              +title('Заголовок 2', 'h3', 'title--small components__title-text')
+              img(src="https://via.placeholder.com/1240x315", alt="")
+              p Разнообразный и богатый опыт сложившаяся структура организации обеспечивает широкому кругу (специалистов) участие в формировании направлений
+                |  прогрессивного развития. Идейные соображения высшего порядка, а также дальнейшее развитие различных форм деятельности играет важную роль
+                |  формировании форм развития. Таким образом новая модель организационной деятельности играет важную роль в формировании дальнейших
+                |  направлений развития. Повседневная практика показывает, что начало повседневной работы по формированию позиции в значительной степени
+                |  обуславливает создание направлений прогрессивного развития.
+              ul
+                li Идейные соображения высшего порядка, а также постоянный количественный рост;
+                li И сфера нашей активности влечет за собой процесс внедрения и модернизации направлений прогрессивного развития;
+                li Таким образом сложившаяся структура организации позволяет выполнять важные задания по разработке направлений развития;
+                li Таким образом рамки и место обучения кадров в значительной степени обуславливает создание модели развития;
+                li Повседневная практика показывает, что консультация с широким активом позволяет оценить значение систем массового участия.
+              p Равным образом постоянное информационно-пропагандистское обеспечение нашей деятельности способствует подготовки и реализации системы
+                |  обучения кадров, соответствует насущным потребностям. Разнообразный и богатый опыт реализация намеченных плановых заданий влечет за собой
+                |  процесс внедрения и модернизации систем массового участия. Равным образом реализация намеченных плановых заданий в значительной степени
+                |  обуславливает создание соответствующий условий активизации. Товарищи! сложившаяся структура организации позволяет выполнять важные задания по
+                |  разработке систем массового участия.
+              p Повседневная практика показывает, что новая модель организационной деятельности позволяет оценить значение направлений прогрессивного
+                |  развития. Значимость этих проблем настолько очевидна, что постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет
+                |  выполнять важные задания по разработке существенных финансовых и административных условий. Разнообразный и богатый опыт консультация с
+                |  широким активом влечет за собой процесс внедрения и модернизации форм развития.
+              p Товарищи! новая модель организационной деятельности требуют определения и уточнения направлений прогрессивного развития. Значимость этих
+                |  проблем настолько очевидна, что постоянный количественный рост и сфера нашей активности играет важную роль в формировании системы обучения
+                |  кадров, соответствует насущным потребностям. Повседневная практика показывает, что постоянное информационно-пропагандистское
+                |  обеспечение нашей деятельности в значительной степени обуславливает создание форм развития.
+              p Значимость этих проблем настолько очевидна, что сложившаяся структура организации позволяет оценить значение дальнейших направлений развития.
+                |  Повседневная практика показывает, что новая модель организационной деятельности играет важную роль в формировании системы обучения кадров,
+                |  соответствует насущным потребностям. Не следует, однако забывать, что новая модель организационной деятельности требуют определения и уточнения
+                |  модели развития.
+              p  Повседневная практика показывает, что рамки и место обучения кадров играет важную роль в формировании систем массового участия. Разнообразный и
+                |  богатый опыт реализация намеченных плановых заданий позволяет оценить значение соответствующий условий активизации. Не следует, однако
+                |  забывать, что дальнейшее развитие различных форм деятельности в значительной степени обуславливает создание направлений прогрессивного развития.
+
+      .components__block-outer
+        .products-grid
+          each item in PRODUCTS
+            +product-preview(item)
+
+      .components__block-outer
+        +breadcrumbs(bc, 'block__element')
+      
+      .components__block-outer
+        .components__title Фильтр
+        .sort-block
+          select.__js_custom-select(name="select")
+            each it in ['',1,2,3,4,5,6,7]
+              option(value="by-deadline" + it) По сроку обучения #{it}
+          +custom-checkbox('withDiscount', 'Со скидкой')
+
+      .components__block-outer
+        .components__title Радиокнопка
+        +custom-radio('availability', ['В наличии', 'В наличии под заказ', 'Нет в наличии'], 1, 'block__element')
+
+      .components__block-outer
+        .components__title Кнопки
+        .components__block-inner
+          +button('Кнопка 1')
+          +button('Кнопка 2', 'button--outline')
+          +button('', 'button--outline button--icon', 'chevron-right')
+          +button('Кнопка', 'button--angle', 'arrow-angle')
+          +button('Кнопка 1', 'button--disabled')
+          +button('Кнопка 2', 'button--outline button--disabled')
+          +button('', 'button--outline button--icon button--disabled', 'chevron-right')
+          +button('Кнопка', 'button--angle button--disabled', 'arrow-angle')
+
+      .components__block-outer
+        .components__title Постраничная навигация
+        .components__block-inner
+          +pagination()
+
+      .components__block-outer
+        
+        .components__title Превью курса + сетка
+        .courses-grid
+          each item in courses 
+            +course-preview(item)
+    .contact-section
+      .contact-section__container.container 
+        .contact-section__image
+          img(src="images/components/contacts-placeholder.jpg", srcset="images/components/contacts-placeholder@2x.jpg 2x" width="580", height="690", alt="")
+        section.contact-section__main
+          +title('Есть вопросы?', 'h2', 'title--small contact-section__title')
+          .contact-section__text Воспользуйтесь формой ниже, и мы поможем вам начать ваше путешествие
+
+          .contact-section__form.sform
+            form(action="#", method="post")
+              //- .field--valid .field--error
+              label.sform__field.sform__field--half.field
+                span.field__hint Ваше Имя*
+                input(type="text", name="name")
+              label.sform__field.sform__field--half.field
+                span.field__hint Номер телефона*
+                input(type="tel", name="phone")
+              label.sform__field.field
+                span.field__hint Email*
+                input(type="email", name="email")
+              label.sform__field.field
+                span.field__hint Что вас интересует
+                textarea(name="message")
+              .sform__bottom 
+                +button('Отправить', 'sform__send')(type="submit")
+                .sform__bottom-text Нажимая на кнопку «Отправить», вы соглашаетсь с <a href="#" target="_blank">условиями обработки персональных данных</a>
+    br 
+    br 
+    br
+    .contact-section
+      .contact-section__container.container 
+        section.contact-section__info
+          +title('Наш клуб', 'h2', 'title--small contact-section__title')
+          .contact-section__list
+            .contact-section__item.contact-item
+              .contact-item__hint Телефон
+              .contact-item__text 
+                a(href="tel:89259999902") 8 (925) 999-99-02
+            .contact-section__item.contact-item
+              .contact-item__hint Email
+              .contact-item__text
+                a(href="mailto:learn2dive-tdi-sdi@info.ru") learn2dive-tdi-sdi@info.ru
+            .contact-section__item.contact-section__item--full.contact-item
+              .contact-item__hint Адрес
+              address.contact-item__text 125284&nbsp;Москва, Беговой проезд, дом&nbsp;11
+          .contact-section__map
+            //- placeholder
+            img(src="images/components/map.jpg", alt="")
+
+        section.contact-section__main
+          +title('Есть вопросы?', 'h2', 'title--small contact-section__title')
+          .contact-section__text Воспользуйтесь формой ниже, и мы поможем вам начать ваше путешествие
+
+          .contact-section__form.sform
+            form(action="#", method="post")
+              //- .field--valid .field--error
+              label.sform__field.sform__field--half.field
+                span.field__hint Ваше Имя*
+                input(type="text", name="name")
+              label.sform__field.sform__field--half.field
+                span.field__hint Номер телефона*
+                input(type="tel", name="phone")
+              label.sform__field.field
+                span.field__hint Email*
+                input(type="email", name="email")
+              label.sform__field.field
+                span.field__hint Что вас интересует
+                textarea(name="message")
+              .sform__bottom 
+                +button('Отправить', 'sform__send')(type="submit")
+                .sform__bottom-text Нажимая на кнопку «Отправить», вы соглашаетсь с <a href="#" target="_blank">условиями обработки персональных данных</a>
+
+
+    section.products-carousel
+      .products-carousel__container.container
+        +title('Вы недавно смотрели', 'h2', 'title--small products-carousel__title')
+        .products-carousel__swiper.swiper-container.__js_products-carousel
+          .swiper-wrapper 
+            each item in SIMILAR
+              +product-preview(item)
+          .swiper-pagination
+          .products-carousel__navigation
+            +button('', 'products-carousel__btn button--outline button--icon __js_prev', 'chevron-left')
+            +button('', 'products-carousel__btn button--outline button--icon __js_next', 'chevron-right')
+            
+

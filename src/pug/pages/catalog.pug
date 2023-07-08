@@ -1,0 +1,255 @@
+extends ../layouts/default
+
+block vars
+  -
+    const page = {
+      title: 'Магазин'
+    };
+
+    const bc = [
+      {text: page.title}
+    ];
+    const PRODUCTS = [
+      {
+        img: {n: '1', w: '120', h: '171'},
+        title: 'SDI OWD',
+        text: 'Open Water Diver. Учебное пособие по дайвингу',
+        isOldPrice: true,
+        label: '-10%',
+        cl: 'products-grid__item'
+      },
+      {
+        img: {n: '2', w: '115', h: '171'},
+        title: 'SDI ночной дайвинг',
+        text: 'Ночной дайвинг. Подводная навигация и погружения ',
+        label: 'Хит',
+        cl: 'products-grid__item'
+      },
+      {
+        img: {n: '3', w: '120', h: '171'},
+        title: 'FRTI пособие',
+        text: 'Экстренная медицинская помощь для взрослых и детей',
+        label: 'New',
+        cl: 'products-grid__item'
+      },
+      {
+        img: {n: '4', w: '123', h: '171'},
+        title: 'Стивен Барски Dry Suit',
+        text: 'Дайвинг в сухом костюме. История, обзор теории, уход.',
+        cl: 'products-grid__item'
+      },
+      {
+        img: {n: '5', w: '140', h: '186'},
+        title: 'SDI OWD',
+        text: 'Open Water Diver. Учебное пособие по дайвингу',
+        isOrderIt: true,
+        cl: 'products-grid__item'
+      },
+      {
+        img: {n: '6', w: '171', h: '195'},
+        title: 'SDI ночной дайвинг',
+        text: 'Ночной дайвинг. Подводная навигация и погружения',
+        cl: 'products-grid__item'
+      },
+      {
+        img: {n: '7', w: '106', h: '193'},
+        title: 'FRTI пособие',
+        text: 'Экстренная медицинская помощь для взрослых и детей',
+        isOrderIt: true,
+        cl: 'products-grid__item'
+      },
+      {
+        img: {n: '8', w: '112', h: '201'},
+        title: 'Стивен Барски Dry Suit',
+        text: 'Дайвинг в сухом костюме. История, обзор теории, уход.',
+        cl: 'products-grid__item'
+      },
+      {
+        img: {n: '1', w: '120', h: '171'},
+        title: 'SDI OWD',
+        text: 'Open Water Diver. Учебное пособие по дайвингу',
+        isOldPrice: true,
+        label: '-10%',
+        cl: 'products-grid__item'
+      },
+      {
+        img: {n: '7', w: '106', h: '193'},
+        title: 'FRTI пособие',
+        text: 'Экстренная медицинская помощь для взрослых и детей',
+        isOrderIt: true,
+        cl: 'products-grid__item'
+      },
+      {
+        img: {n: '2', w: '115', h: '171'},
+        title: 'SDI ночной дайвинг',
+        text: 'Ночной дайвинг. Подводная навигация и погружения ',
+        label: 'Хит',
+        cl: 'products-grid__item'
+      },
+      {
+        img: {n: '4', w: '123', h: '171'},
+        title: 'Стивен Барски Dry Suit',
+        text: 'Дайвинг в сухом костюме. История, обзор теории, уход.',
+        cl: 'products-grid__item'
+      },
+      {
+        img: {n: '8', w: '112', h: '201'},
+        title: 'Стивен Барски Dry Suit',
+        text: 'Дайвинг в сухом костюме. История, обзор теории, уход.',
+        cl: 'products-grid__item'
+      },
+      {
+        img: {n: '3', w: '120', h: '171'},
+        title: 'FRTI пособие',
+        text: 'Экстренная медицинская помощь для взрослых и детей',
+        label: 'New',
+        cl: 'products-grid__item'
+      },
+      {
+        img: {n: '1', w: '120', h: '171'},
+        title: 'SDI OWD',
+        text: 'Open Water Diver. Учебное пособие по дайвингу',
+        isOldPrice: true,
+        isOrderIt: true,
+        label: '-10%',
+        cl: 'products-grid__item'
+      },
+      {
+        img: {n: '6', w: '171', h: '195'},
+        title: 'SDI ночной дайвинг',
+        text: 'Ночной дайвинг. Подводная навигация и погружения',
+        isOrderIt: true,
+        cl: 'products-grid__item'
+      },{
+        img: {n: '1', w: '120', h: '171'},
+        title: 'SDI OWD',
+        text: 'Open Water Diver. Учебное пособие по дайвингу',
+        isOldPrice: true,
+        label: '-10%',
+        cl: 'products-grid__item'
+      },
+      {
+        img: {n: '2', w: '115', h: '171'},
+        title: 'SDI ночной дайвинг',
+        text: 'Ночной дайвинг. Подводная навигация и погружения ',
+        label: 'Хит',
+        cl: 'products-grid__item'
+      },
+      {
+        img: {n: '3', w: '120', h: '171'},
+        title: 'FRTI пособие',
+        text: 'Экстренная медицинская помощь для взрослых и детей',
+        label: 'New',
+        cl: 'products-grid__item'
+      },
+      {
+        img: {n: '4', w: '123', h: '171'},
+        title: 'Стивен Барски Dry Suit',
+        text: 'Дайвинг в сухом костюме. История, обзор теории, уход.',
+        cl: 'products-grid__item'
+      },
+      {
+        img: {n: '5', w: '140', h: '186'},
+        title: 'SDI OWD',
+        text: 'Open Water Diver. Учебное пособие по дайвингу',
+        cl: 'products-grid__item'
+      },
+      {
+        img: {n: '6', w: '171', h: '195'},
+        title: 'SDI ночной дайвинг',
+        text: 'Ночной дайвинг. Подводная навигация и погружения',
+        cl: 'products-grid__item'
+      },
+      {
+        img: {n: '7', w: '106', h: '193'},
+        title: 'FRTI пособие',
+        text: 'Экстренная медицинская помощь для взрослых и детей',
+        cl: 'products-grid__item'
+      },
+      {
+        img: {n: '8', w: '112', h: '201'},
+        title: 'Стивен Барски Dry Suit',
+        text: 'Дайвинг в сухом костюме. История, обзор теории, уход.',
+        cl: 'products-grid__item'
+      },
+    ];
+
+    const tags = ['Курсы в подарок', 'Акция', 'Распродажа', 'Снаряжение', 'Курсы в подарок', 'Акция', 'Распродажа', 'Снаряжение', 'Акция', 'Акция', 'Распродажа', 'Курсы в подарок', 'Курсы в подарок', 'Снаряжение', 'Распродажа', 'Снаряжение', 'Акция'];
+
+block main
+  article.inner-page
+    header.inner-page__header
+      .container
+        +breadcrumbs(bc, 'inner-page__breadcrumbs')
+        +title('Магазин', 'h1', 'title--medium inner-page__title')
+        .inner-page__sort.sort-block
+          select.__js_custom-select(name="select")
+            option(value="by-popular") По популярности
+            option(value="by-price") По цене
+          +custom-checkbox('withDiscount', 'Со скидкой')
+          .inner-page__filter-btn
+            +icon('filter')
+        //-.inner-page__tags.tags-block
+          +title('Теги', 'div', 'title--small tags-block__title')
+          .tags-block__list
+            each item, index in tags 
+              +button(item, 'tags-block__item' + (index === 2 ? ' tags-block__item--checked' : ''), '', '#')
+          
+          .tags-block__only-mobile
+            select.__js_tags-select(name="tabs-select")
+              each item, index in tags 
+                option(value= index )= item
+
+    
+    .container
+      .inner-page__category
+        .inner-page__category-aside.inner-page__category-aside--flex-column
+          //+title('Фильтры', 'div', 'title--small inner-page__category-aside-title')
+          
+          .inner-page__category-aside-filters.filters
+            form(action="#", method="post")
+              .filters__section
+                button.filters__section-title(type="button") Наличие
+                .filters__section-main
+                  +custom-radio('availability', ['В наличии', 'В наличии под заказ', 'Нет в наличии'], 0, '')
+            
+
+
+              .filters__section
+                button.filters__section-title(type="button") Цена
+                .filters__section-main
+                  .filters__section-fields
+                    label.filters__section-field.field
+                      span.field__hint От
+                      input(type="number", name="from")
+                    label.filters__section-field.field
+                      span.field__hint До
+                      input(type="number", name="to")
+                  +custom-checkbox('less-than', 'Менее 1 000₽', false, 'filters__section-checkbox')
+                  +custom-checkbox('from-to', 'От 1 000₽ до 3 000₽', false, 'filters__section-checkbox')
+                  +custom-checkbox('more-than', 'Более 5 000₽', false, 'filters__section-checkbox')
+
+              .filters__section
+                button.filters__section-title(type="button") Производитель
+                .filters__section-main
+                  +custom-checkbox('manafacturer-sdi', 'SDI', false, 'filters__section-checkbox')
+                  +custom-checkbox('manafacturer-frti', 'FRTI', false, 'filters__section-checkbox')
+                  +custom-checkbox('manafacturer-tdi', 'TDI', false, 'filters__section-checkbox')
+              
+              .filters__section
+                button.filters__section-title(type="button") Акция
+                .filters__section-main
+                  +custom-checkbox('profitable-kits', 'Выгодные комплекты (455)', false, 'filters__section-checkbox')
+                  +custom-checkbox('discounted-products', 'Товары со скидкой (2)', false, 'filters__section-checkbox')
+
+
+              .filters__nav
+                +button('Сбросить', 'filters__reset')
+                +button('Применить', 'filters__done')
+        .inner-page__category-grid.products-grid.products-grid--three-columns
+          each item in PRODUCTS
+            +product-preview(item)
+      
+          +button('Больше товаров', 'products-grid__more-products')
+          
+          +pagination('products-grid__pagination')

@@ -1,0 +1,15 @@
+.share-btn {
+  display: inline-block;
+  vertical-align: top;
+
+  svg {
+    display: inline-block;
+    vertical-align: top;
+    fill: $black;
+    transition: fill 0.3s ease;
+
+    @include hover {
+      fill: $gray-ph;
+    }
+  }
+}

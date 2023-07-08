@@ -1,0 +1,5 @@
+mixin footer-menu-list(list, mod)
+  ul.footer__menu-list(class= mod ? "footer__menu-list--" + mod : '')
+    each item in list
+      li.footer__menu-item 
+        a(href= item.url)= item.text

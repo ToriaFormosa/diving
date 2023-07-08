@@ -1,0 +1,98 @@
+/* base */
+@import "base/var";
+@import "base/mixin";
+@import "base/reset";
+@import "base/fonts";
+@import "base/animation";
+@import "base/global";
+
+/* libs */
+@import "./../../node_modules/swiper/swiper";
+@import "libs/jquery.fancybox.css";
+@import "libs/choices.min.css";
+@import "libs/gsap-slider.css";
+@import "libs/simplebar.css";
+
+/* partials */
+@import "partials/menu";
+@import "partials/header_new";
+@import "partials/footer_new";
+@import "partials/title";
+@import "partials/text";
+@import "partials/button";
+@import "partials/pagination";
+@import "partials/breadcrumbs";
+@import "partials/socials";
+@import "partials/custom-checkbox";
+@import "partials/custom-radio";
+@import "partials/choices"; //override lib styles
+@import "partials/field";
+@import "partials/share-btn";
+@import "partials/quantity";
+@import "partials/preloader";
+
+/* blocks */
+@import "blocks/components";
+@import "blocks/product-preview";
+@import "blocks/course-preview";
+@import "blocks/review";
+@import "blocks/give-review";
+@import "blocks/tabs";
+@import "blocks/parameter";
+@import "blocks/tab-content";
+@import "blocks/sort-block";
+@import "blocks/sform";
+@import "blocks/contact-item";
+@import "blocks/features";
+@import "blocks/products-grid";
+@import "blocks/first-screen";
+@import "blocks/courses-card";
+@import "blocks/courses";
+@import "blocks/tutorials";
+@import "blocks/stock";
+@import "blocks/recommend";
+@import "blocks/trip-card";
+@import "blocks/trip";
+@import "blocks/reviews-card";
+@import "blocks/reviews";
+@import "blocks/products";
+@import "blocks/info-block";
+@import "blocks/products-carousel";
+@import "blocks/courses-grid";
+@import "blocks/trips-grid";
+@import "blocks/courses-carousel";
+@import "blocks/contact-section";
+@import "blocks/articles-card";
+@import "blocks/articles-grid";
+@import "blocks/articles";
+@import "blocks/certification-card";
+@import "blocks/inner-hero";
+@import "blocks/cart-table";
+@import "blocks/cart-result";
+@import "blocks/cart-empty";
+@import "blocks/cart-promo";
+@import "blocks/order-preview";
+@import "blocks/discount-status";
+@import "blocks/order-status";
+@import "blocks/cabinet";
+@import "blocks/form-section";
+@import "blocks/tags-block";
+@import "blocks/not-found";
+@import "blocks/certificate-preview";
+@import "blocks/certificates-grid";
+@import "blocks/product-options";
+@import "blocks/filters";
+@import "blocks/article-banner";
+@import "blocks/article-gallery";
+
+@import "blocks/shop-categories";
+@import "blocks/shop-slider";
+@import "blocks/contacts-info";
+
+// Страницы
+@import "blocks/inner-page";
+@import "blocks/shop-page";
+@import "blocks/product-card";
+@import "blocks/article-page";
+//////////////////
+@import "blocks/components";

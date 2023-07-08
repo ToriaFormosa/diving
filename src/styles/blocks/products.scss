@@ -1,0 +1,145 @@
+.products {
+	padding: 73px 0 174px;
+
+	@include max(md) {
+		padding: 50px 0 92px;
+	}
+
+	&__row {
+		display: flex;
+		justify-content: space-between;
+
+		@include max(md) {
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+
+	&__title {
+		@include max(md) {
+			font-size: 18px;
+			line-height: 22px;
+			text-align: center;
+		}
+	}
+
+	&__more {
+		font-size: 18px;
+		padding-right: 0;
+
+		@include max(md) {
+			font-size: 16px;
+			line-height: 20px;
+			margin-top: 10px;
+		}
+	}
+
+	&__wrapper {
+		position: relative;
+
+		@include max(md) {
+			margin-top: 18px;
+		}
+	}
+
+	&__item {
+		.product-preview {
+			&__bottom {
+				justify-content: flex-start;
+			}
+
+			&__price {
+				margin-left: 15px;
+				color: $dark;
+			}
+
+			&__text {
+				margin-bottom: 10px;
+			}
+
+			&__btn {
+				flex-direction: row-reverse;
+				margin-left: 0;
+
+				svg {
+					width: 20px;
+					height: 20px;
+					margin-right: 9px;
+					fill: #fff;
+				}
+			}
+		}
+	}
+
+	&__nav {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		@include max(lg) {
+			margin-top: 11px;
+		}
+
+		@include max(xs) {
+			justify-content: space-between;
+		}
+	}
+
+	&__pagination {
+		display: none;
+		justify-content: center;
+		position: relative;
+		z-index: 1;
+
+		@include max(lg) {
+			display: flex;
+			margin: 0 30px;
+		}
+
+		&.swiper-pagination-lock {
+			display: none;
+		}
+
+		.swiper-pagination-bullet {
+			display: block;
+			width: 20px;
+			height: 2px;
+			background-color: $lightBlue;
+			cursor: pointer;
+
+			&-active {
+				background-color: $blue;
+			}
+		}
+	}
+
+	&__prev,
+	&__next {
+		position: absolute;
+		top: 45%;
+
+		@include max(lg) {
+			position: relative;
+			top: unset;
+			bottom: 0;
+		}
+	}
+
+	&__prev {
+		left: -60px;
+
+		@include max(lg) {
+			left: 0;
+		}
+	}
+
+	&__next {
+		right: -60px;
+
+		@include max(lg) {
+			right: 0;
+		}
+	}
+}

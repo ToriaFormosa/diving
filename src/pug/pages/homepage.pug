@@ -1,0 +1,70 @@
+extends ../layouts/default
+
+block vars
+	-
+		const page = {
+			title: 'Главная'
+		};
+
+		const isHomepage = true;
+
+		//let headerClasses = 'header--absolute';
+		let headerClasses = 'header--homepage';
+
+block header
+	include ../partials/new-header
+
+block main
+	include ../blocks/first-screen.pug
+	include ../blocks/courses.pug
+	include ../blocks/tutorials.pug
+	include ../blocks/stock.pug
+	include ../blocks/recommend.pug
+	include ../blocks/trip.pug
+	include ../blocks/reviews.pug
+	include ../blocks/products.pug
+	include ../blocks/info-block.pug
+	include ../blocks/articles.pug
+	.contact-section
+		.contact-section__container.container
+			section.contact-section__info
+				+title('Наш клуб', 'h2', 'title--small contact-section__title')
+				.contact-section__list
+					.contact-section__item.contact-item
+						.contact-item__hint Телефон
+						.contact-item__text
+							a(href="tel:89259999902") 8 (925) 999-99-02
+					.contact-section__item.contact-item
+						.contact-item__hint Email
+						.contact-item__text
+							a(href="mailto:learn2dive-tdi-sdi@info.ru") learn2dive-tdi-sdi@info.ru
+					.contact-section__item.contact-section__item--full.contact-item
+						.contact-item__hint Адрес
+						address.contact-item__text 125284&nbsp;Москва, Беговой проезд, дом&nbsp;11
+				.contact-section__map
+					//- placeholder
+					img(src="images/components/map.jpg", alt="")
+
+			section.contact-section__main
+				+title('Есть вопросы?', 'h2', 'title--small contact-section__title')
+				.contact-section__text Воспользуйтесь формой ниже, и мы поможем вам начать <br> ваше путешествие
+
+				.contact-section__form.sform
+					form(action="#", method="post")
+						//- .field--valid .field--error
+						label.sform__field.sform__field--half.field
+							span.field__hint Ваше Имя*
+							input(type="text", name="name")
+						label.sform__field.sform__field--half.field
+							span.field__hint Номер телефона*
+							input(type="tel", name="phone")
+						label.sform__field.field
+							span.field__hint Email*
+							input(type="email", name="email")
+						label.sform__field.field
+							span.field__hint Что Вас интересует?
+							textarea(name="message")
+						.sform__bottom
+							+button('Отправить', 'sform__send')(type="submit")
+							.sform__bottom-text Нажимая на кнопку «Отправить», вы соглашаетсь с <a href="#" target="_blank">условиями обработки персональных данных</a>
+

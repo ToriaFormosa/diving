@@ -1,0 +1,86 @@
+extends ../layouts/default
+
+block vars
+  -
+    const page = {
+      title: 'Личный кабинет'
+    };
+
+    const bc = [
+      {text: page.title}
+    ];
+
+    const navLinks = [
+      {text: 'Данные профиля', icon: {id: 'profile', w: '20', h: '20'}, url: URLS.cabinet.profile},
+      {text: 'История заказов', icon: {id: 'sand-clock', w: '13', h: '20'}, url: URLS.cabinet.history, isCurrent: true},
+      {text: 'Накопительная скидка', icon: {id: 'coupon', w: '20', h: '20'}, url: '#'},
+      {text: 'Выйти', icon: {id: 'logout', w: '20', h: '20'}, url: '#'}
+    ];
+
+
+
+block main
+  article.inner-page
+    header.inner-page__header
+      .container
+        +breadcrumbs(bc, 'inner-page__breadcrumbs')
+        +title('Александр Александрович Неалександров', 'h1', 'title--medium inner-page__title')
+    
+    .cabinet
+      section.cabinet__container.container
+        ul.cabinet__nav
+          each item in navLinks
+            if item.isCurrent
+              li.cabinet__nav-item.cabinet__nav-item--current
+                a.cabinet__nav-link
+                  span.cabinet__nav-icon
+                    +icon(item.icon.id)(width= item.icon.w, height= item.icon.h)
+                  | #{item.text}
+            else
+              li.cabinet__nav-item
+                a.cabinet__nav-link(href= item.url)
+                  span.cabinet__nav-icon
+                    +icon(item.icon.id)(width= item.icon.w, height= item.icon.h)
+                  | #{item.text}
+
+        .cabinet__main.cabinet__main--unbordered.cabinet__main--no-pb
+          .cabinet__order-notice Заказ №1 был оформлен 12.08.2021 и сейчас находится в обработке
+          .cabinet__order-status.order-status.__js_order-status(data-status="3")
+            +title('Статус заказа', 'h2', 'title--small order-status__title')
+            .order-status__steps 
+              .order-status__step Оформление
+              .order-status__step Оплата
+              .order-status__step Доставка
+              .order-status__step Завершение заказа
+            .order-status__scale
+              .order-status__scale-line
+              - let count = 3;
+              - let i = 17;
+              while i--
+                span.order-status__scale-sep(class= (count === 3 ? ' order-status__scale-sep--long' : ''))
+                - count ? count-- : count = 3;
+
+          +title('Ваш заказ', 'h2', 'title--small cabinet__title')
+          .cabinet__result.cart-result
+            .cart-result__body
+              .cart-result__row
+                .cart-result__hint <b>Стивен Барски Dry Suit х1</b>
+                .cart-result__val 999&nbsp;200₽
+              .cart-result__row
+                .cart-result__hint Стоимость
+                .cart-result__val 999&nbsp;200₽
+              .cart-result__row
+                .cart-result__hint Доставка
+                .cart-result__val Самовывоз
+              .cart-result__row
+                .cart-result__hint Оплата
+                .cart-result__val При доставке
+                  
+            .cart-result__footer 
+              .cart-result__row
+                .cart-result__hint Итого
+                .cart-result__val  999&nbsp;000₽
+              .cart-result__action
+                a.cart-result__clear(href="#") Очистить
+                +button('Подтвердить заказ', 'cart-result__send', '', URLS.cabinet.orderAccepted)
+          

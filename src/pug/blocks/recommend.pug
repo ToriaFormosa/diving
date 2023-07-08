@@ -1,0 +1,27 @@
+section.recommend
+	.container
+		+title('Рекомендуемые товары <br> для дайвинга', '', 'title--large recommend__title')
+		+button('Все учебники', 'button--angle recommend__more recommend__more--mobile', 'arrow-angle', URLS.shop)
+		.recommend__wrapper
+			select.__js_custom-select(name='categories')
+				each item in RECOMMEND_TABS
+					option(value= item.target)= item.text
+
+			.recommend__tabs
+				p.title Категории
+				each item, index in RECOMMEND_TABS
+					button(class= (index === 0 ? 'active' : '') ,type="button", data-target= item.target)= item.text
+
+			.recommend__content
+				each item, index in RECOMMEND_TABS
+					.recommend__content-item(data-id= item.target, class= (index === 0 ? 'is-shown' : 'is-hidden'))
+						.swiper-container.__js_recommend-carousel
+							.swiper-wrapper
+								each item in PRODUCTS_3
+									+product-preview(item)
+						.recommend__content-item-bottom
+							.recommend__nav
+								+button('', 'button--outline button--icon slick-prev recommend__prev', 'chevron-right')
+								.recommend__pagination
+								+button('', 'button--outline button--icon slick-next recommend__next', 'chevron-right')
+							+button('Перейти в магазин ' + item.text, 'button--angle recommend__more', 'arrow-angle', URLS.shop)

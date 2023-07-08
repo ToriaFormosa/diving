@@ -1,0 +1,15 @@
+.sort-block {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -16px;
+
+  & > * {
+    align-self: center;
+    margin-right: 35px;
+    margin-top: 16px;
+  }
+
+  .choices {
+    min-width: 92px;
+  }
+}

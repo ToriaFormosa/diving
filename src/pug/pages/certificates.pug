@@ -1,0 +1,72 @@
+extends ../layouts/default
+
+block vars
+  -
+    const page = {
+      title: 'Подарочные сертификаты'
+    };
+
+    const bc = [
+      {text: page.title}
+    ];
+
+    const certificates = [
+      {
+        img: '1',
+        text: 'Скидка 15% на аксессуары при покупке костюма',
+        class: 'certificates-grid__item'
+      },
+      {
+        img: '2',
+        text: 'Скидка 5% на курсы для начинающих после пробного погружения',
+        class: 'certificates-grid__item'
+      },
+      {
+        img: '3',
+        text: 'Скидка 10% на SDI OWD при покупке учебника',
+        class: 'certificates-grid__item'
+      },
+      {
+        img: '2',
+        text: 'Скидка 5% на курсы для начинающих после пробного погружения',
+        class: 'certificates-grid__item'
+      },
+      {
+        img: '3',
+        text: 'Скидка 10% на SDI OWD при покупке учебника',
+        class: 'certificates-grid__item'
+      },
+      {
+        img: '1',
+        text: 'Скидка 15% на аксессуары при покупке костюма',
+        class: 'certificates-grid__item'
+      },
+      {
+        img: '2',
+        text: 'Скидка 10% на SDI OWD при покупке учебника',
+        class: 'certificates-grid__item'
+      },
+      {
+        img: '1',
+        text: 'Скидка 15% на аксессуары при покупке костюма',
+        class: 'certificates-grid__item'
+      },
+      {
+        img: '3',
+        text: 'Скидка 5% на курсы для начинающих после пробного погружения',
+        class: 'certificates-grid__item'
+      }
+    ]
+
+
+block main
+  article.inner-page
+    header.inner-page__header
+      .container
+        +breadcrumbs(bc, 'inner-page__breadcrumbs')
+        +title(page.title, 'h1', 'title--medium inner-page__title')
+    
+    .container 
+      .certificates-grid
+        each item in certificates 
+          +certificate-preview(item)

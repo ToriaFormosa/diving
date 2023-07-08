@@ -1,0 +1,50 @@
+/* media */
+$media-list: (
+  "xxs": 374,
+  "xs": 560,
+  "sm": 767,
+  "md": 1079,
+  "lg": 1279,
+  "xl": 1599,
+  "x1160": 1760,
+  "xxl": 1900,
+);
+
+/* шрифты */
+$mainFont: "Montserrat", sans-serif;
+$fontRoboto: "Roboto", sans-serif;
+
+/* цвета */
+$mainColor: #000;
+$black: #000;
+$white: #fff;
+$gray-ph: #4f5764;
+$dark: #262c36;
+$smoky: #f6f7fa;
+$green: #0eef68;
+$red: #ec1d43;
+
+$gray: #caccd3;
+$gray-22: #222222;
+$gray-706: #706e79;
+$gray-26: #262c36;
+$gray-a4: #a4adba;
+$gray-9a: #9a9fa7;
+$gray-f3: #f3f5f6;
+$gray-f5: #f5f7fa;
+$gray-c6: #c6d7e7;
+$gray-c8: #c8d1df;
+$blue: #2c60ae;
+$blue-09: #093981;
+$dark-blue: #1b3870;
+$blue-hover: #1b498e;
+$blue-hover2: #083880;
+$blue-2c: #2c60ae;
+$lightBlue: #ccd8ea;
+$lightBlue2: #c6d2e4;
+$lightBlue3: #9dcaff;
+// Retina
+//---------------------------------
+
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;

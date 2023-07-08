@@ -1,0 +1,53 @@
+extends ../layouts/default
+
+block vars
+	-
+		const page = {
+			title: 'Контакты'
+		};
+
+		const bc = [
+			{text: page.title}
+		];
+
+block main
+	article.inner-page.inner-page--pb0
+		header
+			.container
+				+breadcrumbs(bc, 'inner-page__breadcrumbs')
+
+		.contacts-info
+			.contacts-info__left
+				.contacts-info__content
+					+title('Контактная информация', 'h1', 'title--medium contacts-info__title')
+					.contacts-info__list
+						.contacts-info__item
+							.contacts-info__hint Адрес
+							address.contacts-info__text 000000 г. Москва, ул. Ленина 175
+						.contacts-info__item.contacts-info__item--worktime
+							.contacts-info__hint Часы работы
+							.contacts-info__text
+								p Пн-Пт: 9:00-18:00
+								p Сб: 9:00-13:00
+								p Вс: Выходной
+						.contacts-info__item
+							.contacts-info__hint Контакты
+							.contacts-info__text
+								p
+									a(href="tel:+79998887765") +7 (999) 888 77-65
+								p
+									a(href="mailto:12345diving@mail.com") 12345diving@mail.com
+						.contacts-info__item.contacts-info__item--social
+							.contacts-info__hint Мы в соцсетях
+							.contacts-info__text.contacts-info__text--socials
+								a(href="#")
+									+icon('tiktok')(width='25', height='25')
+								a(href="#")
+									+icon('vk-fill')(width='25', height='25')
+								a(href="#")
+									+icon('insta-fill')(width='25', height='25')
+								a(href="#")
+									+icon('fb')(width='25', height='25')
+
+			.contacts-info__right
+				iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d35927.10478361642!2d37.56279700546976!3d55.7507880844031!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54afc73d4b0c9%3A0x3d44d6cc5757cf4c!2z0JzQvtGB0LrQstCw!5e0!3m2!1sru!2sru!4v1631551721784!5m2!1sru!2sru' width='962' height='431' style='border:0;' allowfullscreen='' loading='lazy')

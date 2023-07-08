@@ -1,0 +1,134 @@
+.reviews {
+  padding: 21px 0 104px;
+  background-color: $gray-f5;
+
+  @include max(md) {
+    padding: 50px 0;
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+
+    @include max(md) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__title {
+    @include max(md) {
+      text-align: center;
+    }
+
+    @include max(sm) {
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+
+  &__more {
+    font-size: 18px;
+    padding-right: 0;
+
+    @include max(md) {
+      font-size: 16px;
+      line-height: 20px;
+      margin-top: 10px;
+    }
+  }
+
+  &__wrapper {
+    margin-top: 25px;
+    position: relative;
+
+    @include max(md) {
+      margin-top: 18px;
+    }
+  }
+
+  &__mobile-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include max(xl) {
+      margin-top: 25px;
+    }
+
+    @include max(xs) {
+      justify-content: space-between;
+    }
+
+    .reviews__prev,
+    .reviews__next {
+      display: none;
+
+      @include max(xl) {
+        display: block;
+      }
+    }
+  }
+
+  &__pagination {
+    display: none;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+
+    @include max(xl) {
+      display: flex;
+      margin: 0 30px;
+    }
+
+    &.swiper-pagination-lock {
+      display: none;
+    }
+
+    .swiper-pagination-bullet {
+      display: block;
+      width: 20px;
+      height: 2px;
+      background-color: $lightBlue;
+      cursor: pointer;
+
+      &-active {
+        background-color: $blue;
+      }
+    }
+  }
+
+  &__prev,
+  &__next {
+    position: absolute;
+    top: 46.5%;
+
+    @include max(xl) {
+      display: none;
+      position: relative;
+      top: unset;
+      bottom: 0;
+    }
+  }
+
+  &__prev {
+    left: -60px;
+
+    @include max(xl) {
+      left: 0;
+    }
+  }
+
+  &__next {
+    right: -60px;
+
+    @include max(xl) {
+      right: 0;
+    }
+  }
+}
+
+.reviews + .products-carousel {
+  margin-top: 36px;
+}

@@ -1,0 +1,37 @@
+section.articles
+	.container.articles__container
+		+title('Наши статьи', '', 'title--large articles__title')
+		.articles__wrapper
+			.swiper-container.__js_articles-carousel
+				.swiper-wrapper
+					.articles__item.articles-card.swiper-slide
+						.articles-card__image
+							img(src="images/homepage/articles/1.jpg", srcset="images/homepage/articles/1.jpg 2x", width="397", height="246", alt="")
+						.articles-card__content
+							.articles-card__title Что такое дейли дайвинг <br> или сафари. Его особенности
+							.articles-card__row
+								+button('Подробнее', 'button--angle articles-card__more', 'arrow-angle')
+								.articles-card__date 20.08.2021
+					.articles__item.articles-card.swiper-slide
+						.articles-card__image
+							img(src="images/homepage/articles/2.jpg", srcset="images/homepage/articles/2.jpg 2x", width="397", height="246", alt="")
+						.articles-card__content
+							.articles-card__title Сайдмаунт - плюсы и минусы. Сложности сборки
+							.articles-card__row
+								+button('Подробнее', 'button--angle articles-card__more', 'arrow-angle')
+								.articles-card__date 20.08.2021
+					.articles__item.articles-card.swiper-slide
+						.articles-card__image
+							img(src="images/homepage/articles/3.jpg", srcset="images/homepage/articles/3.jpg 2x", width="397", height="246", alt="")
+						.articles-card__content
+							.articles-card__title Лучшие места для дайвинга. <br> Наша подборка
+							.articles-card__row
+								+button('Подробнее', 'button--angle articles-card__more', 'arrow-angle')
+								.articles-card__date 20.08.2021
+
+
+			.articles__nav
+				+button('', 'button--outline button--icon slick-prev articles__prev', 'chevron-right')
+				.articles__pagination
+				+button('', 'button--outline button--icon slick-next articles__next', 'chevron-right')
+		+button('Все статьи', 'button--angle articles__more', 'arrow-angle')

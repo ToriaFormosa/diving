@@ -1,0 +1,57 @@
+.quantity {
+  display: inline-flex;
+
+  @include max(sm) {
+    width: 100%;
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    appearance: none;
+
+    @include max(sm) {
+      width: 60px;
+      border: solid 1px $gray;
+    }
+
+    svg {
+      display: block;
+      fill: $dark;
+      transition: fill 0.3s ease;
+      align-self: center;
+    }
+
+    @include hover {
+      svg {
+        fill: $blue;
+      }
+    }
+  }
+
+  &__input {
+    display: block;
+    width: 60px;
+    padding: 12px 5px;
+    font-size: 19px;
+    line-height: 1;
+    font-weight: 500;
+    color: $dark;
+    text-align: center;
+    border: solid 1px $gray;
+    transition: border-color 0.3s ease;
+
+    @include max(sm) {
+      width: calc(100% - 118px);
+      margin-left: -1px;
+      margin-right: -1px;
+    }
+
+    @include hover {
+      border-color: $dark;
+    }
+  }
+}

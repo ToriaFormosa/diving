@@ -1,0 +1,319 @@
+extends ../layouts/default
+
+block vars
+  -
+    const page = {
+      title: 'Ребризер KISS Sidewinder',
+      isProductPage: true
+    };
+
+    const bc = [
+      {text: 'Магазин', url: URLS.catalog},
+      {text: page.title}
+    ];
+
+    const table = [
+      {th: 'Объем (мл)', td: '2000'},
+      {th: 'Состав смеси', td: '80% кислорода, 20% азота'},
+      {th: 'Маска в комплекте', td: 'есть'},
+      {th: 'Тип маски', td: 'мягкая'},
+      {th: 'Высота баллона (см)', td: '28.5'},
+      {th: 'Ширина баллона (см)', td: '15'},
+      {th: 'Диаметр баллона (см)', td: '6.6'},
+      {th: 'Вес (г)', td: '185'},
+      {th: 'Срок годности (мес)', td: '58'}
+    ];
+
+    const reviews = [
+      {img: '', name: 'Аноним', title: 'Рекомендую!', text: 'Таким образом начало повседневной работы по формированию позиции представляет собой интересный эксперимент проверки систем массового участия. Товарищи! укрепление и развитие структуры представляет собой интересный эксперимент проверки соответствующий условий активизации. Повседневная практика показывает, что укрепление и развитие структуры способствует подготовки и реализации новых предложений. Равным образом реализация намеченных плановых заданий влечет за собой процесс внедрения и модернизации модели развития. Задача организации, в особенности же сложившаяся структура организации обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач.' },
+      {img: 'avatar', name: 'Алекс Хазайбырген', title: 'Не рекомендую!', text: 'Задача организации, в особенности же постоянное информационно-пропагандистское обеспечение нашей деятельности представляет собой интересный эксперимент проверки форм развития. Таким образом постоянный количественный рост и сфера нашей активности обеспечивает широкому кругу (специалистов) участие в формировании форм развития.' },
+      {img: '', name: 'Аноним', title: 'Рекомендую!', text: 'Таким образом начало повседневной работы по формированию позиции представляет собой интересный эксперимент проверки систем массового участия. Товарищи! укрепление и развитие структуры представляет собой интересный эксперимент проверки соответствующий условий активизации. Повседневная практика показывает, что укрепление и развитие структуры способствует подготовки и реализации новых предложений. Равным образом реализация намеченных плановых заданий влечет за собой процесс внедрения и модернизации модели развития. Задача организации, в особенности же сложившаяся структура организации обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач.' },
+      {img: 'avatar', name: 'Алекс Хазайбырген', title: 'Не рекомендую!', text: 'Задача организации, в особенности же постоянное информационно-пропагандистское обеспечение нашей деятельности представляет собой интересный эксперимент проверки форм развития. Таким образом постоянный количественный рост и сфера нашей активности обеспечивает широкому кругу (специалистов) участие в формировании форм развития.' }
+    ];
+
+    const similar = [
+      {
+        img: {n: '5', w: '140', h: '186'},
+        title: 'SDI OWD',
+        text: 'Open Water Diver. Учебное пособие по дайвингу',
+        cl: 'products-carousel__item swiper-slide'
+      },
+      {
+        img: {n: '6', w: '171', h: '195'},
+        title: 'SDI ночной дайвинг',
+        text: 'Ночной дайвинг. Подводная навигация и погружения',
+        cl: 'products-carousel__item swiper-slide'
+      },
+      {
+        img: {n: '7', w: '106', h: '193'},
+        title: 'FRTI пособие',
+        text: 'Экстренная медицинская помощь для взрослых и детей',
+        cl: 'products-carousel__item swiper-slide'
+      },
+      {
+        img: {n: '8', w: '112', h: '201'},
+        title: 'Стивен Барски Dry Suit',
+        text: 'Дайвинг в сухом костюме. История, обзор теории, уход.',
+        cl: 'products-carousel__item swiper-slide'
+      },
+      {
+        img: {n: '1', w: '120', h: '171'},
+        title: 'SDI OWD',
+        text: 'Open Water Diver. Учебное пособие по дайвингу',
+        isOldPrice: true,
+        label: '-10%',
+        cl: 'products-carousel__item swiper-slide'
+      }
+    ];
+
+    const viewed = [
+      {
+        img: {n: '5', w: '140', h: '186'},
+        title: 'SDI OWD',
+        text: 'Open Water Diver. Учебное пособие по дайвингу',
+        cl: 'products-carousel__item swiper-slide'
+      },
+      {
+        img: {n: '6', w: '171', h: '195'},
+        title: 'SDI ночной дайвинг',
+        text: 'Ночной дайвинг. Подводная навигация и погружения',
+        cl: 'products-carousel__item swiper-slide'
+      }
+    ];
+
+    const options = [
+      {
+        title: 'Primary Electronics',
+        options: [{val: '', text: 'Выберите опцию'}, {val: '1', text: 'Shearwater Petrel - Hardwire (+12 425₽)'}, {val: '2', text: 'Shearwater Petrel - Fischer, includes Fischer cable (+$1,507.00)'}, {val: '3', text: 'Shearwater Petrel - Hardwire (+12 425₽)'}, {val: '4', text: 'Shearwater Petrel - Fischer, includes Fischer cable (+$1,507.00)'}, {val: '5', text: 'Shearwater Petrel - Hardwire (+12 425₽)'}, {val: '6', text: 'Shearwater Petrel - Fischer, includes Fischer cable (+$1,507.00)'}, {val: '7', text: 'None - Choose this option if you are adding your own display, or would like a different option'}],
+        modal: ''
+      },
+      {
+        title: 'Secondary Electronics',
+        options: [{val: '', text: 'Выберите опцию'}, {val: '1', text: 'None - no secondary display por'}, {val: '2', text: 'Shearwater Petrel - hardwired, includes cell splitter CB (+$1,336.00)'}, {val: '3', text: 'Shearwater Petrel - Fischer, includes cable & cell splitter CB (+$1,726.00)'}, {val: '4', text: 'Shearwater Petrel - Fischer, includes Fischer cable (+$1,507.00)'}, {val: '5', text: 'Shearwater Petrel - Hardwire (+12 425₽)'}, {val: '6', text: 'Shearwater Petrel - Fischer, includes Fischer cable (+$1,507.00)'}, {val: '7', text: 'Shearwater Petrel - Fischer, includes Fischer cable (+$1,507.00)'}, {val: '8', text: 'Shearwater Petrel - Fischer, includes Fischer cable (+$1,507.00)'}, {val: '9', text: 'Shearwater Petrel - Fischer, includes Fischer cable (+$1,507.00)'}],
+        modal: ''
+      },
+      {
+        title: 'Oxygen Sensors',
+        options: [{val: '', text: 'Выберите опцию'}, {val: '1', text: '3 Molex oxygen sensors (+$327.00)', isSelected: true}, {val: '2', text: 'No oxygen sensors'}],
+        modal: ''
+      },
+      {
+        title: 'Manual Addition Valve',
+        options: [{val: '', text: 'Выберите опцию'}, {val: '1', text: 'KISS Basic MAV', isSelected: true}, {val: '2', text: 'KISS dual button - top loading MAV (back mount) (+$90.00)'}, {val: '3', text: 'KISS dual button - bottom loading MAV (side mount) (+$90.00)'}, {val: '4', text: 'Omni-Swivel dual button - MAV (+$182.00)'}],
+        modal: ''
+      },
+      {
+        title: 'Scrubber Coating',
+        options: [{val: '', text: 'Выберите опцию'}, {val: '1', text: 'Standard textured coating', isSelected: true}, {val: '2', text: 'Syntactic foam insulation (+$350.00)'}, {val: '3', text: 'Heated scrubber, includes syntactic foam (+$1,450.00)'}],
+        modal: ''
+      },
+      {
+        title: 'Mouthpiece',
+        options: [{val: '', text: 'Выберите опцию'}, {val: '1', text: 'KISS DSV', isSelected: true}, {val: '2', text: 'Hollis BOV'}, {val: '3', text: 'Poseidon BOV (+$1,350.00)'}],
+        modal: ''
+      },
+      {
+        title: 'Recommended Spares',
+        options: [{val: '', text: 'Выберите опцию'}, {val: '1', text: 'Spare parts kit - ballistic nylon bag, O-ring set, Mouthpiece O-ring set, 1 mushroom valve, brass nut, ADV valve stem, ADV diaphragm, circ clip (2), scrubber head screen, scrubber head spring set (4) (+$231.00)'}, {val: '2', text: 'O-Ring Kit, full Spirit Sidewinder, NO mouthpiece kit (+$36.50)'}, {val: '3', text: 'O-Ring Kit, DSV (+$33.00)'}, {val: '4', text: 'Mushroom valve (1 piece) (+$44.00)'}, {val: '5', text: 'Spare c-clip (set of 2) (+$31.00)'}, {val: '6', text: 'Loop hose, for DSV - 11 to 18 inch, 56 segments (1 piece) (+$55.00)'}, {val: '7', text: 'Loop hose, for DSV - 13 to 22 inch, 64 segments (1 piece) (+$55.00)'}, {val: '8', text: 'Loop hose, for BOV - 11 to 18 inch, 56 segments (1 piece) (+$55.00)'}, {val: '9', text: 'Spare O2 sensor (+$109.00)'}, {val: '10', text: 'ADV diaphragm, bare (+$16.50)'}, {val: '11', text: 'ADV valve stem (+$60.00)'}, {val: '12', text: 'Scrubber canister top screen (+$43.00)'}, {val: '13', text: 'Scrubber head spring kit (set of 4) (+$37.50)'}, {val: '14', text: 'Scrubber head bronze nut (+$2.50)'}, {val: '15', text: 'Spare Fischer Cable (+$390.00)'}, {val: '16', text: 'Spare 4-pin cable (+$305.00)'}],
+        isMultiple: true,
+        mod: 'full',
+        modal: ''
+      }
+    ];
+
+block main
+  article.product-card
+    .container
+      +breadcrumbs(bc, 'product-card__breadcrumbs')
+      .product-card__main
+        +title(page.title, 'h1', 'title--large product-card__title')
+        .product-card__image
+          .product-card__photo
+            a(href="https://via.placeholder.com/640", data-fancybox)
+              img(src="images/product-card/product-full3.jpg", srcset="images/product-card/product-full3@2x.jpg 2x", width="495", height="375", alt="Вид слева")
+          .product-card__thumbs.swiper-container.__js_product-thumbs
+            .swiper-wrapper
+              button.product-card__thumbs-item.active.swiper-slide(type="button", data-full-image="images/product-card/product-full3.jpg", data-full-image2x="images/product-card/product-full3@2x.jpg 2x", data-fancybox-image="https://via.placeholder.com/640", data-alt="Вид слева")
+                img(src="images/product-card/product-thumb-1.jpg", srcset="images/product-card/product-thumb-1@2x.jpg 2x", width="93", height="93", alt="Миниатюра вид слева")
+              button.product-card__thumbs-item.swiper-slide(type="button", data-full-image="images/product-card/full-2.jpg", data-full-image2x="images/product-card/full-2@2x.jpg 2x", data-fancybox-image="https://via.placeholder.com/640", data-alt="Вид справа")
+                img(src="images/product-card/product-thumb-2.jpg", srcset="images/product-card/product-thumb-2@2x.jpg 2x", width="93", height="93", alt="Миниатюра вид справа")
+              button.product-card__thumbs-item.swiper-slide(type="button", data-full-image="images/product-card/full-3.jpg", data-full-image2x="images/product-card/full-3@2x.jpg 2x", data-fancybox-image="https://via.placeholder.com/640", data-alt="Вид сверху")
+                img(src="images/product-card/product-thumb-3.jpg", srcset="images/product-card/product-thumb-3@2x.jpg 2x", width="93", height="93", alt="Миниатюра вид сверху")
+              button.product-card__thumbs-item.swiper-slide(type="button", data-full-image="images/product-card/full-4.jpg", data-full-image2x="images/product-card/full-4@2x.jpg 2x", data-fancybox-image="https://via.placeholder.com/640", data-alt="Вид снизу")
+                img(src="images/product-card/product-thumb-4.jpg", srcset="images/product-card/product-thumb-4@2x.jpg 2x", width="93", height="93", alt="Миниатюра вид снизу")
+              // для теста переполнения //////////////////////////
+              //button.product-card__thumbs-item.swiper-slide(type="button", data-full-image="images/product-card/full-4.jpg", data-full-image2x="images/product-card/full-4@2x.jpg 2x",, data-fancybox-image="https://via.placeholder.com/640", data-alt="Вид снизу")
+                img(src="images/product-card/product-thumb-4.jpg", srcset="images/product-card/product-thumb-4@2x.jpg 2x", width="93", height="93", alt="Миниатюра вид снизу")
+              //button.product-card__thumbs-item.swiper-slide(type="button", data-full-image="images/product-card/full-4.jpg", data-full-image2x="images/product-card/full-4@2x.jpg 2x",, data-fancybox-image="https://via.placeholder.com/640", data-alt="Вид снизу")
+                img(src="images/product-card/product-thumb-4.jpg", srcset="images/product-card/product-thumb-4@2x.jpg 2x", width="93", height="93", alt="Миниатюра вид снизу")
+
+            button.product-card__thumbs-btn.product-card__thumbs-btn--prev.__js_prev(type="button")
+              +icon('chevron-up')(width="18", height="18")
+            button.product-card__thumbs-btn.product-card__thumbs-btn--next.__js_next(type="button")
+              +icon('chevron-down')(width="18", height="18")
+
+        .product-card__info 
+          .product-card__article Артикул: 01234567890abc
+          .product-card__download
+            .product-card__download-item
+              span.product-card__download-item-icon
+                +icon('file')(width="24", height="30")
+              a(href="#", download) Скачать цветовую схему в формате PDF
+        
+
+    
+        .product-card__options.product-options
+          each item, index in options
+            .product-options__item(class= item.mod ? 'product-options__item--' + item.mod : '')
+              .product-options__item-title= item.title
+              label.product-options__item-field.filed.field--select
+                if item.isMultiple
+                  select.__js_custom-options-select(name="#", multiple)
+                    each option in item.options
+                      if option.isSelected
+                        option(value= option.val, selected)= option.text
+                      else
+                        option(value= option.val)= option.text
+                else
+                  select.__js_custom-options-select(name="#")
+                    each option in item.options
+                      if option.isSelected
+                        option(value= option.val, selected)= option.text
+                      else
+                        option(value= option.val)= option.text
+              
+              +button('Explain this option', 'product-options__item-link button--angle __js_show-explain', 'arrow-angle', '#explain-' + (index + 1))
+              
+              if item.modal 
+                .product-options__item-explain(id="explain-" + (index+1))!= item.modal
+              else
+                .product-options__item-explain(id="explain-" + (index+1))
+                  .product-options__item-title Primary Electronics
+                  p All KISS rebreathers require some form of monitoring electronics to display the PO2 readings from your oxygen sensors. KISS offers a variety of options for all types of divers and their needs and budgets.
+
+                  p The Shearwater Petrel has become the standard in rebreather electronics due to its proven design, simple and intuitive interface, and outstanding customer support. Also available is the Shearwater NERD - the ultimate in rebreather monitoring and safety, as well as the Divesoft Freedom. 
+
+                  p The options are as follows: 
+
+                  .product-options__item-title Shearwater Petrel - Hardwired
+                  p The hardwired version of the Petrel is what the name implies. The connection from the rebreather to the Petrel dive computer is hardwired and hence (semi) permanent. While the cable can be removed with a wrench, it cannot be unplugged from the dive computer. Hardwired computers lack convenience, but offer an increase in reliability, as the failure point of the plug is eliminated. 
+
+                  .product-options__item-title Shearwater Petrel - 4-PIN Detachable
+                  p The 4-pin Petrel is detachable from the rebreather head by means of a 4-pin Subcon cable. This allows the computer to be disconnected for storage and travel purposes. The 4-pin plug is on the head side of the cable, and the computer itself has about 30" of cable that is hardwired to the computer. 
+
+                  p Please note! There are 4-pin cables and 5-pin cables used on Shearwater devices and they are NOT COMPATIBLE! Not only are the plugs different, but the means of transmitting data is different. 4-pin cables use analog data transmission, while 5-pin cables use digital data packets. If you are considering buying a used Shearwater Petrel with a Subcon cable, be sure to check if it's 4 or 5 pin before buying. 
+
+                  .product-options__item-title Shearwater NERD - 4-PIN Detachable
+                  p The NERD has taken the CCR computer industry by storm. Essentially a Petrel display, right in your dive mask. The information you need is always in your field of view increasing diver awareness. 
+
+                  p Please note! There are 4-pin cables and 5-pin cables used on Shearwater devices and they are NOT COMPATIBLE! Not only are the plugs different, but the means of transmitting data is different. 4-pin cables use analog data transmission, while 5-pin cables use digital data packets. If you are considering buying a used Shearwater NERD with a Subcon cable, be sure to check if it's 4 or 5 pin before buying. 
+
+                  .product-options__item-title Fischer Cable only - 28 inches
+                  p For those who already have a rebreather dive computer with a Fischer port, you may select a Fischer cable only. The Shearwater Petrel is the most popular dive computer of this nature, however other brands are also capable of working as well. Please contact your dive instructor, or KISS Rebreathers for questions on compatibility.
+
+                  p The 28 inch version of the Fischer cable is for those who wish to have a wrist mount display. 
+        
+        .product-card__bottom
+          .product-card__price
+            span 1&nbsp;500₽
+            span.product-card__price-max -&nbsp;2&nbsp;500₽
+          .product-card__action
+            +button('В корзину', 'product-card__btn button--to-cart', 'cart', '#')
+            a.product-card__btn.button.button--outline(href="#")
+              span.only-mobile Оформить
+              span Купить в 1 клик
+
+    .product-card__tabs.tabs
+      .tabs__container.container
+
+        .tabs__item.active
+          button(type="button", data-target="#description") 
+            span Описание товара
+        
+        .tabs__content.tab-content.active#description
+          p Sidemount rebreathers have historically taken on the form factor of a sidemount open circuit tank. While this design attempts to mimic the streamlining of a sidemount cylinder, often hydrostatic work of breathing issues result if the unit isn't perfectly rigged and mounted. Even when it is, the work of breathing is only optimal when in certain diving positions.
+
+          p KISS Sidewinder rebreather solves these issues by splitting the canisters on the diver's left and right sides. These are connected by one 8-liter counterlung, which spans across the diver's back. The result is a super clean, streamlined configuration which provides excellent work of breathing in most diving orientations.
+
+          .tab-content__gallery
+            a(href="images/product-card/desc-1.jpg" data-fancybox="images")
+              img(src="images/product-card/desc-1.jpg")
+            a(href="images/product-card/desc-2.jpg" data-fancybox="images")
+              img(src="images/product-card/desc-2.jpg")
+            a(href="images/product-card/desc-3.jpg" data-fancybox="images")
+              img(src="images/product-card/desc-3.jpg")
+            a(href="images/product-card/desc-4.jpg" data-fancybox="images")
+              img(src="images/product-card/desc-4.jpg")
+          
+          p Sidemount rebreathers have historically taken on the form factor of a sidemount open circuit tank. While this design attempts to mimic the streamlining of a sidemount cylinder, often hydrostatic work of breathing issues result if the unit isn't perfectly rigged and mounted. Even when it is, the work of breathing is only optimal when in certain diving positions.
+
+          p The KISS Sidewinder rebreather solves these issues by splitting the canisters on the diver's left and right sides. These are connected by one 8-liter counterlung, which spans across the diver's back. The result is a super clean, streamlined configuration which provides excellent work of breathing in most diving orientations.
+
+
+  
+        .tabs__item
+          button(type="button", data-target="#specifications") 
+            span Характеристики
+        
+        .tabs__content.tab-content#specifications
+          table
+            tbody
+              each tr in table
+                tr 
+                  th= tr.th 
+                  td= tr.td
+
+        .tabs__item
+          button(type="button", data-target="#reviews") 
+            span Отзывы (20)
+
+        .tabs__content.tab-content.tab-content--no-border-padding#reviews
+          each review in reviews 
+            .product-card__review.review
+              .review__author
+                .review__author-image
+                  if review.img
+                    img(src="images/product-card/" + review.img + ".jpg", srcset="images/product-card/" + review.img + "@2x.jpg 2x", width="36", height="36", alt= review.name)
+                  else 
+                    img(src="images/no-avatar.svg", width="36", height="36", alt="Нет аватара")
+                .review__author-meta 
+                  .review__author-name= review.name
+                  time.review__author-date(datetime="2021-08-12") 12.08.21
+              .review__content 
+                +title(review.title, 'div', 'title--small review__title')
+                .review__text= review.text
+          .tab-content__only-mobile 
+            +button('Все отзывы (105)', '', '', '#')
+          section.product-card__give-review.give-review
+            +title('Оставить отзыв', 'h2', 'title--small give-review__title')
+            form(action="#", method="post")
+              label
+                textarea(name="review")
+              +button('Отправить', 'give-review__send')
+
+
+
+
+    section.products-carousel
+      .products-carousel__container.container
+        +title('Похожие товары', 'h2', 'title--small products-carousel__title')
+        .products-carousel__swiper.swiper-container.__js_products-carousel
+          .swiper-wrapper 
+            each item in similar
+              +product-preview(item)
+          .products-carousel__navigation
+            +button('', 'products-carousel__btn button--outline button--icon __js_prev', 'chevron-left')
+            +button('', 'products-carousel__btn button--outline button--icon __js_next', 'chevron-right')
+        .products-carousel__pagination
+
+    section.products-carousel
+      .products-carousel__container.container
+        +title('Вы недавно смотрели', 'h2', 'title--small products-carousel__title')
+        .products-carousel__swiper.swiper-container.__js_products-carousel
+          .swiper-wrapper 
+            each item in viewed
+              +product-preview(item)
+          .products-carousel__navigation
+            +button('', 'products-carousel__btn button--outline button--icon __js_prev', 'chevron-left')
+            +button('', 'products-carousel__btn button--outline button--icon __js_next', 'chevron-right')
+        .products-carousel__pagination

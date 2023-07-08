@@ -1,0 +1,44 @@
+extends ../layouts/default
+
+block vars
+  -
+    const page = {
+      title: 'Личный кабинет'
+    };
+
+    const bc = [
+      {text: page.title}
+    ];
+
+
+
+block main
+  article.inner-page.inner-page--order-accepted
+    header.inner-page__header
+      .container
+        +breadcrumbs(bc, 'inner-page__breadcrumbs')
+        +title('Александр Александрович Неалександров', 'h1', 'title--medium inner-page__title')
+    
+    .cabinet
+      section.cabinet__container.container
+        .cabinet__main.cabinet__main--simple
+          .cabinet__accept-message Спасибо. Ваш заказ был принят.
+          +title('Ваш заказ', 'h2', 'title--small cabinet__title')
+
+          ul.cabinet__order-info
+            li 
+              | Номер заказа:
+              span 1
+            li 
+              | Дата:
+              span 16.08.2021
+            li 
+              | Оплата:
+              span При доставке
+            li  
+              | Email:
+              span 12345@mail.com
+            li 
+              | Итог:
+              span 999 000₽
+

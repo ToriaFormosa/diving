@@ -1,0 +1,33 @@
+section.trip
+	.container
+		+title('Ближайшие клубные поездки', '', 'title--large trip__title')
+		.trip__wrapper
+			.swiper-container.__js_trip-carousel
+				.swiper-wrapper
+					.trip-card.swiper-slide 
+						.trip-card__bg
+							img(src="images/homepage/trip/1.jpg", srcset="images/homepage/trip/1@2x.jpg 2x", width="607", height="339", alt="")
+						.trip-card__content
+							.trip-card__place Египет
+							.trip-card__title Дейли-дайвинг на Красном море
+							.trip-card__date 02.09.2021 - 11.09.2021
+							.trip-card__desc Один из лучших и излюбленных дайверами маршрутов сафари.
+							.trip-card__price 97 000₽
+							+button('Подробнее', 'button--outline button--icon trip-card__more', 'chevron-right')
+					.trip-card.swiper-slide
+						.trip-card__bg
+							img(src="images/homepage/trip/2.jpg", srcset="images/homepage/trip/2@2x.jpg 2x", width="386", height="399", alt="")
+						.trip-card__content
+							.trip-card__place Мексика
+							.trip-card__title Полуостров Юкатан
+							.trip-card__date 30.10.2021 - 13.11.2021
+							.trip-card__desc Увлекательное путешествие по следам древних цивилизаций и погружения в невероятных сенотах
+							.trip-card__price 288 000₽
+							+button('Подробнее', 'button--outline button--icon trip-card__more', 'chevron-right')
+
+			+button('', 'button--outline button--icon slick-prev trip__prev', 'chevron-right')
+			+button('', 'button--outline button--icon slick-next trip__next', 'chevron-right')
+		.trip__mobile-wrapper
+			+button('', 'button--outline button--icon slick-prev trip__prev', 'chevron-right')
+			+button('Все поездки', 'trip__all', '', '')
+			+button('', 'button--outline button--icon slick-next trip__next', 'chevron-right')

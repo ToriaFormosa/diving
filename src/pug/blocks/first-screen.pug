@@ -1,0 +1,11 @@
+section.first-screen(style='background-image: url("images/homepage/banner-first.jpg")')
+	.first-screen__scale
+		+icon('scale')
+	.first-screen__center
+		.first-screen__title Учитесь дайвингу в москве с TDI SDI
+		.first-screen__logos
+			+icon('logo-tdi')(width='176', height='81')
+			+icon('logo-sdi')(width='171', height='83')
+	a.first-screen__anchor.anchor(href='#courses')
+		+icon('arrow-down')
+	+socials('first-screen__socials', ['tiktok', 'vk', 'insta', 'fb'])

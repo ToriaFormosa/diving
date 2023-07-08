@@ -1,0 +1,194 @@
+//-<div class="content content--fixed1" style="display: none;">
+  <div class="page-header">
+    <h1 class="page-header__title">
+      <span class="page-header__title-inner">LikeNuShus</span>
+      <span class="page-header__title-sub">man &amp; woman</span>
+    </h1>
+    <ul class="social">
+      <li class="social__item">
+        <a class="social__item-link" href="https://codepen.io/DivineBlow" target="_blank">
+          <svg class="icon icon--social icon--codepen">
+            <use xlink:href="#icon-codepen"></use>
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <p class="tagline">Lightly Used Shoes, Cheap!</p>
+//-</div>
+.slideshow
+  .slide
+    .slide__wrap
+      //.slide__img(style="background-image: url(https://images.pexels.com/photos/1456735/pexels-photo-1456735.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);")
+      .slide__img(style="background-image: url(images/shop-slider/full.jpg)")
+      
+      .slide__title-wrap
+        .slide__content
+          h3.slide__title
+            span Ныряйте вместе 1
+            span.slide__title-shifted с нашими часами
+          .slide__price 
+            span.slide__price-val 1 200₽ 
+            span.slide__price-text за комплект
+          a.action.action--details(href="#")
+            span Подробнее
+            +icon('chevron-right')(width="7", height="11")
+
+  .slide
+    .slide__wrap
+      //.slide__img(style="background-image: url(https://images.unsplash.com/flagged/photo-1556637640-2c80d3201be8)")
+      .slide__img(style="background-image: url(images/shop-slider/full.jpg)")
+      .slide__title-wrap
+        .slide__content
+          h3.slide__title
+            span Ныряйте вместе 2
+            span.slide__title-shifted с нашими часами
+          .slide__price 
+            span.slide__price-val 1 200₽ 
+            span.slide__price-text за комплект
+          a.action.action--details(href="#") 
+            span Подробнее
+            +icon('chevron-right')(width="7", height="11")
+
+  .slide
+    .slide__wrap
+      //.slide__img(style=" background-image: url(https://images.unsplash.com/photo-1612902377756-414b2139d5e2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1051&q=80);")
+      .slide__img(style="background-image: url(images/shop-slider/full.jpg)")
+      .slide__title-wrap
+        .slide__content
+          h3.slide__title
+            span Ныряйте вместе 3
+            span.slide__title-shifted с нашими часами
+          .slide__price 
+            span.slide__price-val 1 200₽ 
+            span.slide__price-text за комплект
+          a.action.action--details(href="#") 
+            span Подробнее
+            +icon('chevron-right')(width="7", height="11")
+
+  .details-wrap
+    .details
+      .details__item.details__item-img(data-direction="ttb")
+        .details__inner
+          img(src="https://images.unsplash.com/photo-1584539696499-bff0b4768e4e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=100", alt="Some image")
+        
+      
+      .details__item.details__item-sizes
+        .details__inner.details__inner--sizes
+          span.details__size 6
+          span.details__size 6.5
+          span.details__size.details__size--selected 7
+          span.details__size 7.5
+          span.details__size 8
+          span.details__size 9
+          span.details__size.details__size--disabled 9.5
+          span.details__size 10
+    
+      .details__item.details__item--addtocart(data-direction="ttb")
+        .details__inner
+          button.action.action--addtocart(type="button", aria-label="add to cart")
+            +icon('cart')
+    
+    
+      .details__item.details__item-colors(data-direction="ttb")
+        .details__inner.details__inner--grid.details__inner--colors
+          span.details__color.details__color--BeigeGray Beige and Gray
+          span.details__color.details__color--red Red
+          span.details__color.details__color--green Green
+
+      .details__item.details__item-price
+        .details__inner.details__inner--price $65
+      
+      .details__item.details__item--close(data-direction="ttb")
+        .details__inner
+          button.action.action--close(type="button") Close
+    
+    
+    // /details
+    .details
+      .details__item.details__item-img(data-direction="ttb")
+        .details__inner
+          img(src="https://images.unsplash.com/photo-1597000610458-c910e915835f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=100", alt="Some image")
+
+      .details__item.details__item-sizes
+        .details__inner.details__inner--sizes
+          span.details__size 6
+          span.details__size.details__size--disabled 6.5
+          span.details__size 7
+          span.details__size 7.5
+          span.details__size.details__size--selected 8
+          span.details__size 9
+          span.details__size.details__size--disabled 9.5
+          span.details__size.details__size--disabled 10
+
+      .details__item.details__item--addtocart(data-direction="ttb")
+        .details__inner
+          button.action.action--addtocart(type="button", aria-label="add to cart")
+            +icon('cart')
+
+      .details__item.details__item-colors(data-direction="ttb")
+        .details__inner.details__inner--grid.details__inner--colors
+          span.details__color.details__color--WhiteBlack White and Black
+          span.details__color.details__color--BlueBlack Blue and Black
+          span.details__color.details__color--PinkBlack Pink and Black
+
+
+      .details__item.details__item-price
+        .details__inner.details__inner--price $30
+      
+      .details__item.details__item--close(data-direction="ttb")
+        .details__inner
+          button.action.action--close(type="button") Close
+    
+    // /details
+    .details
+      .details__item.details__item-img(data-direction="ttb")
+        .details__inner
+          img(src="https://images.unsplash.com/photo-1611510338559-2f463335092c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=100", alt="Some image")
+
+      .details__item.details__item-sizes
+        .details__inner.details__inner--sizes
+          span.details__size 6
+          span.details__size.details__size--disabled 6.5
+          span.details__size 7
+          span.details__size.details__size--disabled 7.5
+          span.details__size 8
+          span.details__size.details__size--selected 9
+          span.details__size.details__size--disabled 9.5
+          span.details__size 10
+      
+      .details__item.details__item--addtocart(data-direction="ttb")
+        .details__inner
+          button.action.action--addtocart(type="button", aria-label="add to cart")
+            +icon('cart')
+      
+      .details__item.details__item-colors(data-direction="ttb")
+        .details__inner.details__inner--grid.details__inner--colors
+          span.details__color.details__color--WhiteRedBlue White with Red and Blue trim
+          span.details__color.details__color--WhiteGreenBlack White with Green and Black trim
+          span.details__color.details__color--sky Sky
+
+      .details__item.details__item-price
+        .details__inner.details__inner--price $45
+
+      .details__item.details__item--close(data-direction="ttb")
+        .details__inner
+          button.action.action--close(type="button") Close
+    
+    // /details
+
+  //-.test-line
+  //-.test-line.test-line--red
+  .boxnav
+    button.boxnav__item.boxnav__item--prev(type="button", aria-label="prev slide")
+      +icon('prev')(width="11", height="22")
+    .boxnav__item.boxnav__item--label
+      span.boxnav__label.boxnav__label--current 1
+      span.boxnav__label.boxnav__label--total
+    
+    button.boxnav__item.boxnav__item--next(type="button", aria-label="next slide")
+      +icon('next')(width="11", height="22")
+
+
+  button.action.action--details.action--details-mobile(type="button", aria-label="show details") + details
+<!-- details -->

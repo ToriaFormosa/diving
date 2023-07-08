@@ -1,0 +1,99 @@
+extends ../layouts/default
+
+block vars
+  -
+    const page = {
+      title: 'Клубные поездки'
+    };
+
+    const bc = [
+      {text: page.title}
+    ];
+
+    const trips = [
+      {
+        img: '1',
+        place: 'Египет',
+        title: 'Дейли-дайвинг на Красном море',
+        date: '02.09.2021 - 11.09.2021',
+        desc: 'Один из лучших и излюбленных дайверами маршрутов сафари.',
+        price: '97 000₽'
+      },
+      {
+        img: '2',
+        place: 'Мексика',
+        title: 'Полуостров Юкатан',
+        date: '30.10.2021 - 13.11.2021',
+        desc: 'Увлекательное путешествие по следам древних цивилизаций и погружения в невероятных сенотах',
+        price: '288 000₽'
+      },
+      {
+        img: '2',
+        place: 'Мексика',
+        title: 'Полуостров Юкатан',
+        date: '30.10.2021 - 13.11.2021',
+        desc: 'Увлекательное путешествие по следам древних цивилизаций и погружения в невероятных сенотах',
+        price: '288 000₽'
+      },
+      {
+        img: '1',
+        place: 'Египет',
+        title: 'Дейли-дайвинг на Красном море',
+        date: '02.09.2021 - 11.09.2021',
+        desc: 'Один из лучших и излюбленных дайверами маршрутов сафари.',
+        price: '97 000₽'
+      },
+      {
+        img: '1',
+        place: 'Египет',
+        title: 'Дейли-дайвинг на Красном море',
+        date: '02.09.2021 - 11.09.2021',
+        desc: 'Один из лучших и излюбленных дайверами маршрутов сафари.',
+        price: '97 000₽'
+      },
+      {
+        img: '2',
+        place: 'Мексика',
+        title: 'Полуостров Юкатан',
+        date: '30.10.2021 - 13.11.2021',
+        desc: 'Увлекательное путешествие по следам древних цивилизаций и погружения в невероятных сенотах',
+        price: '288 000₽'
+      },
+      {
+        img: '2',
+        place: 'Мексика',
+        title: 'Полуостров Юкатан',
+        date: '30.10.2021 - 13.11.2021',
+        desc: 'Увлекательное путешествие по следам древних цивилизаций и погружения в невероятных сенотах',
+        price: '288 000₽'
+      },
+      {
+        img: '1',
+        place: 'Египет',
+        title: 'Дейли-дайвинг на Красном море',
+        date: '02.09.2021 - 11.09.2021',
+        desc: 'Один из лучших и излюбленных дайверами маршрутов сафари.',
+        price: '97 000₽'
+      },
+    ];
+
+block main
+  article.inner-page
+    header.inner-page__header
+      .container
+        +breadcrumbs(bc, 'inner-page__breadcrumbs')
+        +title(page.title, 'h1', 'title--medium inner-page__title')
+    
+    .container
+      .inner-page__grid.trips-grid
+        each item in trips
+          .trips-grid__item.trip-card
+            .trip-card__bg
+              img(src="images/homepage/trip/" + item.img + ".jpg", srcset="images/homepage/trip/" + item.img + "@2x.jpg 2x", width="607", height="339", alt="")
+            .trip-card__content
+              .trip-card__place= item.place
+              .trip-card__title= item.title
+              .trip-card__date= item.date
+              .trip-card__desc= item.desc
+              .trip-card__price= item.price
+              +button('Подробнее', 'button--outline button--icon trip-card__more', 'chevron-right', URLS.trip)

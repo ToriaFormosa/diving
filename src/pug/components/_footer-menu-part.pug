@@ -1,0 +1,6 @@
+mixin footer-menu-part(title, list, mod)
+  .footer__menu-part(class= mod ? "footer__menu-part--" + mod : '')
+    a.footer__menu-subtitle(href= URLS.courses)= title
+      +icon('arrow-angle')(width="15", height="10")
+    .footer__menu-part-wrapper
+      +footer-menu-list(list, mod)

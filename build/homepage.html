@@ -1,0 +1,2761 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link href="css/main.min.css" rel="stylesheet">
+    <title>Главная</title>
+  </head>
+  <body>
+    <div class="preloader">
+      <div id="particleCanvas-White"></div>
+      <div class="preloader__outer">
+        <div class="preloader__inner"><span class="preloader__text">Loading</span></div>
+      </div>
+    </div>
+    <header class="header header--homepage">
+      <div class="header__container">
+        <div class="header__logo"><a class="header__logo-tdi">
+            <svg width="85" height="26">
+              <use xlink:href="./images/sprite.svg#logo-tdi"></use>
+            </svg></a><a class="header__logo-sdi">
+            <svg width="84" height="26">
+              <use xlink:href="./images/sprite.svg#logo-sdi"></use>
+            </svg></a>
+        </div>
+        <div class="header__canvas">
+          <button class="header__canvas-close" type="button" aria-label="Скрыть меню">
+            <svg width="14" height="14">
+              <use xlink:href="./images/sprite.svg#close"></use>
+            </svg>
+          </button>
+          <div class="header__main-menu menu">
+            <ul class="menu__list"> 
+              <li class="menu__item menu__item--expand"><a class="menu__link" href="courses-page.html">Обучение дайвингу
+                  <svg width="8" height="4">
+                    <use xlink:href="./images/sprite.svg#arrow-angle-down"></use>
+                  </svg></a>
+                <div class="menu__submenu">
+                  <button class="menu__back" type="button" aria-label="Вернуться в основное меню">
+                    <svg width="30" height="30">
+                      <use xlink:href="./images/sprite.svg#back"></use>
+                    </svg>
+                  </button>
+                  <div class="menu__submenu-title">Обучение дайвингу</div>
+                  <ul class="menu__submenu-list"> 
+                    <li class="menu__submenu-item"> <a href="#">OWD</a></li>
+                    <li class="menu__submenu-item"> <a href="#">Advanced Adventure Open Water</a></li>
+                    <li class="menu__submenu-item"> <a href="#">Advanced Diver Development Program</a></li>
+                    <li class="menu__submenu-item"> <a href="#">Advanced Buoyancy</a></li>
+                    <li class="menu__submenu-item"> <a href="#">Advanced Buoyancy ext</a></li>
+                    <li class="menu__submenu-item"> <a href="#">U/W Navigation</a></li>
+                    <li class="menu__submenu-item"> <a href="#">Deep Diver</a></li>
+                    <li class="menu__submenu-item"> <a href="#">Night Diver</a></li>
+                    <li class="menu__submenu-item"> <a href="#">Dry Suit Diver</a></li>
+                    <li class="menu__submenu-item"> <a href="#">Ice Diver</a></li>
+                    <li class="menu__submenu-item"> <a href="#">Sidemount Diver</a></li>
+                    <li class="menu__submenu-item"> <a href="#">Rescue Diver</a></li>
+                    <li class="menu__submenu-item"> <a href="#">SDI Divemaster</a></li>
+                    <li class="menu__submenu-item"> <a href="#">Assistant Instructor</a></li>
+                    <li class="menu__submenu-item"> <a href="#">Adult and Child Emergency Care</a></li>
+                    <li class="menu__submenu-item"> <a href="#">O2 Administrator</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="menu__item menu__item--expand"><a class="menu__link" href="shop.html">Магазин
+                  <svg width="8" height="4">
+                    <use xlink:href="./images/sprite.svg#arrow-angle-down"></use>
+                  </svg></a>
+                <div class="menu__submenu">
+                  <button class="menu__back" type="button" aria-label="Вернуться в основное меню">
+                    <svg width="30" height="30">
+                      <use xlink:href="./images/sprite.svg#back"></use>
+                    </svg>
+                  </button>
+                  <div class="menu__submenu-title">Магазин</div>
+                  <ul class="menu__submenu-list"> 
+                    <li class="menu__submenu-item"> <a href="catalog.html">Костюмы</a></li>
+                    <li class="menu__submenu-item"> <a href="catalog.html">Аксессуары</a></li>
+                    <li class="menu__submenu-item"> <a href="catalog.html">Такелаж</a></li>
+                    <li class="menu__submenu-item"> <a href="catalog.html">Фонари</a></li>
+                    <li class="menu__submenu-item"> <a href="catalog.html">Ребризер</a></li>
+                    <li class="menu__submenu-item"> <a href="catalog.html">Подводная съемка</a></li>
+                    <li class="menu__submenu-item"> <a href="catalog.html">Ласты</a></li>
+                    <li class="menu__submenu-item"> <a href="catalog.html">Катушки и буи</a></li>
+                    <li class="menu__submenu-item"> <a href="catalog.html">Sidemount</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="menu__item"><a class="menu__link" href="certification.html">Карты сертификации</a>
+              </li>
+              <li class="menu__item"><a class="menu__link" href="trips-page.html">Клубные поездки</a>
+              </li>
+            </ul>
+          </div>
+          <div class="header__second-menu">
+            <button class="header__second-menu-toggle" type="button" aria-label="Показать дополнительное меню">
+              <svg width="22" height="11">
+                <use xlink:href="./images/sprite.svg#burger"></use>
+              </svg>
+            </button>
+            <div class="menu menu--second">
+              <ul class="menu__list"> 
+                <li class="menu__item"><a class="menu__link" href="#">Акции</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Оплата и доставка</a></li>
+                <li class="menu__item"><a class="menu__link" href="articles-page.html">Статьи</a></li>
+                <li class="menu__item"><a class="menu__link" href="contacts.html">Контакты</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="header__lang-swither"><a class="ru active">RU</a><span class="delimiter">/</span><a class="en" href="#">EN</a></div><a class="header__basket" href="cart.html">
+            <svg width="20" height="20">
+              <use xlink:href="./images/sprite.svg#cart"></use>
+            </svg><span>0</span></a>
+        </div><a class="header__profile" href="profile.html">
+          <svg width="20" height="20">
+            <use xlink:href="./images/sprite.svg#profile"></use>
+          </svg></a>
+        <button class="header__burger" type="button">
+          <svg width="22" height="11">
+            <use xlink:href="./images/sprite.svg#burger"></use>
+          </svg>
+        </button>
+      </div>
+    </header>
+    <main class="main">
+      <section class="first-screen" style="background-image: url(&quot;images/homepage/banner-first.jpg&quot;)">
+        <div class="first-screen__scale">
+          <svg>
+            <use xlink:href="./images/sprite.svg#scale"></use>
+          </svg>
+        </div>
+        <div class="first-screen__center">
+          <div class="first-screen__title">Учитесь дайвингу в москве с TDI SDI</div>
+          <div class="first-screen__logos">
+            <svg width="176" height="81">
+              <use xlink:href="./images/sprite.svg#logo-tdi"></use>
+            </svg>
+            <svg width="171" height="83">
+              <use xlink:href="./images/sprite.svg#logo-sdi"></use>
+            </svg>
+          </div>
+        </div><a class="first-screen__anchor anchor" href="#courses">
+          <svg>
+            <use xlink:href="./images/sprite.svg#arrow-down"></use>
+          </svg></a>
+        <div class="socials first-screen__socials">
+          <div class="socials__item"><a href="#" target="_blank">
+              <svg width="30" height="30">
+                <use xlink:href="./images/sprite.svg#tiktok"></use>
+              </svg></a></div>
+          <div class="socials__item"><a href="#" target="_blank">
+              <svg width="30" height="30">
+                <use xlink:href="./images/sprite.svg#vk"></use>
+              </svg></a></div>
+          <div class="socials__item"><a href="#" target="_blank">
+              <svg width="30" height="30">
+                <use xlink:href="./images/sprite.svg#insta"></use>
+              </svg></a></div>
+          <div class="socials__item"><a href="#" target="_blank">
+              <svg width="30" height="30">
+                <use xlink:href="./images/sprite.svg#fb"></use>
+              </svg></a></div>
+        </div>
+      </section>
+      <section class="courses" id="courses">
+        <div class="container">
+          <h2 class="title--large courses__title title">Курсы обучения дайвингу</h2>
+          <div class="courses__wrapper">
+            <div class="swiper-container __js_courses-carousel-2">
+              <div class="swiper-wrapper">
+                <div class="courses__item swiper-slide course-preview"><span class="course-preview__label">Акция %</span>
+                  <div class="course-preview__image"><img src="images/course-preview/1.jpg" srcset="images/course-preview/1@2x.jpg 2x" width="397" height="478" alt=""></div>
+                  <div class="course-preview__content">
+                    <h3 class="course-preview__title">SDI OWD</h3>
+                    <div class="course-preview__list"><span>От 10 лет</span><span>более 4-х часов</span>
+                    </div>
+                    <div class="course-preview__text">4&nbsp;теоретических занятий, 4&nbsp;погружений в&nbsp;бассейне, экзамен, 4&nbsp;погружения в&nbsp;открытой воде, аренда оборудования включена.</div>
+                    <div class="course-preview__action"> <a class="button course-preview__btn button--white button--more" href="course-page.html"><span>Подробнее</span>
+                        <svg>
+                          <use xlink:href="./images/sprite.svg#chevron-right"></use>
+                        </svg></a>
+                      <div class="course-preview__price">
+                        <div class="course-preview__price-old">от 55 000₽</div>от 25 000₽
+                      </div>
+                    </div><a class="course-preview__link" href="#">Приобрести в подарок</a>
+                  </div>
+                </div>
+                <div class="courses__item swiper-slide course-preview">
+                  <div class="course-preview__image"><img src="images/course-preview/2.jpg" srcset="images/course-preview/2@2x.jpg 2x" width="397" height="325" alt=""></div>
+                  <div class="course-preview__content">
+                    <h3 class="course-preview__title">Пробное погружение</h3>
+                    <div class="course-preview__list"><span>От 10 лет</span><span>более 4-х часов</span>
+                    </div>
+                    <div class="course-preview__text">1&nbsp;погружение с&nbsp;инструктором в&nbsp;бассейне или водоеме. Аренда полного комплекта снаряжения включена</div>
+                    <div class="course-preview__action"> <a class="button course-preview__btn button--white button--more" href="course-page.html"><span>Подробнее</span>
+                        <svg>
+                          <use xlink:href="./images/sprite.svg#chevron-right"></use>
+                        </svg></a>
+                      <div class="course-preview__price">2 500₽
+                      </div>
+                    </div><a class="course-preview__link" href="#">Приобрести в подарок</a>
+                  </div>
+                </div>
+                <div class="courses__item swiper-slide course-preview">
+                  <div class="course-preview__image"><img src="images/course-preview/3.jpg" srcset="images/course-preview/3@2x.jpg 2x" width="397" height="341" alt=""></div>
+                  <div class="course-preview__content">
+                    <h3 class="course-preview__title">SDI Advanced Adventure Open Water</h3>
+                    <div class="course-preview__list"><span>более 4-х часов</span>
+                    </div>
+                    <div class="course-preview__text">Теория, 5&nbsp;погружений в&nbsp;открытой воде с&nbsp;инструктором.</div>
+                    <div class="course-preview__action"> <a class="button course-preview__btn button--white button--more" href="course-page.html"><span>Подробнее</span>
+                        <svg>
+                          <use xlink:href="./images/sprite.svg#chevron-right"></use>
+                        </svg></a>
+                      <div class="course-preview__price">12 000₽
+                      </div>
+                    </div><a class="course-preview__link" href="#">Приобрести в подарок</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="button button--outline button--icon slick-prev courses__prev"><span></span>
+              <svg>
+                <use xlink:href="./images/sprite.svg#chevron-right"></use>
+              </svg>
+            </button>
+            <button class="button button--outline button--icon slick-next courses__next"><span></span>
+              <svg>
+                <use xlink:href="./images/sprite.svg#chevron-right"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="courses__note">По окончании выбранного курса присваивается соответствующий сертификат международного образца</div>
+          <div class="courses__mobile-wrapper">
+            <button class="button button--outline button--icon slick-prev courses__prev"><span></span>
+              <svg>
+                <use xlink:href="./images/sprite.svg#chevron-right"></use>
+              </svg>
+            </button><a class="button courses__btn" href="courses-page.html"><span>Все курсы</span></a>
+            <button class="button button--outline button--icon slick-next courses__next"><span></span>
+              <svg>
+                <use xlink:href="./images/sprite.svg#chevron-right"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class="tutorials">
+        <div class="tutorials__bg"><img src="images/homepage/tutorial-bg.png" srcset="images/homepage/tutorial-bg.png 2x" width="732" height="535" alt=""></div>
+        <div class="container tutorials__container">
+          <div class="tutorials__row">
+            <h2 class="title--medium tutorials__title title">Учебные пособия</h2><a class="tutorials__all" href="catalog.html" target="_blank">Все учебники
+              <svg>
+                <use xlink:href="./images/sprite.svg#arrow-angle"></use>
+              </svg></a>
+          </div>
+          <div class="tutorials__wrapper">
+            <div class="swiper-container __js_tutorials-carousel">
+              <div class="swiper-wrapper">
+                <div class="tutorials__item swiper-slide product-preview">
+                  <div class="product-preview__image"> <img src="images/product-preview/1.jpg" srcset="images/product-preview/1@2x.jpg 2x" width="120" height="171" alt="SDI OWD"></div>
+                  <h3 class="product-preview__title"> <a href="#">SDI OWD</a></h3>
+                  <div class="product-preview__text">Open Water Diver. Учебное пособие по дайвингу</div>
+                  <div class="product-preview__middle"> 
+                    <div class="product-preview__price">1&nbsp;200₽
+                      <div class="product-preview__price-old">1&nbsp;200₽</div>
+                    </div>
+                    <div class="product-preview__discount">-10%</div>
+                    <div class="product-preview__orders">150</div>
+                  </div>
+                  <div class="product-preview__bottom"> 
+                    <div class="product-preview__rating">
+                      <svg width="15" height="15">
+                        <use xlink:href="./images/sprite.svg#star"></use>
+                      </svg>
+                      <svg width="15" height="15">
+                        <use xlink:href="./images/sprite.svg#star"></use>
+                      </svg>
+                      <svg width="15" height="15">
+                        <use xlink:href="./images/sprite.svg#star"></use>
+                      </svg>
+                      <svg width="15" height="15">
+                        <use xlink:href="./images/sprite.svg#star"></use>
+                      </svg>
+                      <svg width="15" height="15">
+                        <use xlink:href="./images/sprite.svg#star-empty"></use>
+                      </svg>
+                    </div><a class="button product-preview__btn button--to-cart" href="#"><span>В корзину</span>
+                      <svg>
+                        <use xlink:href="./images/sprite.svg#cart"></use>
+                      </svg></a>
+                  </div>
+                </div>
+                <div class="tutorials__item swiper-slide product-preview">
+                  <div class="product-preview__image"> <img src="images/product-preview/2.jpg" srcset="images/product-preview/2@2x.jpg 2x" width="115" height="171" alt="SDI ночной дайвинг"></div>
+                  <h3 class="product-preview__title"> <a href="#">SDI ночной дайвинг</a></h3>
+                  <div class="product-preview__text">Ночной дайвинг. Подводная навигация и погружения</div>
+                  <div class="product-preview__middle"> 
+                    <div class="product-preview__price">1&nbsp;200₽
+                      <div class="product-preview__price-old">1&nbsp;200₽</div>
+                    </div>
+                    <div class="product-preview__discount">-10%</div>
+                    <div class="product-preview__orders">150</div>
+                  </div>
+                  <div class="product-preview__bottom"> 
+                    <div class="product-preview__rating">
+                      <svg width="15" height="15">
+                        <use xlink:href="./images/sprite.svg#star"></use>
+                      </svg>
+                      <svg width="15" height="15">
+                        <use xlink:href="./images/sprite.svg#star"></use>
+                      </svg>
+                      <svg width="15" height="15">
+                        <use xlink:href="./images/sprite.svg#star"></use>
+                      </svg>
+                      <svg width="15" height="15">
+                        <use xlink:href="./images/sprite.svg#star"></use>
+                      </svg>
+                      <svg width="15" height="15">
+                        <use xlink:href="./images/sprite.svg#star-empty"></use>
+                      </svg>
+                    </div><a class="button product-preview__btn button--to-cart" href="#"><span>В корзину</span>
+                      <svg>
+                        <use xlink:href="./images/sprite.svg#cart"></use>
+                      </svg></a>
+                  </div>
+                </div>
+                <div class="tutorials__item swiper-slide product-preview">
+                  <div class="product-preview__image"> <img src="images/product-preview/3.jpg" srcset="images/product-preview/3@2x.jpg 2x" width="120" height="171" alt="FRTI пособие"></div>
+                  <h3 class="product-preview__title"> <a href="#">FRTI пособие</a></h3>
+                  <div class="product-preview__text">Экстренная медицинская помощь для взрослых и детей</div>
+                  <div class="product-preview__middle"> 
+                    <div class="product-preview__price">1&nbsp;200₽
+                      <div class="product-preview__price-old">1&nbsp;200₽</div>
+                    </div>
+                    <div class="product-preview__discount">-10%</div>
+                    <div class="product-preview__orders">150</div>
+                  </div>
+                  <div class="product-preview__bottom"> 
+                    <div class="product-preview__rating">
+                      <svg width="15" height="15">
+                        <use xlink:href="./images/sprite.svg#star"></use>
+                      </svg>
+                      <svg width="15" height="15">
+                        <use xlink:href="./images/sprite.svg#star"></use>
+                      </svg>
+                      <svg width="15" height="15">
+                        <use xlink:href="./images/sprite.svg#star"></use>
+                      </svg>
+                      <svg width="15" height="15">
+                        <use xlink:href="./images/sprite.svg#star"></use>
+                      </svg>
+                      <svg width="15" height="15">
+                        <use xlink:href="./images/sprite.svg#star-empty"></use>
+                      </svg>
+                    </div><a class="button product-preview__btn button--to-cart" href="#"><span>В корзину</span>
+                      <svg>
+                        <use xlink:href="./images/sprite.svg#cart"></use>
+                      </svg></a>
+                  </div>
+                </div>
+                <div class="tutorials__item swiper-slide product-preview">
+                  <div class="product-preview__image"> <img src="images/product-preview/4.jpg" srcset="images/product-preview/4@2x.jpg 2x" width="123" height="171" alt="Стивен Барски Dry Suit"></div>
+                  <h3 class="product-preview__title"> <a href="#">Стивен Барски Dry Suit</a></h3>
+                  <div class="product-preview__text">Дайвинг в сухом костюме. История, обзор теории, уход.</div>
+                  <div class="product-preview__middle"> 
+                    <div class="product-preview__price">1&nbsp;200₽
+                      <div class="product-preview__price-old">1&nbsp;200₽</div>
+                    </div>
+                    <div class="product-preview__discount">-10%</div>
+                    <div class="product-preview__orders">150</div>
+                  </div>
+                  <div class="product-preview__bottom"> 
+                    <div class="product-preview__rating">
+                      <svg width="15" height="15">
+                        <use xlink:href="./images/sprite.svg#star"></use>
+                      </svg>
+                      <svg width="15" height="15">
+                        <use xlink:href="./images/sprite.svg#star"></use>
+                      </svg>
+                      <svg width="15" height="15">
+                        <use xlink:href="./images/sprite.svg#star"></use>
+                      </svg>
+                      <svg width="15" height="15">
+                        <use xlink:href="./images/sprite.svg#star"></use>
+                      </svg>
+                      <svg width="15" height="15">
+                        <use xlink:href="./images/sprite.svg#star-empty"></use>
+                      </svg>
+                    </div><a class="button product-preview__btn button--to-cart" href="#"><span>В корзину</span>
+                      <svg>
+                        <use xlink:href="./images/sprite.svg#cart"></use>
+                      </svg></a>
+                  </div>
+                </div>
+                <div class="tutorials__item swiper-slide product-preview">
+                  <div class="product-preview__image"> <img src="images/product-preview/3.jpg" srcset="images/product-preview/3@2x.jpg 2x" width="120" height="171" alt="FRTI пособие"></div>
+                  <h3 class="product-preview__title"> <a href="#">FRTI пособие</a></h3>
+                  <div class="product-preview__text">Экстренная медицинская помощь для взрослых и детей</div>
+                  <div class="product-preview__middle"> 
+                    <div class="product-preview__price">1&nbsp;200₽
+                      <div class="product-preview__price-old">1&nbsp;200₽</div>
+                    </div>
+                    <div class="product-preview__discount">-10%</div>
+                    <div class="product-preview__orders">150</div>
+                  </div>
+                  <div class="product-preview__bottom"> 
+                    <div class="product-preview__rating">
+                      <svg width="15" height="15">
+                        <use xlink:href="./images/sprite.svg#star"></use>
+                      </svg>
+                      <svg width="15" height="15">
+                        <use xlink:href="./images/sprite.svg#star"></use>
+                      </svg>
+                      <svg width="15" height="15">
+                        <use xlink:href="./images/sprite.svg#star"></use>
+                      </svg>
+                      <svg width="15" height="15">
+                        <use xlink:href="./images/sprite.svg#star"></use>
+                      </svg>
+                      <svg width="15" height="15">
+                        <use xlink:href="./images/sprite.svg#star-empty"></use>
+                      </svg>
+                    </div><a class="button product-preview__btn button--to-cart" href="#"><span>В корзину</span>
+                      <svg>
+                        <use xlink:href="./images/sprite.svg#cart"></use>
+                      </svg></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tutorials__nav">
+              <button class="button button--outline button--icon slick-prev tutorials__prev"><span></span>
+                <svg>
+                  <use xlink:href="./images/sprite.svg#chevron-right"></use>
+                </svg>
+              </button>
+              <div class="tutorials__pagination"></div>
+              <button class="button button--outline button--icon slick-next tutorials__next"><span></span>
+                <svg>
+                  <use xlink:href="./images/sprite.svg#chevron-right"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="stock">
+        <div class="container stock__container">
+          <div class="stock__wrapper">
+            <div class="swiper-container __js_stock-carousel">
+              <div class="swiper-wrapper"><a class="stock__slide swiper-slide certificate-preview" href="#">
+                  <div class="certificate-preview__bg"><img src="images/certificates/1.jpg" srcset="images/certificates/1@2x.jpg 2x" width="397" height="246" alt=""></div>
+                  <div class="certificate-preview__text">Скидка 15% на аксессуары при покупке костюма</div></a><a class="stock__slide swiper-slide certificate-preview" href="#">
+                  <div class="certificate-preview__bg"><img src="images/certificates/2.jpg" srcset="images/certificates/2@2x.jpg 2x" width="397" height="246" alt=""></div>
+                  <div class="certificate-preview__text">Скидка 5% на курсы для начинающих после пробного погружения</div></a><a class="stock__slide swiper-slide certificate-preview" href="#">
+                  <div class="certificate-preview__bg"><img src="images/certificates/3.jpg" srcset="images/certificates/3@2x.jpg 2x" width="397" height="246" alt=""></div>
+                  <div class="certificate-preview__text">Скидка 10% на SDI OWD при покупке учебника</div></a>
+              </div>
+            </div>
+            <div class="stock__nav">
+              <button class="button button--outline button--icon slick-prev stock__prev"><span></span>
+                <svg>
+                  <use xlink:href="./images/sprite.svg#chevron-right"></use>
+                </svg>
+              </button>
+              <div class="stock__pagination"></div>
+              <button class="button button--outline button--icon slick-next stock__next"><span></span>
+                <svg>
+                  <use xlink:href="./images/sprite.svg#chevron-right"></use>
+                </svg>
+              </button>
+            </div>
+          </div><a class="button button--angle stock__more" href="certificates.html"><span>Подробнее об акциях</span>
+            <svg>
+              <use xlink:href="./images/sprite.svg#arrow-angle"></use>
+            </svg></a>
+        </div>
+      </section>
+      <section class="recommend">
+        <div class="container">
+          <h2 class="title--large recommend__title title">Рекомендуемые товары <br> для дайвинга</h2><a class="button button--angle recommend__more recommend__more--mobile" href="shop.html"><span>Все учебники</span>
+            <svg>
+              <use xlink:href="./images/sprite.svg#arrow-angle"></use>
+            </svg></a>
+          <div class="recommend__wrapper">
+            <select class="__js_custom-select" name="categories">
+              <option value="popular">Популярное</option>
+              <option value="costumes">Костюмы</option>
+              <option value="accessories">Аксессуары</option>
+              <option value="rigging">Такелаж</option>
+              <option value="lanterns">Фонари</option>
+              <option value="rebreather">Ребризер</option>
+              <option value="underwater-photography">Подводная съемка</option>
+              <option value="flippers">Ласты</option>
+              <option value="coils-and-buoys">Катушки и буи</option>
+              <option value="sidemount">Sidemount</option>
+            </select>
+            <div class="recommend__tabs">
+              <p class="title">Категории</p>
+              <button class="active" type="button" data-target="popular">Популярное</button>
+              <button type="button" data-target="costumes">Костюмы</button>
+              <button type="button" data-target="accessories">Аксессуары</button>
+              <button type="button" data-target="rigging">Такелаж</button>
+              <button type="button" data-target="lanterns">Фонари</button>
+              <button type="button" data-target="rebreather">Ребризер</button>
+              <button type="button" data-target="underwater-photography">Подводная съемка</button>
+              <button type="button" data-target="flippers">Ласты</button>
+              <button type="button" data-target="coils-and-buoys">Катушки и буи</button>
+              <button type="button" data-target="sidemount">Sidemount</button>
+            </div>
+            <div class="recommend__content">
+              <div class="recommend__content-item is-shown" data-id="popular">
+                <div class="swiper-container __js_recommend-carousel">
+                  <div class="swiper-wrapper">
+                    <div class="recommend__item swiper-slide product-preview">
+                      <div class="product-preview__image"> <img src="images/product-preview/9.jpg" srcset="images/product-preview/9@2x.jpg 2x" width="145" height="189" alt="SDI ночной дайвинг"></div>
+                      <h3 class="product-preview__title"> <a href="#">SDI ночной дайвинг</a></h3>
+                      <div class="product-preview__text">Open Water Diver. Учебное пособие по дайвингу</div>
+                      <div class="product-preview__middle"> 
+                        <div class="product-preview__price">1&nbsp;200₽
+                          <div class="product-preview__price-old">1&nbsp;200₽</div>
+                        </div>
+                        <div class="product-preview__discount">-10%</div>
+                        <div class="product-preview__orders">150</div>
+                      </div>
+                      <div class="product-preview__bottom"> 
+                        <div class="product-preview__rating">
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star-empty"></use>
+                          </svg>
+                        </div><a class="button product-preview__btn button--to-cart" href="#"><span>В корзину</span>
+                          <svg>
+                            <use xlink:href="./images/sprite.svg#cart"></use>
+                          </svg></a>
+                      </div>
+                    </div>
+                    <div class="recommend__item swiper-slide product-preview">
+                      <div class="product-preview__image"> <img src="images/product-preview/10.jpg" srcset="images/product-preview/10@2x.jpg 2x" width="168" height="146" alt="SDI ночной дайвинг"></div>
+                      <h3 class="product-preview__title"> <a href="#">SDI ночной дайвинг</a></h3>
+                      <div class="product-preview__text">Ночной дайвинг. Подводная навигация и погружения</div>
+                      <div class="product-preview__middle"> 
+                        <div class="product-preview__price">1&nbsp;200₽
+                          <div class="product-preview__price-old">1&nbsp;200₽</div>
+                        </div>
+                        <div class="product-preview__discount">-10%</div>
+                        <div class="product-preview__orders">150</div>
+                      </div>
+                      <div class="product-preview__bottom"> 
+                        <div class="product-preview__rating">
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star-empty"></use>
+                          </svg>
+                        </div><a class="button product-preview__btn button--to-cart" href="#"><span>В корзину</span>
+                          <svg>
+                            <use xlink:href="./images/sprite.svg#cart"></use>
+                          </svg></a>
+                      </div>
+                    </div>
+                    <div class="recommend__item swiper-slide product-preview">
+                      <div class="product-preview__image"> <img src="images/product-preview/11.jpg" srcset="images/product-preview/11@2x.jpg 2x" width="126" height="162" alt="SDI ночной дайвинг"></div>
+                      <h3 class="product-preview__title"> <a href="#">SDI ночной дайвинг</a></h3>
+                      <div class="product-preview__text">Ночной дайвинг. Подводная навигация и погружения</div>
+                      <div class="product-preview__middle"> 
+                        <div class="product-preview__price">1&nbsp;200₽
+                          <div class="product-preview__price-old">1&nbsp;200₽</div>
+                        </div>
+                        <div class="product-preview__discount">-10%</div>
+                        <div class="product-preview__orders">150</div>
+                      </div>
+                      <div class="product-preview__bottom"> 
+                        <div class="product-preview__rating">
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star-empty"></use>
+                          </svg>
+                        </div><a class="button product-preview__btn button--to-cart" href="#"><span>В корзину</span>
+                          <svg>
+                            <use xlink:href="./images/sprite.svg#cart"></use>
+                          </svg></a>
+                      </div>
+                    </div>
+                    <div class="recommend__item swiper-slide product-preview">
+                      <div class="product-preview__image"> <img src="images/product-preview/9.jpg" srcset="images/product-preview/9@2x.jpg 2x" width="145" height="189" alt="SDI ночной дайвинг"></div>
+                      <h3 class="product-preview__title"> <a href="#">SDI ночной дайвинг</a></h3>
+                      <div class="product-preview__text">Ночной дайвинг. Подводная навигация и погружения</div>
+                      <div class="product-preview__middle"> 
+                        <div class="product-preview__price">1&nbsp;200₽
+                          <div class="product-preview__price-old">1&nbsp;200₽</div>
+                        </div>
+                        <div class="product-preview__discount">-10%</div>
+                        <div class="product-preview__orders">150</div>
+                      </div>
+                      <div class="product-preview__bottom"> 
+                        <div class="product-preview__rating">
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star-empty"></use>
+                          </svg>
+                        </div><a class="button product-preview__btn button--to-cart" href="#"><span>В корзину</span>
+                          <svg>
+                            <use xlink:href="./images/sprite.svg#cart"></use>
+                          </svg></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="recommend__content-item-bottom">
+                  <div class="recommend__nav">
+                    <button class="button button--outline button--icon slick-prev recommend__prev"><span></span>
+                      <svg>
+                        <use xlink:href="./images/sprite.svg#chevron-right"></use>
+                      </svg>
+                    </button>
+                    <div class="recommend__pagination"></div>
+                    <button class="button button--outline button--icon slick-next recommend__next"><span></span>
+                      <svg>
+                        <use xlink:href="./images/sprite.svg#chevron-right"></use>
+                      </svg>
+                    </button>
+                  </div><a class="button button--angle recommend__more" href="shop.html"><span>Перейти в магазин Популярное</span>
+                    <svg>
+                      <use xlink:href="./images/sprite.svg#arrow-angle"></use>
+                    </svg></a>
+                </div>
+              </div>
+              <div class="recommend__content-item is-hidden" data-id="costumes">
+                <div class="swiper-container __js_recommend-carousel">
+                  <div class="swiper-wrapper">
+                    <div class="recommend__item swiper-slide product-preview">
+                      <div class="product-preview__image"> <img src="images/product-preview/9.jpg" srcset="images/product-preview/9@2x.jpg 2x" width="145" height="189" alt="SDI ночной дайвинг"></div>
+                      <h3 class="product-preview__title"> <a href="#">SDI ночной дайвинг</a></h3>
+                      <div class="product-preview__text">Open Water Diver. Учебное пособие по дайвингу</div>
+                      <div class="product-preview__middle"> 
+                        <div class="product-preview__price">1&nbsp;200₽
+                          <div class="product-preview__price-old">1&nbsp;200₽</div>
+                        </div>
+                        <div class="product-preview__discount">-10%</div>
+                        <div class="product-preview__orders">150</div>
+                      </div>
+                      <div class="product-preview__bottom"> 
+                        <div class="product-preview__rating">
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star-empty"></use>
+                          </svg>
+                        </div><a class="button product-preview__btn button--to-cart" href="#"><span>В корзину</span>
+                          <svg>
+                            <use xlink:href="./images/sprite.svg#cart"></use>
+                          </svg></a>
+                      </div>
+                    </div>
+                    <div class="recommend__item swiper-slide product-preview">
+                      <div class="product-preview__image"> <img src="images/product-preview/10.jpg" srcset="images/product-preview/10@2x.jpg 2x" width="168" height="146" alt="SDI ночной дайвинг"></div>
+                      <h3 class="product-preview__title"> <a href="#">SDI ночной дайвинг</a></h3>
+                      <div class="product-preview__text">Ночной дайвинг. Подводная навигация и погружения</div>
+                      <div class="product-preview__middle"> 
+                        <div class="product-preview__price">1&nbsp;200₽
+                          <div class="product-preview__price-old">1&nbsp;200₽</div>
+                        </div>
+                        <div class="product-preview__discount">-10%</div>
+                        <div class="product-preview__orders">150</div>
+                      </div>
+                      <div class="product-preview__bottom"> 
+                        <div class="product-preview__rating">
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star-empty"></use>
+                          </svg>
+                        </div><a class="button product-preview__btn button--to-cart" href="#"><span>В корзину</span>
+                          <svg>
+                            <use xlink:href="./images/sprite.svg#cart"></use>
+                          </svg></a>
+                      </div>
+                    </div>
+                    <div class="recommend__item swiper-slide product-preview">
+                      <div class="product-preview__image"> <img src="images/product-preview/11.jpg" srcset="images/product-preview/11@2x.jpg 2x" width="126" height="162" alt="SDI ночной дайвинг"></div>
+                      <h3 class="product-preview__title"> <a href="#">SDI ночной дайвинг</a></h3>
+                      <div class="product-preview__text">Ночной дайвинг. Подводная навигация и погружения</div>
+                      <div class="product-preview__middle"> 
+                        <div class="product-preview__price">1&nbsp;200₽
+                          <div class="product-preview__price-old">1&nbsp;200₽</div>
+                        </div>
+                        <div class="product-preview__discount">-10%</div>
+                        <div class="product-preview__orders">150</div>
+                      </div>
+                      <div class="product-preview__bottom"> 
+                        <div class="product-preview__rating">
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star-empty"></use>
+                          </svg>
+                        </div><a class="button product-preview__btn button--to-cart" href="#"><span>В корзину</span>
+                          <svg>
+                            <use xlink:href="./images/sprite.svg#cart"></use>
+                          </svg></a>
+                      </div>
+                    </div>
+                    <div class="recommend__item swiper-slide product-preview">
+                      <div class="product-preview__image"> <img src="images/product-preview/9.jpg" srcset="images/product-preview/9@2x.jpg 2x" width="145" height="189" alt="SDI ночной дайвинг"></div>
+                      <h3 class="product-preview__title"> <a href="#">SDI ночной дайвинг</a></h3>
+                      <div class="product-preview__text">Ночной дайвинг. Подводная навигация и погружения</div>
+                      <div class="product-preview__middle"> 
+                        <div class="product-preview__price">1&nbsp;200₽
+                          <div class="product-preview__price-old">1&nbsp;200₽</div>
+                        </div>
+                        <div class="product-preview__discount">-10%</div>
+                        <div class="product-preview__orders">150</div>
+                      </div>
+                      <div class="product-preview__bottom"> 
+                        <div class="product-preview__rating">
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star-empty"></use>
+                          </svg>
+                        </div><a class="button product-preview__btn button--to-cart" href="#"><span>В корзину</span>
+                          <svg>
+                            <use xlink:href="./images/sprite.svg#cart"></use>
+                          </svg></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="recommend__content-item-bottom">
+                  <div class="recommend__nav">
+                    <button class="button button--outline button--icon slick-prev recommend__prev"><span></span>
+                      <svg>
+                        <use xlink:href="./images/sprite.svg#chevron-right"></use>
+                      </svg>
+                    </button>
+                    <div class="recommend__pagination"></div>
+                    <button class="button button--outline button--icon slick-next recommend__next"><span></span>
+                      <svg>
+                        <use xlink:href="./images/sprite.svg#chevron-right"></use>
+                      </svg>
+                    </button>
+                  </div><a class="button button--angle recommend__more" href="shop.html"><span>Перейти в магазин Костюмы</span>
+                    <svg>
+                      <use xlink:href="./images/sprite.svg#arrow-angle"></use>
+                    </svg></a>
+                </div>
+              </div>
+              <div class="recommend__content-item is-hidden" data-id="accessories">
+                <div class="swiper-container __js_recommend-carousel">
+                  <div class="swiper-wrapper">
+                    <div class="recommend__item swiper-slide product-preview">
+                      <div class="product-preview__image"> <img src="images/product-preview/9.jpg" srcset="images/product-preview/9@2x.jpg 2x" width="145" height="189" alt="SDI ночной дайвинг"></div>
+                      <h3 class="product-preview__title"> <a href="#">SDI ночной дайвинг</a></h3>
+                      <div class="product-preview__text">Open Water Diver. Учебное пособие по дайвингу</div>
+                      <div class="product-preview__middle"> 
+                        <div class="product-preview__price">1&nbsp;200₽
+                          <div class="product-preview__price-old">1&nbsp;200₽</div>
+                        </div>
+                        <div class="product-preview__discount">-10%</div>
+                        <div class="product-preview__orders">150</div>
+                      </div>
+                      <div class="product-preview__bottom"> 
+                        <div class="product-preview__rating">
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star-empty"></use>
+                          </svg>
+                        </div><a class="button product-preview__btn button--to-cart" href="#"><span>В корзину</span>
+                          <svg>
+                            <use xlink:href="./images/sprite.svg#cart"></use>
+                          </svg></a>
+                      </div>
+                    </div>
+                    <div class="recommend__item swiper-slide product-preview">
+                      <div class="product-preview__image"> <img src="images/product-preview/10.jpg" srcset="images/product-preview/10@2x.jpg 2x" width="168" height="146" alt="SDI ночной дайвинг"></div>
+                      <h3 class="product-preview__title"> <a href="#">SDI ночной дайвинг</a></h3>
+                      <div class="product-preview__text">Ночной дайвинг. Подводная навигация и погружения</div>
+                      <div class="product-preview__middle"> 
+                        <div class="product-preview__price">1&nbsp;200₽
+                          <div class="product-preview__price-old">1&nbsp;200₽</div>
+                        </div>
+                        <div class="product-preview__discount">-10%</div>
+                        <div class="product-preview__orders">150</div>
+                      </div>
+                      <div class="product-preview__bottom"> 
+                        <div class="product-preview__rating">
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star-empty"></use>
+                          </svg>
+                        </div><a class="button product-preview__btn button--to-cart" href="#"><span>В корзину</span>
+                          <svg>
+                            <use xlink:href="./images/sprite.svg#cart"></use>
+                          </svg></a>
+                      </div>
+                    </div>
+                    <div class="recommend__item swiper-slide product-preview">
+                      <div class="product-preview__image"> <img src="images/product-preview/11.jpg" srcset="images/product-preview/11@2x.jpg 2x" width="126" height="162" alt="SDI ночной дайвинг"></div>
+                      <h3 class="product-preview__title"> <a href="#">SDI ночной дайвинг</a></h3>
+                      <div class="product-preview__text">Ночной дайвинг. Подводная навигация и погружения</div>
+                      <div class="product-preview__middle"> 
+                        <div class="product-preview__price">1&nbsp;200₽
+                          <div class="product-preview__price-old">1&nbsp;200₽</div>
+                        </div>
+                        <div class="product-preview__discount">-10%</div>
+                        <div class="product-preview__orders">150</div>
+                      </div>
+                      <div class="product-preview__bottom"> 
+                        <div class="product-preview__rating">
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star-empty"></use>
+                          </svg>
+                        </div><a class="button product-preview__btn button--to-cart" href="#"><span>В корзину</span>
+                          <svg>
+                            <use xlink:href="./images/sprite.svg#cart"></use>
+                          </svg></a>
+                      </div>
+                    </div>
+                    <div class="recommend__item swiper-slide product-preview">
+                      <div class="product-preview__image"> <img src="images/product-preview/9.jpg" srcset="images/product-preview/9@2x.jpg 2x" width="145" height="189" alt="SDI ночной дайвинг"></div>
+                      <h3 class="product-preview__title"> <a href="#">SDI ночной дайвинг</a></h3>
+                      <div class="product-preview__text">Ночной дайвинг. Подводная навигация и погружения</div>
+                      <div class="product-preview__middle"> 
+                        <div class="product-preview__price">1&nbsp;200₽
+                          <div class="product-preview__price-old">1&nbsp;200₽</div>
+                        </div>
+                        <div class="product-preview__discount">-10%</div>
+                        <div class="product-preview__orders">150</div>
+                      </div>
+                      <div class="product-preview__bottom"> 
+                        <div class="product-preview__rating">
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star-empty"></use>
+                          </svg>
+                        </div><a class="button product-preview__btn button--to-cart" href="#"><span>В корзину</span>
+                          <svg>
+                            <use xlink:href="./images/sprite.svg#cart"></use>
+                          </svg></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="recommend__content-item-bottom">
+                  <div class="recommend__nav">
+                    <button class="button button--outline button--icon slick-prev recommend__prev"><span></span>
+                      <svg>
+                        <use xlink:href="./images/sprite.svg#chevron-right"></use>
+                      </svg>
+                    </button>
+                    <div class="recommend__pagination"></div>
+                    <button class="button button--outline button--icon slick-next recommend__next"><span></span>
+                      <svg>
+                        <use xlink:href="./images/sprite.svg#chevron-right"></use>
+                      </svg>
+                    </button>
+                  </div><a class="button button--angle recommend__more" href="shop.html"><span>Перейти в магазин Аксессуары</span>
+                    <svg>
+                      <use xlink:href="./images/sprite.svg#arrow-angle"></use>
+                    </svg></a>
+                </div>
+              </div>
+              <div class="recommend__content-item is-hidden" data-id="rigging">
+                <div class="swiper-container __js_recommend-carousel">
+                  <div class="swiper-wrapper">
+                    <div class="recommend__item swiper-slide product-preview">
+                      <div class="product-preview__image"> <img src="images/product-preview/9.jpg" srcset="images/product-preview/9@2x.jpg 2x" width="145" height="189" alt="SDI ночной дайвинг"></div>
+                      <h3 class="product-preview__title"> <a href="#">SDI ночной дайвинг</a></h3>
+                      <div class="product-preview__text">Open Water Diver. Учебное пособие по дайвингу</div>
+                      <div class="product-preview__middle"> 
+                        <div class="product-preview__price">1&nbsp;200₽
+                          <div class="product-preview__price-old">1&nbsp;200₽</div>
+                        </div>
+                        <div class="product-preview__discount">-10%</div>
+                        <div class="product-preview__orders">150</div>
+                      </div>
+                      <div class="product-preview__bottom"> 
+                        <div class="product-preview__rating">
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star-empty"></use>
+                          </svg>
+                        </div><a class="button product-preview__btn button--to-cart" href="#"><span>В корзину</span>
+                          <svg>
+                            <use xlink:href="./images/sprite.svg#cart"></use>
+                          </svg></a>
+                      </div>
+                    </div>
+                    <div class="recommend__item swiper-slide product-preview">
+                      <div class="product-preview__image"> <img src="images/product-preview/10.jpg" srcset="images/product-preview/10@2x.jpg 2x" width="168" height="146" alt="SDI ночной дайвинг"></div>
+                      <h3 class="product-preview__title"> <a href="#">SDI ночной дайвинг</a></h3>
+                      <div class="product-preview__text">Ночной дайвинг. Подводная навигация и погружения</div>
+                      <div class="product-preview__middle"> 
+                        <div class="product-preview__price">1&nbsp;200₽
+                          <div class="product-preview__price-old">1&nbsp;200₽</div>
+                        </div>
+                        <div class="product-preview__discount">-10%</div>
+                        <div class="product-preview__orders">150</div>
+                      </div>
+                      <div class="product-preview__bottom"> 
+                        <div class="product-preview__rating">
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star-empty"></use>
+                          </svg>
+                        </div><a class="button product-preview__btn button--to-cart" href="#"><span>В корзину</span>
+                          <svg>
+                            <use xlink:href="./images/sprite.svg#cart"></use>
+                          </svg></a>
+                      </div>
+                    </div>
+                    <div class="recommend__item swiper-slide product-preview">
+                      <div class="product-preview__image"> <img src="images/product-preview/11.jpg" srcset="images/product-preview/11@2x.jpg 2x" width="126" height="162" alt="SDI ночной дайвинг"></div>
+                      <h3 class="product-preview__title"> <a href="#">SDI ночной дайвинг</a></h3>
+                      <div class="product-preview__text">Ночной дайвинг. Подводная навигация и погружения</div>
+                      <div class="product-preview__middle"> 
+                        <div class="product-preview__price">1&nbsp;200₽
+                          <div class="product-preview__price-old">1&nbsp;200₽</div>
+                        </div>
+                        <div class="product-preview__discount">-10%</div>
+                        <div class="product-preview__orders">150</div>
+                      </div>
+                      <div class="product-preview__bottom"> 
+                        <div class="product-preview__rating">
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star-empty"></use>
+                          </svg>
+                        </div><a class="button product-preview__btn button--to-cart" href="#"><span>В корзину</span>
+                          <svg>
+                            <use xlink:href="./images/sprite.svg#cart"></use>
+                          </svg></a>
+                      </div>
+                    </div>
+                    <div class="recommend__item swiper-slide product-preview">
+                      <div class="product-preview__image"> <img src="images/product-preview/9.jpg" srcset="images/product-preview/9@2x.jpg 2x" width="145" height="189" alt="SDI ночной дайвинг"></div>
+                      <h3 class="product-preview__title"> <a href="#">SDI ночной дайвинг</a></h3>
+                      <div class="product-preview__text">Ночной дайвинг. Подводная навигация и погружения</div>
+                      <div class="product-preview__middle"> 
+                        <div class="product-preview__price">1&nbsp;200₽
+                          <div class="product-preview__price-old">1&nbsp;200₽</div>
+                        </div>
+                        <div class="product-preview__discount">-10%</div>
+                        <div class="product-preview__orders">150</div>
+                      </div>
+                      <div class="product-preview__bottom"> 
+                        <div class="product-preview__rating">
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star-empty"></use>
+                          </svg>
+                        </div><a class="button product-preview__btn button--to-cart" href="#"><span>В корзину</span>
+                          <svg>
+                            <use xlink:href="./images/sprite.svg#cart"></use>
+                          </svg></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="recommend__content-item-bottom">
+                  <div class="recommend__nav">
+                    <button class="button button--outline button--icon slick-prev recommend__prev"><span></span>
+                      <svg>
+                        <use xlink:href="./images/sprite.svg#chevron-right"></use>
+                      </svg>
+                    </button>
+                    <div class="recommend__pagination"></div>
+                    <button class="button button--outline button--icon slick-next recommend__next"><span></span>
+                      <svg>
+                        <use xlink:href="./images/sprite.svg#chevron-right"></use>
+                      </svg>
+                    </button>
+                  </div><a class="button button--angle recommend__more" href="shop.html"><span>Перейти в магазин Такелаж</span>
+                    <svg>
+                      <use xlink:href="./images/sprite.svg#arrow-angle"></use>
+                    </svg></a>
+                </div>
+              </div>
+              <div class="recommend__content-item is-hidden" data-id="lanterns">
+                <div class="swiper-container __js_recommend-carousel">
+                  <div class="swiper-wrapper">
+                    <div class="recommend__item swiper-slide product-preview">
+                      <div class="product-preview__image"> <img src="images/product-preview/9.jpg" srcset="images/product-preview/9@2x.jpg 2x" width="145" height="189" alt="SDI ночной дайвинг"></div>
+                      <h3 class="product-preview__title"> <a href="#">SDI ночной дайвинг</a></h3>
+                      <div class="product-preview__text">Open Water Diver. Учебное пособие по дайвингу</div>
+                      <div class="product-preview__middle"> 
+                        <div class="product-preview__price">1&nbsp;200₽
+                          <div class="product-preview__price-old">1&nbsp;200₽</div>
+                        </div>
+                        <div class="product-preview__discount">-10%</div>
+                        <div class="product-preview__orders">150</div>
+                      </div>
+                      <div class="product-preview__bottom"> 
+                        <div class="product-preview__rating">
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star-empty"></use>
+                          </svg>
+                        </div><a class="button product-preview__btn button--to-cart" href="#"><span>В корзину</span>
+                          <svg>
+                            <use xlink:href="./images/sprite.svg#cart"></use>
+                          </svg></a>
+                      </div>
+                    </div>
+                    <div class="recommend__item swiper-slide product-preview">
+                      <div class="product-preview__image"> <img src="images/product-preview/10.jpg" srcset="images/product-preview/10@2x.jpg 2x" width="168" height="146" alt="SDI ночной дайвинг"></div>
+                      <h3 class="product-preview__title"> <a href="#">SDI ночной дайвинг</a></h3>
+                      <div class="product-preview__text">Ночной дайвинг. Подводная навигация и погружения</div>
+                      <div class="product-preview__middle"> 
+                        <div class="product-preview__price">1&nbsp;200₽
+                          <div class="product-preview__price-old">1&nbsp;200₽</div>
+                        </div>
+                        <div class="product-preview__discount">-10%</div>
+                        <div class="product-preview__orders">150</div>
+                      </div>
+                      <div class="product-preview__bottom"> 
+                        <div class="product-preview__rating">
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star-empty"></use>
+                          </svg>
+                        </div><a class="button product-preview__btn button--to-cart" href="#"><span>В корзину</span>
+                          <svg>
+                            <use xlink:href="./images/sprite.svg#cart"></use>
+                          </svg></a>
+                      </div>
+                    </div>
+                    <div class="recommend__item swiper-slide product-preview">
+                      <div class="product-preview__image"> <img src="images/product-preview/11.jpg" srcset="images/product-preview/11@2x.jpg 2x" width="126" height="162" alt="SDI ночной дайвинг"></div>
+                      <h3 class="product-preview__title"> <a href="#">SDI ночной дайвинг</a></h3>
+                      <div class="product-preview__text">Ночной дайвинг. Подводная навигация и погружения</div>
+                      <div class="product-preview__middle"> 
+                        <div class="product-preview__price">1&nbsp;200₽
+                          <div class="product-preview__price-old">1&nbsp;200₽</div>
+                        </div>
+                        <div class="product-preview__discount">-10%</div>
+                        <div class="product-preview__orders">150</div>
+                      </div>
+                      <div class="product-preview__bottom"> 
+                        <div class="product-preview__rating">
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star-empty"></use>
+                          </svg>
+                        </div><a class="button product-preview__btn button--to-cart" href="#"><span>В корзину</span>
+                          <svg>
+                            <use xlink:href="./images/sprite.svg#cart"></use>
+                          </svg></a>
+                      </div>
+                    </div>
+                    <div class="recommend__item swiper-slide product-preview">
+                      <div class="product-preview__image"> <img src="images/product-preview/9.jpg" srcset="images/product-preview/9@2x.jpg 2x" width="145" height="189" alt="SDI ночной дайвинг"></div>
+                      <h3 class="product-preview__title"> <a href="#">SDI ночной дайвинг</a></h3>
+                      <div class="product-preview__text">Ночной дайвинг. Подводная навигация и погружения</div>
+                      <div class="product-preview__middle"> 
+                        <div class="product-preview__price">1&nbsp;200₽
+                          <div class="product-preview__price-old">1&nbsp;200₽</div>
+                        </div>
+                        <div class="product-preview__discount">-10%</div>
+                        <div class="product-preview__orders">150</div>
+                      </div>
+                      <div class="product-preview__bottom"> 
+                        <div class="product-preview__rating">
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star-empty"></use>
+                          </svg>
+                        </div><a class="button product-preview__btn button--to-cart" href="#"><span>В корзину</span>
+                          <svg>
+                            <use xlink:href="./images/sprite.svg#cart"></use>
+                          </svg></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="recommend__content-item-bottom">
+                  <div class="recommend__nav">
+                    <button class="button button--outline button--icon slick-prev recommend__prev"><span></span>
+                      <svg>
+                        <use xlink:href="./images/sprite.svg#chevron-right"></use>
+                      </svg>
+                    </button>
+                    <div class="recommend__pagination"></div>
+                    <button class="button button--outline button--icon slick-next recommend__next"><span></span>
+                      <svg>
+                        <use xlink:href="./images/sprite.svg#chevron-right"></use>
+                      </svg>
+                    </button>
+                  </div><a class="button button--angle recommend__more" href="shop.html"><span>Перейти в магазин Фонари</span>
+                    <svg>
+                      <use xlink:href="./images/sprite.svg#arrow-angle"></use>
+                    </svg></a>
+                </div>
+              </div>
+              <div class="recommend__content-item is-hidden" data-id="rebreather">
+                <div class="swiper-container __js_recommend-carousel">
+                  <div class="swiper-wrapper">
+                    <div class="recommend__item swiper-slide product-preview">
+                      <div class="product-preview__image"> <img src="images/product-preview/9.jpg" srcset="images/product-preview/9@2x.jpg 2x" width="145" height="189" alt="SDI ночной дайвинг"></div>
+                      <h3 class="product-preview__title"> <a href="#">SDI ночной дайвинг</a></h3>
+                      <div class="product-preview__text">Open Water Diver. Учебное пособие по дайвингу</div>
+                      <div class="product-preview__middle"> 
+                        <div class="product-preview__price">1&nbsp;200₽
+                          <div class="product-preview__price-old">1&nbsp;200₽</div>
+                        </div>
+                        <div class="product-preview__discount">-10%</div>
+                        <div class="product-preview__orders">150</div>
+                      </div>
+                      <div class="product-preview__bottom"> 
+                        <div class="product-preview__rating">
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star-empty"></use>
+                          </svg>
+                        </div><a class="button product-preview__btn button--to-cart" href="#"><span>В корзину</span>
+                          <svg>
+                            <use xlink:href="./images/sprite.svg#cart"></use>
+                          </svg></a>
+                      </div>
+                    </div>
+                    <div class="recommend__item swiper-slide product-preview">
+                      <div class="product-preview__image"> <img src="images/product-preview/10.jpg" srcset="images/product-preview/10@2x.jpg 2x" width="168" height="146" alt="SDI ночной дайвинг"></div>
+                      <h3 class="product-preview__title"> <a href="#">SDI ночной дайвинг</a></h3>
+                      <div class="product-preview__text">Ночной дайвинг. Подводная навигация и погружения</div>
+                      <div class="product-preview__middle"> 
+                        <div class="product-preview__price">1&nbsp;200₽
+                          <div class="product-preview__price-old">1&nbsp;200₽</div>
+                        </div>
+                        <div class="product-preview__discount">-10%</div>
+                        <div class="product-preview__orders">150</div>
+                      </div>
+                      <div class="product-preview__bottom"> 
+                        <div class="product-preview__rating">
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star-empty"></use>
+                          </svg>
+                        </div><a class="button product-preview__btn button--to-cart" href="#"><span>В корзину</span>
+                          <svg>
+                            <use xlink:href="./images/sprite.svg#cart"></use>
+                          </svg></a>
+                      </div>
+                    </div>
+                    <div class="recommend__item swiper-slide product-preview">
+                      <div class="product-preview__image"> <img src="images/product-preview/11.jpg" srcset="images/product-preview/11@2x.jpg 2x" width="126" height="162" alt="SDI ночной дайвинг"></div>
+                      <h3 class="product-preview__title"> <a href="#">SDI ночной дайвинг</a></h3>
+                      <div class="product-preview__text">Ночной дайвинг. Подводная навигация и погружения</div>
+                      <div class="product-preview__middle"> 
+                        <div class="product-preview__price">1&nbsp;200₽
+                          <div class="product-preview__price-old">1&nbsp;200₽</div>
+                        </div>
+                        <div class="product-preview__discount">-10%</div>
+                        <div class="product-preview__orders">150</div>
+                      </div>
+                      <div class="product-preview__bottom"> 
+                        <div class="product-preview__rating">
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star-empty"></use>
+                          </svg>
+                        </div><a class="button product-preview__btn button--to-cart" href="#"><span>В корзину</span>
+                          <svg>
+                            <use xlink:href="./images/sprite.svg#cart"></use>
+                          </svg></a>
+                      </div>
+                    </div>
+                    <div class="recommend__item swiper-slide product-preview">
+                      <div class="product-preview__image"> <img src="images/product-preview/9.jpg" srcset="images/product-preview/9@2x.jpg 2x" width="145" height="189" alt="SDI ночной дайвинг"></div>
+                      <h3 class="product-preview__title"> <a href="#">SDI ночной дайвинг</a></h3>
+                      <div class="product-preview__text">Ночной дайвинг. Подводная навигация и погружения</div>
+                      <div class="product-preview__middle"> 
+                        <div class="product-preview__price">1&nbsp;200₽
+                          <div class="product-preview__price-old">1&nbsp;200₽</div>
+                        </div>
+                        <div class="product-preview__discount">-10%</div>
+                        <div class="product-preview__orders">150</div>
+                      </div>
+                      <div class="product-preview__bottom"> 
+                        <div class="product-preview__rating">
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star-empty"></use>
+                          </svg>
+                        </div><a class="button product-preview__btn button--to-cart" href="#"><span>В корзину</span>
+                          <svg>
+                            <use xlink:href="./images/sprite.svg#cart"></use>
+                          </svg></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="recommend__content-item-bottom">
+                  <div class="recommend__nav">
+                    <button class="button button--outline button--icon slick-prev recommend__prev"><span></span>
+                      <svg>
+                        <use xlink:href="./images/sprite.svg#chevron-right"></use>
+                      </svg>
+                    </button>
+                    <div class="recommend__pagination"></div>
+                    <button class="button button--outline button--icon slick-next recommend__next"><span></span>
+                      <svg>
+                        <use xlink:href="./images/sprite.svg#chevron-right"></use>
+                      </svg>
+                    </button>
+                  </div><a class="button button--angle recommend__more" href="shop.html"><span>Перейти в магазин Ребризер</span>
+                    <svg>
+                      <use xlink:href="./images/sprite.svg#arrow-angle"></use>
+                    </svg></a>
+                </div>
+              </div>
+              <div class="recommend__content-item is-hidden" data-id="underwater-photography">
+                <div class="swiper-container __js_recommend-carousel">
+                  <div class="swiper-wrapper">
+                    <div class="recommend__item swiper-slide product-preview">
+                      <div class="product-preview__image"> <img src="images/product-preview/9.jpg" srcset="images/product-preview/9@2x.jpg 2x" width="145" height="189" alt="SDI ночной дайвинг"></div>
+                      <h3 class="product-preview__title"> <a href="#">SDI ночной дайвинг</a></h3>
+                      <div class="product-preview__text">Open Water Diver. Учебное пособие по дайвингу</div>
+                      <div class="product-preview__middle"> 
+                        <div class="product-preview__price">1&nbsp;200₽
+                          <div class="product-preview__price-old">1&nbsp;200₽</div>
+                        </div>
+                        <div class="product-preview__discount">-10%</div>
+                        <div class="product-preview__orders">150</div>
+                      </div>
+                      <div class="product-preview__bottom"> 
+                        <div class="product-preview__rating">
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star-empty"></use>
+                          </svg>
+                        </div><a class="button product-preview__btn button--to-cart" href="#"><span>В корзину</span>
+                          <svg>
+                            <use xlink:href="./images/sprite.svg#cart"></use>
+                          </svg></a>
+                      </div>
+                    </div>
+                    <div class="recommend__item swiper-slide product-preview">
+                      <div class="product-preview__image"> <img src="images/product-preview/10.jpg" srcset="images/product-preview/10@2x.jpg 2x" width="168" height="146" alt="SDI ночной дайвинг"></div>
+                      <h3 class="product-preview__title"> <a href="#">SDI ночной дайвинг</a></h3>
+                      <div class="product-preview__text">Ночной дайвинг. Подводная навигация и погружения</div>
+                      <div class="product-preview__middle"> 
+                        <div class="product-preview__price">1&nbsp;200₽
+                          <div class="product-preview__price-old">1&nbsp;200₽</div>
+                        </div>
+                        <div class="product-preview__discount">-10%</div>
+                        <div class="product-preview__orders">150</div>
+                      </div>
+                      <div class="product-preview__bottom"> 
+                        <div class="product-preview__rating">
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star-empty"></use>
+                          </svg>
+                        </div><a class="button product-preview__btn button--to-cart" href="#"><span>В корзину</span>
+                          <svg>
+                            <use xlink:href="./images/sprite.svg#cart"></use>
+                          </svg></a>
+                      </div>
+                    </div>
+                    <div class="recommend__item swiper-slide product-preview">
+                      <div class="product-preview__image"> <img src="images/product-preview/11.jpg" srcset="images/product-preview/11@2x.jpg 2x" width="126" height="162" alt="SDI ночной дайвинг"></div>
+                      <h3 class="product-preview__title"> <a href="#">SDI ночной дайвинг</a></h3>
+                      <div class="product-preview__text">Ночной дайвинг. Подводная навигация и погружения</div>
+                      <div class="product-preview__middle"> 
+                        <div class="product-preview__price">1&nbsp;200₽
+                          <div class="product-preview__price-old">1&nbsp;200₽</div>
+                        </div>
+                        <div class="product-preview__discount">-10%</div>
+                        <div class="product-preview__orders">150</div>
+                      </div>
+                      <div class="product-preview__bottom"> 
+                        <div class="product-preview__rating">
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star-empty"></use>
+                          </svg>
+                        </div><a class="button product-preview__btn button--to-cart" href="#"><span>В корзину</span>
+                          <svg>
+                            <use xlink:href="./images/sprite.svg#cart"></use>
+                          </svg></a>
+                      </div>
+                    </div>
+                    <div class="recommend__item swiper-slide product-preview">
+                      <div class="product-preview__image"> <img src="images/product-preview/9.jpg" srcset="images/product-preview/9@2x.jpg 2x" width="145" height="189" alt="SDI ночной дайвинг"></div>
+                      <h3 class="product-preview__title"> <a href="#">SDI ночной дайвинг</a></h3>
+                      <div class="product-preview__text">Ночной дайвинг. Подводная навигация и погружения</div>
+                      <div class="product-preview__middle"> 
+                        <div class="product-preview__price">1&nbsp;200₽
+                          <div class="product-preview__price-old">1&nbsp;200₽</div>
+                        </div>
+                        <div class="product-preview__discount">-10%</div>
+                        <div class="product-preview__orders">150</div>
+                      </div>
+                      <div class="product-preview__bottom"> 
+                        <div class="product-preview__rating">
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star-empty"></use>
+                          </svg>
+                        </div><a class="button product-preview__btn button--to-cart" href="#"><span>В корзину</span>
+                          <svg>
+                            <use xlink:href="./images/sprite.svg#cart"></use>
+                          </svg></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="recommend__content-item-bottom">
+                  <div class="recommend__nav">
+                    <button class="button button--outline button--icon slick-prev recommend__prev"><span></span>
+                      <svg>
+                        <use xlink:href="./images/sprite.svg#chevron-right"></use>
+                      </svg>
+                    </button>
+                    <div class="recommend__pagination"></div>
+                    <button class="button button--outline button--icon slick-next recommend__next"><span></span>
+                      <svg>
+                        <use xlink:href="./images/sprite.svg#chevron-right"></use>
+                      </svg>
+                    </button>
+                  </div><a class="button button--angle recommend__more" href="shop.html"><span>Перейти в магазин Подводная съемка</span>
+                    <svg>
+                      <use xlink:href="./images/sprite.svg#arrow-angle"></use>
+                    </svg></a>
+                </div>
+              </div>
+              <div class="recommend__content-item is-hidden" data-id="flippers">
+                <div class="swiper-container __js_recommend-carousel">
+                  <div class="swiper-wrapper">
+                    <div class="recommend__item swiper-slide product-preview">
+                      <div class="product-preview__image"> <img src="images/product-preview/9.jpg" srcset="images/product-preview/9@2x.jpg 2x" width="145" height="189" alt="SDI ночной дайвинг"></div>
+                      <h3 class="product-preview__title"> <a href="#">SDI ночной дайвинг</a></h3>
+                      <div class="product-preview__text">Open Water Diver. Учебное пособие по дайвингу</div>
+                      <div class="product-preview__middle"> 
+                        <div class="product-preview__price">1&nbsp;200₽
+                          <div class="product-preview__price-old">1&nbsp;200₽</div>
+                        </div>
+                        <div class="product-preview__discount">-10%</div>
+                        <div class="product-preview__orders">150</div>
+                      </div>
+                      <div class="product-preview__bottom"> 
+                        <div class="product-preview__rating">
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star-empty"></use>
+                          </svg>
+                        </div><a class="button product-preview__btn button--to-cart" href="#"><span>В корзину</span>
+                          <svg>
+                            <use xlink:href="./images/sprite.svg#cart"></use>
+                          </svg></a>
+                      </div>
+                    </div>
+                    <div class="recommend__item swiper-slide product-preview">
+                      <div class="product-preview__image"> <img src="images/product-preview/10.jpg" srcset="images/product-preview/10@2x.jpg 2x" width="168" height="146" alt="SDI ночной дайвинг"></div>
+                      <h3 class="product-preview__title"> <a href="#">SDI ночной дайвинг</a></h3>
+                      <div class="product-preview__text">Ночной дайвинг. Подводная навигация и погружения</div>
+                      <div class="product-preview__middle"> 
+                        <div class="product-preview__price">1&nbsp;200₽
+                          <div class="product-preview__price-old">1&nbsp;200₽</div>
+                        </div>
+                        <div class="product-preview__discount">-10%</div>
+                        <div class="product-preview__orders">150</div>
+                      </div>
+                      <div class="product-preview__bottom"> 
+                        <div class="product-preview__rating">
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star-empty"></use>
+                          </svg>
+                        </div><a class="button product-preview__btn button--to-cart" href="#"><span>В корзину</span>
+                          <svg>
+                            <use xlink:href="./images/sprite.svg#cart"></use>
+                          </svg></a>
+                      </div>
+                    </div>
+                    <div class="recommend__item swiper-slide product-preview">
+                      <div class="product-preview__image"> <img src="images/product-preview/11.jpg" srcset="images/product-preview/11@2x.jpg 2x" width="126" height="162" alt="SDI ночной дайвинг"></div>
+                      <h3 class="product-preview__title"> <a href="#">SDI ночной дайвинг</a></h3>
+                      <div class="product-preview__text">Ночной дайвинг. Подводная навигация и погружения</div>
+                      <div class="product-preview__middle"> 
+                        <div class="product-preview__price">1&nbsp;200₽
+                          <div class="product-preview__price-old">1&nbsp;200₽</div>
+                        </div>
+                        <div class="product-preview__discount">-10%</div>
+                        <div class="product-preview__orders">150</div>
+                      </div>
+                      <div class="product-preview__bottom"> 
+                        <div class="product-preview__rating">
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star-empty"></use>
+                          </svg>
+                        </div><a class="button product-preview__btn button--to-cart" href="#"><span>В корзину</span>
+                          <svg>
+                            <use xlink:href="./images/sprite.svg#cart"></use>
+                          </svg></a>
+                      </div>
+                    </div>
+                    <div class="recommend__item swiper-slide product-preview">
+                      <div class="product-preview__image"> <img src="images/product-preview/9.jpg" srcset="images/product-preview/9@2x.jpg 2x" width="145" height="189" alt="SDI ночной дайвинг"></div>
+                      <h3 class="product-preview__title"> <a href="#">SDI ночной дайвинг</a></h3>
+                      <div class="product-preview__text">Ночной дайвинг. Подводная навигация и погружения</div>
+                      <div class="product-preview__middle"> 
+                        <div class="product-preview__price">1&nbsp;200₽
+                          <div class="product-preview__price-old">1&nbsp;200₽</div>
+                        </div>
+                        <div class="product-preview__discount">-10%</div>
+                        <div class="product-preview__orders">150</div>
+                      </div>
+                      <div class="product-preview__bottom"> 
+                        <div class="product-preview__rating">
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star-empty"></use>
+                          </svg>
+                        </div><a class="button product-preview__btn button--to-cart" href="#"><span>В корзину</span>
+                          <svg>
+                            <use xlink:href="./images/sprite.svg#cart"></use>
+                          </svg></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="recommend__content-item-bottom">
+                  <div class="recommend__nav">
+                    <button class="button button--outline button--icon slick-prev recommend__prev"><span></span>
+                      <svg>
+                        <use xlink:href="./images/sprite.svg#chevron-right"></use>
+                      </svg>
+                    </button>
+                    <div class="recommend__pagination"></div>
+                    <button class="button button--outline button--icon slick-next recommend__next"><span></span>
+                      <svg>
+                        <use xlink:href="./images/sprite.svg#chevron-right"></use>
+                      </svg>
+                    </button>
+                  </div><a class="button button--angle recommend__more" href="shop.html"><span>Перейти в магазин Ласты</span>
+                    <svg>
+                      <use xlink:href="./images/sprite.svg#arrow-angle"></use>
+                    </svg></a>
+                </div>
+              </div>
+              <div class="recommend__content-item is-hidden" data-id="coils-and-buoys">
+                <div class="swiper-container __js_recommend-carousel">
+                  <div class="swiper-wrapper">
+                    <div class="recommend__item swiper-slide product-preview">
+                      <div class="product-preview__image"> <img src="images/product-preview/9.jpg" srcset="images/product-preview/9@2x.jpg 2x" width="145" height="189" alt="SDI ночной дайвинг"></div>
+                      <h3 class="product-preview__title"> <a href="#">SDI ночной дайвинг</a></h3>
+                      <div class="product-preview__text">Open Water Diver. Учебное пособие по дайвингу</div>
+                      <div class="product-preview__middle"> 
+                        <div class="product-preview__price">1&nbsp;200₽
+                          <div class="product-preview__price-old">1&nbsp;200₽</div>
+                        </div>
+                        <div class="product-preview__discount">-10%</div>
+                        <div class="product-preview__orders">150</div>
+                      </div>
+                      <div class="product-preview__bottom"> 
+                        <div class="product-preview__rating">
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star-empty"></use>
+                          </svg>
+                        </div><a class="button product-preview__btn button--to-cart" href="#"><span>В корзину</span>
+                          <svg>
+                            <use xlink:href="./images/sprite.svg#cart"></use>
+                          </svg></a>
+                      </div>
+                    </div>
+                    <div class="recommend__item swiper-slide product-preview">
+                      <div class="product-preview__image"> <img src="images/product-preview/10.jpg" srcset="images/product-preview/10@2x.jpg 2x" width="168" height="146" alt="SDI ночной дайвинг"></div>
+                      <h3 class="product-preview__title"> <a href="#">SDI ночной дайвинг</a></h3>
+                      <div class="product-preview__text">Ночной дайвинг. Подводная навигация и погружения</div>
+                      <div class="product-preview__middle"> 
+                        <div class="product-preview__price">1&nbsp;200₽
+                          <div class="product-preview__price-old">1&nbsp;200₽</div>
+                        </div>
+                        <div class="product-preview__discount">-10%</div>
+                        <div class="product-preview__orders">150</div>
+                      </div>
+                      <div class="product-preview__bottom"> 
+                        <div class="product-preview__rating">
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star-empty"></use>
+                          </svg>
+                        </div><a class="button product-preview__btn button--to-cart" href="#"><span>В корзину</span>
+                          <svg>
+                            <use xlink:href="./images/sprite.svg#cart"></use>
+                          </svg></a>
+                      </div>
+                    </div>
+                    <div class="recommend__item swiper-slide product-preview">
+                      <div class="product-preview__image"> <img src="images/product-preview/11.jpg" srcset="images/product-preview/11@2x.jpg 2x" width="126" height="162" alt="SDI ночной дайвинг"></div>
+                      <h3 class="product-preview__title"> <a href="#">SDI ночной дайвинг</a></h3>
+                      <div class="product-preview__text">Ночной дайвинг. Подводная навигация и погружения</div>
+                      <div class="product-preview__middle"> 
+                        <div class="product-preview__price">1&nbsp;200₽
+                          <div class="product-preview__price-old">1&nbsp;200₽</div>
+                        </div>
+                        <div class="product-preview__discount">-10%</div>
+                        <div class="product-preview__orders">150</div>
+                      </div>
+                      <div class="product-preview__bottom"> 
+                        <div class="product-preview__rating">
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star-empty"></use>
+                          </svg>
+                        </div><a class="button product-preview__btn button--to-cart" href="#"><span>В корзину</span>
+                          <svg>
+                            <use xlink:href="./images/sprite.svg#cart"></use>
+                          </svg></a>
+                      </div>
+                    </div>
+                    <div class="recommend__item swiper-slide product-preview">
+                      <div class="product-preview__image"> <img src="images/product-preview/9.jpg" srcset="images/product-preview/9@2x.jpg 2x" width="145" height="189" alt="SDI ночной дайвинг"></div>
+                      <h3 class="product-preview__title"> <a href="#">SDI ночной дайвинг</a></h3>
+                      <div class="product-preview__text">Ночной дайвинг. Подводная навигация и погружения</div>
+                      <div class="product-preview__middle"> 
+                        <div class="product-preview__price">1&nbsp;200₽
+                          <div class="product-preview__price-old">1&nbsp;200₽</div>
+                        </div>
+                        <div class="product-preview__discount">-10%</div>
+                        <div class="product-preview__orders">150</div>
+                      </div>
+                      <div class="product-preview__bottom"> 
+                        <div class="product-preview__rating">
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star-empty"></use>
+                          </svg>
+                        </div><a class="button product-preview__btn button--to-cart" href="#"><span>В корзину</span>
+                          <svg>
+                            <use xlink:href="./images/sprite.svg#cart"></use>
+                          </svg></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="recommend__content-item-bottom">
+                  <div class="recommend__nav">
+                    <button class="button button--outline button--icon slick-prev recommend__prev"><span></span>
+                      <svg>
+                        <use xlink:href="./images/sprite.svg#chevron-right"></use>
+                      </svg>
+                    </button>
+                    <div class="recommend__pagination"></div>
+                    <button class="button button--outline button--icon slick-next recommend__next"><span></span>
+                      <svg>
+                        <use xlink:href="./images/sprite.svg#chevron-right"></use>
+                      </svg>
+                    </button>
+                  </div><a class="button button--angle recommend__more" href="shop.html"><span>Перейти в магазин Катушки и буи</span>
+                    <svg>
+                      <use xlink:href="./images/sprite.svg#arrow-angle"></use>
+                    </svg></a>
+                </div>
+              </div>
+              <div class="recommend__content-item is-hidden" data-id="sidemount">
+                <div class="swiper-container __js_recommend-carousel">
+                  <div class="swiper-wrapper">
+                    <div class="recommend__item swiper-slide product-preview">
+                      <div class="product-preview__image"> <img src="images/product-preview/9.jpg" srcset="images/product-preview/9@2x.jpg 2x" width="145" height="189" alt="SDI ночной дайвинг"></div>
+                      <h3 class="product-preview__title"> <a href="#">SDI ночной дайвинг</a></h3>
+                      <div class="product-preview__text">Open Water Diver. Учебное пособие по дайвингу</div>
+                      <div class="product-preview__middle"> 
+                        <div class="product-preview__price">1&nbsp;200₽
+                          <div class="product-preview__price-old">1&nbsp;200₽</div>
+                        </div>
+                        <div class="product-preview__discount">-10%</div>
+                        <div class="product-preview__orders">150</div>
+                      </div>
+                      <div class="product-preview__bottom"> 
+                        <div class="product-preview__rating">
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star-empty"></use>
+                          </svg>
+                        </div><a class="button product-preview__btn button--to-cart" href="#"><span>В корзину</span>
+                          <svg>
+                            <use xlink:href="./images/sprite.svg#cart"></use>
+                          </svg></a>
+                      </div>
+                    </div>
+                    <div class="recommend__item swiper-slide product-preview">
+                      <div class="product-preview__image"> <img src="images/product-preview/10.jpg" srcset="images/product-preview/10@2x.jpg 2x" width="168" height="146" alt="SDI ночной дайвинг"></div>
+                      <h3 class="product-preview__title"> <a href="#">SDI ночной дайвинг</a></h3>
+                      <div class="product-preview__text">Ночной дайвинг. Подводная навигация и погружения</div>
+                      <div class="product-preview__middle"> 
+                        <div class="product-preview__price">1&nbsp;200₽
+                          <div class="product-preview__price-old">1&nbsp;200₽</div>
+                        </div>
+                        <div class="product-preview__discount">-10%</div>
+                        <div class="product-preview__orders">150</div>
+                      </div>
+                      <div class="product-preview__bottom"> 
+                        <div class="product-preview__rating">
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star-empty"></use>
+                          </svg>
+                        </div><a class="button product-preview__btn button--to-cart" href="#"><span>В корзину</span>
+                          <svg>
+                            <use xlink:href="./images/sprite.svg#cart"></use>
+                          </svg></a>
+                      </div>
+                    </div>
+                    <div class="recommend__item swiper-slide product-preview">
+                      <div class="product-preview__image"> <img src="images/product-preview/11.jpg" srcset="images/product-preview/11@2x.jpg 2x" width="126" height="162" alt="SDI ночной дайвинг"></div>
+                      <h3 class="product-preview__title"> <a href="#">SDI ночной дайвинг</a></h3>
+                      <div class="product-preview__text">Ночной дайвинг. Подводная навигация и погружения</div>
+                      <div class="product-preview__middle"> 
+                        <div class="product-preview__price">1&nbsp;200₽
+                          <div class="product-preview__price-old">1&nbsp;200₽</div>
+                        </div>
+                        <div class="product-preview__discount">-10%</div>
+                        <div class="product-preview__orders">150</div>
+                      </div>
+                      <div class="product-preview__bottom"> 
+                        <div class="product-preview__rating">
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star-empty"></use>
+                          </svg>
+                        </div><a class="button product-preview__btn button--to-cart" href="#"><span>В корзину</span>
+                          <svg>
+                            <use xlink:href="./images/sprite.svg#cart"></use>
+                          </svg></a>
+                      </div>
+                    </div>
+                    <div class="recommend__item swiper-slide product-preview">
+                      <div class="product-preview__image"> <img src="images/product-preview/9.jpg" srcset="images/product-preview/9@2x.jpg 2x" width="145" height="189" alt="SDI ночной дайвинг"></div>
+                      <h3 class="product-preview__title"> <a href="#">SDI ночной дайвинг</a></h3>
+                      <div class="product-preview__text">Ночной дайвинг. Подводная навигация и погружения</div>
+                      <div class="product-preview__middle"> 
+                        <div class="product-preview__price">1&nbsp;200₽
+                          <div class="product-preview__price-old">1&nbsp;200₽</div>
+                        </div>
+                        <div class="product-preview__discount">-10%</div>
+                        <div class="product-preview__orders">150</div>
+                      </div>
+                      <div class="product-preview__bottom"> 
+                        <div class="product-preview__rating">
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star"></use>
+                          </svg>
+                          <svg width="15" height="15">
+                            <use xlink:href="./images/sprite.svg#star-empty"></use>
+                          </svg>
+                        </div><a class="button product-preview__btn button--to-cart" href="#"><span>В корзину</span>
+                          <svg>
+                            <use xlink:href="./images/sprite.svg#cart"></use>
+                          </svg></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="recommend__content-item-bottom">
+                  <div class="recommend__nav">
+                    <button class="button button--outline button--icon slick-prev recommend__prev"><span></span>
+                      <svg>
+                        <use xlink:href="./images/sprite.svg#chevron-right"></use>
+                      </svg>
+                    </button>
+                    <div class="recommend__pagination"></div>
+                    <button class="button button--outline button--icon slick-next recommend__next"><span></span>
+                      <svg>
+                        <use xlink:href="./images/sprite.svg#chevron-right"></use>
+                      </svg>
+                    </button>
+                  </div><a class="button button--angle recommend__more" href="shop.html"><span>Перейти в магазин Sidemount</span>
+                    <svg>
+                      <use xlink:href="./images/sprite.svg#arrow-angle"></use>
+                    </svg></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="trip">
+        <div class="container">
+          <h2 class="title--large trip__title title">Ближайшие клубные поездки</h2>
+          <div class="trip__wrapper">
+            <div class="swiper-container __js_trip-carousel">
+              <div class="swiper-wrapper">
+                <div class="trip-card swiper-slide"> 
+                  <div class="trip-card__bg"><img src="images/homepage/trip/1.jpg" srcset="images/homepage/trip/1@2x.jpg 2x" width="607" height="339" alt=""></div>
+                  <div class="trip-card__content">
+                    <div class="trip-card__place">Египет</div>
+                    <div class="trip-card__title">Дейли-дайвинг на Красном море</div>
+                    <div class="trip-card__date">02.09.2021 - 11.09.2021</div>
+                    <div class="trip-card__desc">Один из лучших и излюбленных дайверами маршрутов сафари.</div>
+                    <div class="trip-card__price">97 000₽</div>
+                    <button class="button button--outline button--icon trip-card__more"><span>Подробнее</span>
+                      <svg>
+                        <use xlink:href="./images/sprite.svg#chevron-right"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="trip-card swiper-slide">
+                  <div class="trip-card__bg"><img src="images/homepage/trip/2.jpg" srcset="images/homepage/trip/2@2x.jpg 2x" width="386" height="399" alt=""></div>
+                  <div class="trip-card__content">
+                    <div class="trip-card__place">Мексика</div>
+                    <div class="trip-card__title">Полуостров Юкатан</div>
+                    <div class="trip-card__date">30.10.2021 - 13.11.2021</div>
+                    <div class="trip-card__desc">Увлекательное путешествие по следам древних цивилизаций и погружения в невероятных сенотах</div>
+                    <div class="trip-card__price">288 000₽</div>
+                    <button class="button button--outline button--icon trip-card__more"><span>Подробнее</span>
+                      <svg>
+                        <use xlink:href="./images/sprite.svg#chevron-right"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="button button--outline button--icon slick-prev trip__prev"><span></span>
+              <svg>
+                <use xlink:href="./images/sprite.svg#chevron-right"></use>
+              </svg>
+            </button>
+            <button class="button button--outline button--icon slick-next trip__next"><span></span>
+              <svg>
+                <use xlink:href="./images/sprite.svg#chevron-right"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="trip__mobile-wrapper">
+            <button class="button button--outline button--icon slick-prev trip__prev"><span></span>
+              <svg>
+                <use xlink:href="./images/sprite.svg#chevron-right"></use>
+              </svg>
+            </button>
+            <button class="button trip__all"><span>Все поездки</span>
+            </button>
+            <button class="button button--outline button--icon slick-next trip__next"><span></span>
+              <svg>
+                <use xlink:href="./images/sprite.svg#chevron-right"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class="reviews">
+        <div class="container">
+          <div class="reviews__row">
+            <h2 class="title--medium reviews__title title">Отзывы о прошедших поездках</h2>
+            <button class="button button--angle reviews__more"><span>Все клубные поездки</span>
+              <svg>
+                <use xlink:href="./images/sprite.svg#arrow-angle"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="reviews__wrapper">
+            <div class="reviews-card swiper-slide">
+              <div class="reviews-card__left">
+                <div class="reviews-card__bg"><img src="images/homepage/courses/3.jpg" srcset="images/homepage/courses/3@2x.jpg 2x" width="397" height="341" alt=""></div>
+                <div class="reviews-card__content">
+                  <div class="reviews-card__place">Мальдивы</div>
+                  <div class="reviews-card__title">Золотой треугольник</div>
+                  <div class="reviews-card__desc">Манты, китовые акулы и сафари вдоль райских островов.</div>
+                  <div class="reviews-card__bottom"><a href="#" target="_blank">Подробнее</a>
+                    <div class="reviews-card__date">01.05.2021</div>
+                  </div>
+                </div>
+              </div>
+              <div class="reviews-card__right">
+                <div class="swiper-container __js_reviews-carousel">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="reviews-card__row">
+                        <div class="reviews-card__col">
+                          <div class="reviews-card__person">
+                            <div class="reviews-card__avatar"><img src="images/homepage/courses/3.jpg" srcset="images/homepage/courses/3@2x.jpg 2x" width="397" height="341" alt=""></div>
+                            <div class="reviews-card__person-info">
+                              <p>Александр</p>
+                              <p>Мальдивы</p>
+                            </div>
+                          </div>
+                          <div class="reviews-card__text">
+                            <p>
+                              Не следует, однако забывать, что постоянный количественный рост и сфера нашей активности требуют от нас анализа систем массового участия.</p>
+                            <p>
+                              Значимость этих проблем настолько очевидна, что укрепление и развитие структуры способствует подготовки и реализации системы обучения кадров, соответствует насущным потребностям.</p>
+                            <p>Значимость этих проблем настолько очевидна, что сложившаяся...</p>
+                          </div>
+                        </div>
+                        <div class="reviews-card__col">
+                          <div class="reviews-card__person">
+                            <div class="reviews-card__avatar"><img src="images/homepage/courses/3.jpg" srcset="images/homepage/courses/3@2x.jpg 2x" width="397" height="341" alt=""></div>
+                            <div class="reviews-card__person-info">
+                              <p>Андрей</p>
+                              <p>Мальдивы</p>
+                            </div>
+                          </div>
+                          <div class="reviews-card__text">
+                            <p>
+                              Повседневная практика показывает, что консультация с широким активом обеспечивает широкому кругу (специалистов) участие в формировании системы обучения кадров, соответствует насущным потребностям.</p>
+                            <p>
+                              Идейные соображения высшего порядка, а также начало повседневной работы по формированию позиции в значительной степени обуславливает создание систем массового участия. Равным образом
+                               рамки и место обучения кадров требуют...
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="reviews-card__row">
+                        <div class="reviews-card__col">
+                          <div class="reviews-card__person">
+                            <div class="reviews-card__avatar"><img src="images/homepage/courses/3.jpg" srcset="images/homepage/courses/3@2x.jpg 2x" width="397" height="341" alt=""></div>
+                            <div class="reviews-card__person-info">
+                              <p>Александр</p>
+                              <p>Мальдивы</p>
+                            </div>
+                          </div>
+                          <div class="reviews-card__text">
+                            <p>
+                              Не следует, однако забывать, что постоянный количественный рост и сфера нашей активности требуют от нас анализа систем массового участия.</p>
+                            <p>
+                              Значимость этих проблем настолько очевидна, что укрепление и развитие структуры способствует подготовки и реализации системы обучения кадров, соответствует насущным потребностям.</p>
+                            <p>Значимость этих проблем настолько очевидна, что сложившаяся...</p>
+                          </div>
+                        </div>
+                        <div class="reviews-card__col">
+                          <div class="reviews-card__person">
+                            <div class="reviews-card__avatar"><img src="images/homepage/courses/3.jpg" srcset="images/homepage/courses/3@2x.jpg 2x" width="397" height="341" alt=""></div>
+                            <div class="reviews-card__person-info">
+                              <p>Андрей</p>
+                              <p>Мальдивы</p>
+                            </div>
+                          </div>
+                          <div class="reviews-card__text">
+                            <p>
+                              Повседневная практика показывает, что консультация с широким активом обеспечивает широкому кругу (специалистов) участие в формировании системы обучения кадров, соответствует насущным потребностям.</p>
+                            <p>
+                              Идейные соображения высшего порядка, а также начало повседневной работы по формированию позиции в значительной степени обуславливает создание систем массового участия. Равным образом
+                               рамки и место обучения кадров требуют...
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="reviews__mobile-wrapper">
+                  <button class="button button--outline button--icon slick-prev reviews__prev"><span></span>
+                    <svg>
+                      <use xlink:href="./images/sprite.svg#chevron-right"></use>
+                    </svg>
+                  </button>
+                  <div class="reviews__pagination"></div>
+                  <button class="button button--outline button--icon slick-next reviews__next"><span></span>
+                    <svg>
+                      <use xlink:href="./images/sprite.svg#chevron-right"></use>
+                    </svg>
+                  </button>
+                </div><a class="reviews-card__report" href="" target="_blank">Перейти к фотоотчету</a>
+              </div>
+            </div>
+            <button class="button button--outline button--icon slick-prev reviews__prev"><span></span>
+              <svg>
+                <use xlink:href="./images/sprite.svg#chevron-right"></use>
+              </svg>
+            </button>
+            <button class="button button--outline button--icon slick-next reviews__next"><span></span>
+              <svg>
+                <use xlink:href="./images/sprite.svg#chevron-right"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class="products-carousel">
+        <div class="products-carousel__container container">
+          <header class="products-carousel__header">
+            <h2 class="title--small products-carousel__title title">Товары с клубной символикой</h2><a class="button products-carousel__more button--angle" href="catalog.html"><span>Все товары</span>
+              <svg>
+                <use xlink:href="./images/sprite.svg#arrow-angle"></use>
+              </svg></a>
+          </header>
+          <div class="products-carousel__swiper swiper-container __js_products-carousel">
+            <div class="swiper-wrapper"> 
+              <div class="products-carousel__item swiper-slide product-preview">
+                <div class="product-preview__image"> <img src="images/product-preview/5.jpg" srcset="images/product-preview/5@2x.jpg 2x" width="140" height="186" alt="SDI OWD"></div>
+                <h3 class="product-preview__title"> <a href="#">SDI OWD</a></h3>
+                <div class="product-preview__text">Open Water Diver. Учебное пособие по дайвингу</div>
+                <div class="product-preview__middle"> 
+                  <div class="product-preview__price">1&nbsp;200₽
+                  </div>
+                </div>
+                <div class="product-preview__bottom"> 
+                  <div class="product-preview__rating">
+                    <svg width="15" height="15">
+                      <use xlink:href="./images/sprite.svg#star"></use>
+                    </svg>
+                    <svg width="15" height="15">
+                      <use xlink:href="./images/sprite.svg#star"></use>
+                    </svg>
+                    <svg width="15" height="15">
+                      <use xlink:href="./images/sprite.svg#star"></use>
+                    </svg>
+                    <svg width="15" height="15">
+                      <use xlink:href="./images/sprite.svg#star"></use>
+                    </svg>
+                    <svg width="15" height="15">
+                      <use xlink:href="./images/sprite.svg#star-empty"></use>
+                    </svg>
+                  </div>
+                  <div class="product-preview__out-of-stock">Нет в наличии</div>
+                </div>
+              </div>
+              <div class="products-carousel__item swiper-slide product-preview">
+                <div class="product-preview__image"> <img src="images/product-preview/6.jpg" srcset="images/product-preview/6@2x.jpg 2x" width="171" height="195" alt="SDI ночной дайвинг"></div>
+                <h3 class="product-preview__title"> <a href="#">SDI ночной дайвинг</a></h3>
+                <div class="product-preview__text">Ночной дайвинг. Подводная навигация и погружения</div>
+                <div class="product-preview__middle"> 
+                  <div class="product-preview__price">1&nbsp;200₽
+                  </div>
+                  <div class="product-preview__orders">150</div>
+                </div>
+                <div class="product-preview__bottom"> 
+                  <div class="product-preview__rating">
+                    <svg width="15" height="15">
+                      <use xlink:href="./images/sprite.svg#star"></use>
+                    </svg>
+                    <svg width="15" height="15">
+                      <use xlink:href="./images/sprite.svg#star"></use>
+                    </svg>
+                    <svg width="15" height="15">
+                      <use xlink:href="./images/sprite.svg#star"></use>
+                    </svg>
+                    <svg width="15" height="15">
+                      <use xlink:href="./images/sprite.svg#star"></use>
+                    </svg>
+                    <svg width="15" height="15">
+                      <use xlink:href="./images/sprite.svg#star-empty"></use>
+                    </svg>
+                  </div><a class="button product-preview__btn button--to-cart" href="#"><span>В корзину</span>
+                    <svg>
+                      <use xlink:href="./images/sprite.svg#cart"></use>
+                    </svg></a>
+                </div>
+              </div>
+              <div class="products-carousel__item swiper-slide product-preview">
+                <div class="product-preview__image"> <img src="images/product-preview/7.jpg" srcset="images/product-preview/7@2x.jpg 2x" width="106" height="193" alt="FRTI пособие"></div>
+                <h3 class="product-preview__title"> <a href="#">FRTI пособие</a></h3>
+                <div class="product-preview__text">Экстренная медицинская помощь для взрослых и детей</div>
+                <div class="product-preview__middle"> 
+                  <div class="product-preview__price">1&nbsp;200₽
+                  </div>
+                </div>
+                <div class="product-preview__bottom"> 
+                  <div class="product-preview__rating">
+                    <svg width="15" height="15">
+                      <use xlink:href="./images/sprite.svg#star"></use>
+                    </svg>
+                    <svg width="15" height="15">
+                      <use xlink:href="./images/sprite.svg#star"></use>
+                    </svg>
+                    <svg width="15" height="15">
+                      <use xlink:href="./images/sprite.svg#star"></use>
+                    </svg>
+                    <svg width="15" height="15">
+                      <use xlink:href="./images/sprite.svg#star"></use>
+                    </svg>
+                    <svg width="15" height="15">
+                      <use xlink:href="./images/sprite.svg#star-empty"></use>
+                    </svg>
+                  </div>
+                  <div class="product-preview__out-of-stock">Нет в наличии</div>
+                </div>
+              </div>
+              <div class="products-carousel__item swiper-slide product-preview">
+                <div class="product-preview__image"> <img src="images/product-preview/8.jpg" srcset="images/product-preview/8@2x.jpg 2x" width="112" height="201" alt="Стивен Барски Dry Suit"></div>
+                <h3 class="product-preview__title"> <a href="#">Стивен Барски Dry Suit</a></h3>
+                <div class="product-preview__text">Дайвинг в сухом костюме. История, обзор теории, уход.</div>
+                <div class="product-preview__middle"> 
+                  <div class="product-preview__price">1&nbsp;200₽
+                  </div>
+                  <div class="product-preview__orders">150</div>
+                </div>
+                <div class="product-preview__bottom"> 
+                  <div class="product-preview__rating">
+                    <svg width="15" height="15">
+                      <use xlink:href="./images/sprite.svg#star"></use>
+                    </svg>
+                    <svg width="15" height="15">
+                      <use xlink:href="./images/sprite.svg#star"></use>
+                    </svg>
+                    <svg width="15" height="15">
+                      <use xlink:href="./images/sprite.svg#star"></use>
+                    </svg>
+                    <svg width="15" height="15">
+                      <use xlink:href="./images/sprite.svg#star"></use>
+                    </svg>
+                    <svg width="15" height="15">
+                      <use xlink:href="./images/sprite.svg#star-empty"></use>
+                    </svg>
+                  </div><a class="button product-preview__btn button--to-cart" href="#"><span>В корзину</span>
+                    <svg>
+                      <use xlink:href="./images/sprite.svg#cart"></use>
+                    </svg></a>
+                </div>
+              </div>
+              <div class="products-carousel__item swiper-slide product-preview">
+                <div class="product-preview__image"> <img src="images/product-preview/6.jpg" srcset="images/product-preview/6@2x.jpg 2x" width="171" height="195" alt="SDI ночной дайвинг"></div>
+                <h3 class="product-preview__title"> <a href="#">SDI ночной дайвинг</a></h3>
+                <div class="product-preview__text">Ночной дайвинг. Подводная навигация и погружения</div>
+                <div class="product-preview__middle"> 
+                  <div class="product-preview__price">1&nbsp;200₽
+                  </div>
+                  <div class="product-preview__orders">150</div>
+                </div>
+                <div class="product-preview__bottom"> 
+                  <div class="product-preview__rating">
+                    <svg width="15" height="15">
+                      <use xlink:href="./images/sprite.svg#star"></use>
+                    </svg>
+                    <svg width="15" height="15">
+                      <use xlink:href="./images/sprite.svg#star"></use>
+                    </svg>
+                    <svg width="15" height="15">
+                      <use xlink:href="./images/sprite.svg#star"></use>
+                    </svg>
+                    <svg width="15" height="15">
+                      <use xlink:href="./images/sprite.svg#star"></use>
+                    </svg>
+                    <svg width="15" height="15">
+                      <use xlink:href="./images/sprite.svg#star-empty"></use>
+                    </svg>
+                  </div><a class="button product-preview__btn button--to-cart" href="#"><span>В корзину</span>
+                    <svg>
+                      <use xlink:href="./images/sprite.svg#cart"></use>
+                    </svg></a>
+                </div>
+              </div>
+            </div>
+            <div class="products-carousel__navigation">
+              <button class="button products-carousel__btn button--outline button--icon __js_prev"><span></span>
+                <svg>
+                  <use xlink:href="./images/sprite.svg#chevron-left"></use>
+                </svg>
+              </button>
+              <button class="button products-carousel__btn button--outline button--icon __js_next"><span></span>
+                <svg>
+                  <use xlink:href="./images/sprite.svg#chevron-right"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="products-carousel__pagination"></div>
+        </div>
+      </section>
+      <section class="info-block">
+        <div class="info-block__bg"><img src="images/homepage/banner-info.jpg" srcset="images/homepage/banner-info@2x.jpg 2x" width="1899" height="217" alt=""></div>
+        <div class="container info-block__container">
+          <div class="info-block__image">
+            <picture>
+              <source media="(max-width: 1079px)" srcset="images/homepage/cards-small.png 1x, images/homepage/cards-small@2x.png 2x"><img src="images/homepage/cards.png" srcset="images/homepage/cards@2x.png 2x" alt="">
+            </picture>
+          </div>
+          <div class="info-block__content">
+            <div class="info-block__title">Производим выпуск <br> и перевыпуск карт сертификации дайверов</div><a class="button button--outline button--icon info-block__more" href="certification.html"><span>Подробнее</span>
+              <svg>
+                <use xlink:href="./images/sprite.svg#chevron-right"></use>
+              </svg></a>
+          </div>
+        </div>
+      </section>
+      <section class="articles">
+        <div class="container articles__container">
+          <h2 class="title--large articles__title title">Наши статьи</h2>
+          <div class="articles__wrapper">
+            <div class="swiper-container __js_articles-carousel">
+              <div class="swiper-wrapper">
+                <div class="articles__item articles-card swiper-slide">
+                  <div class="articles-card__image"><img src="images/homepage/articles/1.jpg" srcset="images/homepage/articles/1.jpg 2x" width="397" height="246" alt=""></div>
+                  <div class="articles-card__content">
+                    <div class="articles-card__title">Что такое дейли дайвинг <br> или сафари. Его особенности</div>
+                    <div class="articles-card__row">
+                      <button class="button button--angle articles-card__more"><span>Подробнее</span>
+                        <svg>
+                          <use xlink:href="./images/sprite.svg#arrow-angle"></use>
+                        </svg>
+                      </button>
+                      <div class="articles-card__date">20.08.2021</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="articles__item articles-card swiper-slide">
+                  <div class="articles-card__image"><img src="images/homepage/articles/2.jpg" srcset="images/homepage/articles/2.jpg 2x" width="397" height="246" alt=""></div>
+                  <div class="articles-card__content">
+                    <div class="articles-card__title">Сайдмаунт - плюсы и минусы. Сложности сборки</div>
+                    <div class="articles-card__row">
+                      <button class="button button--angle articles-card__more"><span>Подробнее</span>
+                        <svg>
+                          <use xlink:href="./images/sprite.svg#arrow-angle"></use>
+                        </svg>
+                      </button>
+                      <div class="articles-card__date">20.08.2021</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="articles__item articles-card swiper-slide">
+                  <div class="articles-card__image"><img src="images/homepage/articles/3.jpg" srcset="images/homepage/articles/3.jpg 2x" width="397" height="246" alt=""></div>
+                  <div class="articles-card__content">
+                    <div class="articles-card__title">Лучшие места для дайвинга. <br> Наша подборка</div>
+                    <div class="articles-card__row">
+                      <button class="button button--angle articles-card__more"><span>Подробнее</span>
+                        <svg>
+                          <use xlink:href="./images/sprite.svg#arrow-angle"></use>
+                        </svg>
+                      </button>
+                      <div class="articles-card__date">20.08.2021</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="articles__nav">
+              <button class="button button--outline button--icon slick-prev articles__prev"><span></span>
+                <svg>
+                  <use xlink:href="./images/sprite.svg#chevron-right"></use>
+                </svg>
+              </button>
+              <div class="articles__pagination"></div>
+              <button class="button button--outline button--icon slick-next articles__next"><span></span>
+                <svg>
+                  <use xlink:href="./images/sprite.svg#chevron-right"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <button class="button button--angle articles__more"><span>Все статьи</span>
+            <svg>
+              <use xlink:href="./images/sprite.svg#arrow-angle"></use>
+            </svg>
+          </button>
+        </div>
+      </section>
+      <div class="contact-section">
+        <div class="contact-section__container container">
+          <section class="contact-section__info">
+            <h2 class="title--small contact-section__title title">Наш клуб</h2>
+            <div class="contact-section__list">
+              <div class="contact-section__item contact-item">
+                <div class="contact-item__hint">Телефон</div>
+                <div class="contact-item__text"><a href="tel:89259999902">8 (925) 999-99-02</a></div>
+              </div>
+              <div class="contact-section__item contact-item">
+                <div class="contact-item__hint">Email</div>
+                <div class="contact-item__text"><a href="mailto:learn2dive-tdi-sdi@info.ru">learn2dive-tdi-sdi@info.ru</a></div>
+              </div>
+              <div class="contact-section__item contact-section__item--full contact-item">
+                <div class="contact-item__hint">Адрес</div>
+                <address class="contact-item__text">125284&nbsp;Москва, Беговой проезд, дом&nbsp;11</address>
+              </div>
+            </div>
+            <div class="contact-section__map"><img src="images/components/map.jpg" alt=""></div>
+          </section>
+          <section class="contact-section__main">
+            <h2 class="title--small contact-section__title title">Есть вопросы?</h2>
+            <div class="contact-section__text">Воспользуйтесь формой ниже, и мы поможем вам начать <br> ваше путешествие</div>
+            <div class="contact-section__form sform">
+              <form action="#" method="post">
+                <label class="sform__field sform__field--half field"><span class="field__hint">Ваше Имя*</span>
+                  <input type="text" name="name">
+                </label>
+                <label class="sform__field sform__field--half field"><span class="field__hint">Номер телефона*</span>
+                  <input type="tel" name="phone">
+                </label>
+                <label class="sform__field field"><span class="field__hint">Email*</span>
+                  <input type="email" name="email">
+                </label>
+                <label class="sform__field field"><span class="field__hint">Что Вас интересует?</span>
+                  <textarea name="message"></textarea>
+                </label>
+                <div class="sform__bottom">
+                  <button class="button sform__send" type="submit"><span>Отправить</span>
+                  </button>
+                  <div class="sform__bottom-text">Нажимая на кнопку «Отправить», вы соглашаетсь с <a href="#" target="_blank">условиями обработки персональных данных</a></div>
+                </div>
+              </form>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer__container container">
+        <div class="footer__menu footer__menu--courses"><a class="footer__menu-title" href="courses-page.html">Обучение дайвингу
+            <svg width="10" height="15">
+              <use xlink:href="./images/sprite.svg#arrow-angle"></use>
+            </svg></a>
+          <div class="footer__menu-inner">
+            <div class="footer__menu-part footer__menu-part--columns"><a class="footer__menu-subtitle" href="courses-page.html">SDI
+                <svg width="15" height="10">
+                  <use xlink:href="./images/sprite.svg#arrow-angle"></use>
+                </svg></a>
+              <div class="footer__menu-part-wrapper">
+                <ul class="footer__menu-list footer__menu-list--columns">
+                  <li class="footer__menu-item"> <a href="#">OWD</a></li>
+                  <li class="footer__menu-item"> <a href="#">Ice Diver</a></li>
+                  <li class="footer__menu-item"> <a href="#">Adventure Open Water</a></li>
+                  <li class="footer__menu-item"> <a href="#">Sidemount Diver</a></li>
+                  <li class="footer__menu-item"> <a href="#">Advanced Buoyancy</a></li>
+                  <li class="footer__menu-item"> <a href="#">Rescue Diver</a></li>
+                  <li class="footer__menu-item"> <a href="#">Advanced Buoyancy ext</a></li>
+                  <li class="footer__menu-item"> <a href="#">SDI Divemaster</a></li>
+                  <li class="footer__menu-item"> <a href="#">U/W Navigation</a></li>
+                  <li class="footer__menu-item"> <a href="#">Assistant Instructor</a></li>
+                  <li class="footer__menu-item"> <a href="#">Deep Diver</a></li>
+                  <li class="footer__menu-item"> <a href="#">SDI Advanced SCUBA Diver certification</a></li>
+                  <li class="footer__menu-item"> <a href="#">Night Diver</a></li>
+                  <li class="footer__menu-item"> <a href="#">Dry Suit Diver</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="footer__menu-part"><a class="footer__menu-subtitle" href="courses-page.html">TDI
+                <svg width="15" height="10">
+                  <use xlink:href="./images/sprite.svg#arrow-angle"></use>
+                </svg></a>
+              <div class="footer__menu-part-wrapper">
+                <ul class="footer__menu-list">
+                  <li class="footer__menu-item"> <a href="#">TDI Basic Nitrox</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="footer__menu-part"><a class="footer__menu-subtitle" href="courses-page.html">FRTI
+                <svg width="15" height="10">
+                  <use xlink:href="./images/sprite.svg#arrow-angle"></use>
+                </svg></a>
+              <div class="footer__menu-part-wrapper">
+                <ul class="footer__menu-list">
+                  <li class="footer__menu-item"> <a href="#">Adult and Child Emergency Care</a></li>
+                  <li class="footer__menu-item"> <a href="#">O2 Administrator</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__menu footer__menu--shop"><a class="footer__menu-title" href="shop.html">Каталог товаров
+            <svg width="10" height="15">
+              <use xlink:href="./images/sprite.svg#arrow-angle"></use>
+            </svg></a>
+          <div class="footer__menu-inner">
+            <ul class="footer__menu-list">
+              <li class="footer__menu-item"> <a href="catalog.html">Костюмы</a></li>
+              <li class="footer__menu-item"> <a href="catalog.html">Аксессуары</a></li>
+              <li class="footer__menu-item"> <a href="catalog.html">Такелаж</a></li>
+              <li class="footer__menu-item"> <a href="catalog.html">Фонари</a></li>
+              <li class="footer__menu-item"> <a href="catalog.html">Ребризер</a></li>
+              <li class="footer__menu-item"> <a href="catalog.html">Подводная съемка</a></li>
+              <li class="footer__menu-item"> <a href="catalog.html">Ласты</a></li>
+              <li class="footer__menu-item"> <a href="catalog.html">Катушки и буи</a></li>
+              <li class="footer__menu-item"> <a href="catalog.html">Sidemount</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__menu footer__menu--common">
+          <div class="footer__menu-title">Для клиентов
+            <svg width="10" height="15">
+              <use xlink:href="./images/sprite.svg#arrow-angle"></use>
+            </svg>
+          </div>
+          <div class="footer__menu-inner">
+            <ul class="footer__menu-list">
+              <li class="footer__menu-item"> <a href="certificates.html">Подарочные сертификаты</a></li>
+              <li class="footer__menu-item"> <a href="#">Новости</a></li>
+              <li class="footer__menu-item"> <a href="trips-page.html">Клубные поездки</a></li>
+              <li class="footer__menu-item"> <a href="#">О нас</a></li>
+              <li class="footer__menu-item"> <a href="contacts.html">Контакты</a></li>
+              <li class="footer__menu-item"> <a href="profile.html">Личный кабинет</a></li>
+              <li class="footer__menu-item"> <a href="certification.html">Сертификация</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__common"> 
+          <div class="footer__common-part footer__common-part--copyright">
+            <div class="footer__logos"><a>
+                <svg width="101" height="47">
+                  <use xlink:href="./images/sprite.svg#logo-tdi"></use>
+                </svg></a><a>
+                <svg width="98" height="47">
+                  <use xlink:href="./images/sprite.svg#logo-sdi"></use>
+                </svg></a>
+            </div>
+            <p>2021 © Все права защищены</p>
+          </div>
+          <div class="footer__common-part footer__common-part--social">
+            <p>Мы в соцсетях:</p>
+            <div class="socials socials--horizontal footer__socials">
+              <div class="socials__item"><a href="#" target="_blank">
+                  <svg width="30" height="30">
+                    <use xlink:href="./images/sprite.svg#tiktok"></use>
+                  </svg></a></div>
+              <div class="socials__item"><a href="#" target="_blank">
+                  <svg width="30" height="30">
+                    <use xlink:href="./images/sprite.svg#vk-fill"></use>
+                  </svg></a></div>
+              <div class="socials__item"><a href="#" target="_blank">
+                  <svg width="30" height="30">
+                    <use xlink:href="./images/sprite.svg#insta"></use>
+                  </svg></a></div>
+              <div class="socials__item"><a href="#" target="_blank">
+                  <svg width="30" height="30">
+                    <use xlink:href="./images/sprite.svg#fb"></use>
+                  </svg></a></div>
+            </div>
+          </div>
+          <div class="footer__common-part footer__common-part--info">
+            <p> <a href="#" target="_blank">Политика конфиденциальности</a></p>
+            <p> <a href="#" target="_blank">Обработка персональных данных</a></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>

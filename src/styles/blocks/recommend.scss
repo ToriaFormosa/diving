@@ -1,0 +1,269 @@
+.recommend {
+  padding: 5px 0 56px;
+
+  @include max(md) {
+    padding: 19px 0 50px;
+  }
+
+  &__title {
+    font-weight: 400;
+    text-align: center;
+
+    @include max(md) {
+      font-weight: 500;
+    }
+
+    @include max(sm) {
+      font-size: 18px;
+      line-height: 22px;
+    }
+
+    br {
+      display: none;
+
+      @include max(xs) {
+        display: block;
+      }
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    margin-top: 48px;
+    position: relative;
+
+    @include max(md) {
+      flex-direction: column;
+      margin-top: 3px;
+    }
+  }
+
+  &__tabs {
+    display: flex;
+    flex-direction: column;
+
+    width: 25%;
+
+    @include max(md) {
+      display: none;
+    }
+
+    button {
+      display: inline-block;
+      vertical-align: top;
+      padding: 0;
+      font-size: 15px;
+      line-height: 1.2;
+      font-weight: 500;
+      cursor: pointer;
+      appearance: none;
+      align-self: flex-start;
+
+      + button {
+        margin-top: 23px;
+      }
+
+      &.active {
+        color: $blue;
+        text-decoration: underline;
+      }
+    }
+
+    .title {
+      margin-bottom: 23px;
+      font-size: 24px;
+      line-height: 1;
+    }
+  }
+
+  &__content {
+    width: 75%;
+
+    @include max(md) {
+      width: 100%;
+      margin-top: 30px;
+    }
+  }
+
+  &__content-item {
+    //display: none;
+    opacity: 0;
+
+    &.is-shown {
+      display: block;
+      opacity: 1;
+    }
+
+    &.is-hidden {
+      display: none;
+    }
+
+    &.animate {
+      transition: opacity 0.3s ease;
+    }
+
+    &-bottom {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      width: 100%;
+
+      margin-top: 20px;
+
+      @include max(md) {
+        margin-top: 12px;
+      }
+
+      & > * {
+        align-self: center;
+      }
+    }
+  }
+
+  &__item {
+    width: 100%;
+    max-width: 292px;
+    //margin-right: 24px;
+    height: auto;
+    /*.product-preview {
+      &__image {
+        height: 197px;
+
+        img {
+          object-fit: none;
+        }
+      }
+
+      &__title {
+        margin-top: 2px;
+      }
+
+      &__text {
+        margin-top: 7px;
+      }
+
+      &__bottom {
+        justify-content: flex-start;
+      }
+
+      &__price {
+        color: $gray-26;
+      }
+    }*/
+  }
+
+  &__more {
+    display: inline-flex;
+    padding: 0 16px 0 0;
+    font-size: 18px;
+    //margin-bottom: 26px;
+
+    @include max(md) {
+      display: none;
+    }
+
+    &--mobile {
+      display: none;
+
+      @include max(md) {
+        display: flex;
+        margin: 20px auto 0;
+        font-size: 16px;
+        line-height: 20px;
+      }
+    }
+  }
+
+  &__nav {
+    //width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    //margin-top: 20px;
+
+    @include max(md) {
+      width: 100%;
+      //margin-top: 12px;
+    }
+
+    @include max(xs) {
+      justify-content: space-between;
+    }
+  }
+
+  &__pagination {
+    display: none;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+
+    @include max(md) {
+      display: flex;
+      margin: 0 23px;
+    }
+
+    &.swiper-pagination-lock {
+      display: none;
+    }
+
+    .swiper-pagination-bullet {
+      display: block;
+      width: 20px;
+      height: 2px;
+      background-color: $lightBlue;
+      cursor: pointer;
+
+      &-active {
+        background-color: $blue;
+      }
+    }
+  }
+
+  &__prev,
+  &__next {
+    //position: absolute;
+    margin: 0 7px;
+    bottom: 16px;
+
+    @include max(md) {
+      position: relative;
+      bottom: 0;
+    }
+  }
+
+  &__prev {
+    right: 52px;
+
+    @include max(md) {
+      right: unset;
+      left: 0;
+    }
+  }
+
+  &__next {
+    right: 0;
+
+    @include max(lg) {
+      right: 0;
+    }
+  }
+
+  .choices {
+    display: none;
+    z-index: 2;
+
+    @include max(md) {
+      display: block;
+      margin-top: 16px;
+    }
+
+    &::after {
+      right: 20px !important;
+    }
+
+    &__inner {
+      border: 1px solid $gray;
+      padding: 13px 20px 13px 20px !important;
+    }
+  }
+}

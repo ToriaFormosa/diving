@@ -1,0 +1,53 @@
+.socials {
+	$self: &;
+
+	@include max(md) {
+		display: flex;
+	}
+
+	&__item {
+		@include hover {
+			svg {
+				opacity: 0.85;
+			}
+		}
+
+		+ .socials__item {
+			margin-top: 18px;
+
+			@include max(md) {
+				margin-top: 0;
+				margin-left: 4px;
+			}
+		}
+
+		svg {
+			fill: $white;
+			transition: opacity 0.3s ease;
+
+			@include max(md) {
+				width: 15px;
+				height: 15px;
+			}
+		}
+	}
+
+	&--horizontal {
+		display: flex;
+
+		#{$self} {
+			&__item {
+				+ .socials__item {
+					margin-top: 0;
+					margin-left: 4px;
+				}
+
+				svg {
+					fill: $white;
+					width: 28px;
+					height: 28px;
+				}
+			}
+		}
+	}
+}

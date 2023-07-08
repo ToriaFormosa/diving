@@ -1,0 +1,280 @@
+extends ../layouts/default
+
+block vars
+  -
+    const page = {
+      title: 'Магазин'
+    };
+
+    const bc = [
+      {text: page.title}
+    ];
+
+    const categories = [
+      {icon: {id: 'scuba-diver', w: '17', h: '20'}, text: 'Костюмы'},
+      {icon: {id: 'climb', w: '17', h: '20'}, text: 'Такелаж'},
+      {icon: {id: 'oxygen-tank', w: '16', h: '20'}, text: 'Ребризер'},
+      {icon: {id: 'underwater', w: '24', h: '20'}, text: 'Подводная съемка'},
+      {icon: {id: 'sidemount', w: '20', h: '20'}, text: 'Sidemount'},
+      {icon: {id: 'diving-goggles', w: '25', h: '20'}, text: 'Аксессуары'},
+      {icon: {id: 'torch', w: '20', h: '20'}, text: 'Фонари'},
+      {icon: {id: 'flippers', w: '20', h: '20'}, text: 'Ласты'},
+      {icon: {id: 'buoy', w: '26', h: '20'}, text: 'Катушки и буи'}
+    ];
+
+    const PRODUCTS_1 = [
+      {
+        img: {n: '5', w: '140', h: '186'},
+        title: 'SDI OWD',
+        text: 'Open Water Diver. Учебное пособие по дайвингу',
+        label: '-10%',
+        cl: 'products-carousel__item swiper-slide'
+      },
+      {
+        img: {n: '6', w: '171', h: '195'},
+        title: 'SDI ночной дайвинг',
+        text: 'Ночной дайвинг. Подводная навигация и погружения',
+        cl: 'products-carousel__item swiper-slide'
+      },
+      {
+        img: {n: '7', w: '106', h: '193'},
+        title: 'FRTI пособие',
+        text: 'Экстренная медицинская помощь для взрослых и детей',
+        isOrderIt: true,
+        label: 'new',
+        cl: 'products-carousel__item swiper-slide'
+      },
+      {
+        img: {n: '8', w: '112', h: '201'},
+        title: 'Стивен Барски Dry Suit',
+        text: 'Дайвинг в сухом костюме. История, обзор теории, уход.',
+        cl: 'products-carousel__item swiper-slide'
+      }
+    ];
+
+block header
+  header.header
+    .header__container
+      .header__logo
+        a.header__logo-tdi(href= URLS.home)
+          +icon('logo-tdi')(width="85", height="40")
+        a.header__logo-sdi(href= URLS.home)
+          +icon('logo-sdi')(width="84", height="40")
+      .header__canvas
+        button.header__canvas-close(type="button", aria-label="Скрыть меню")
+          +icon('close')(width="14", height="14")
+        .header__main-menu.menu
+          ul.menu__list
+            each item in MENU_1
+              - const adCl = item.submenu ? 'menu__item--expand' : '';
+              li.menu__item(class= adCl)
+                a.menu__link(href= item.url)= item.text
+                  if item.submenu
+                    +icon('arrow-angle-down')(width="8", height="4")
+                  if item.submenu
+                    .menu__submenu
+                      button.menu__back(type="button", aria-label="Вернуться в основное меню")
+                        +icon('back')(width="30", height="30")
+                      .menu__submenu-title= item.text
+                      ul.menu__submenu-list
+                        each it in item.submenu
+                          li.menu__submenu-item
+                            a(href= it.url)= it.text
+        .header__second-menu
+          button.header__second-menu-toggle(type="button", aria-label="Показать дополнительное меню")
+            +icon('burger')(width='22', height='11')
+          .menu.menu--second
+            ul.menu__list
+              each item in MENU_2
+                li.menu__item
+                  a.menu__link(href= item.url)= item.text
+        .header__lang-swither
+          a.ru.active RU
+          span.delimiter /
+          a.en(href="#") EN
+        a.header__basket(href= URLS.cart.main)
+          +icon('cart')(width='20', height='20')
+          span 0
+      a.header__profile(href= URLS.cabinet.profile)
+        +icon('profile')(width='20', height='20')
+      button.header__burger(type="button")
+        +icon('burger')(width='22', height='11')
+
+    .header__categories.shop-categories
+      .shop-categories__container.container
+        +title('Категории', 'h2', 'title--medium shop-categories__title')
+        .shop-categories__burger
+          +icon('burger')(width='22', height='11')
+          .shop-categories__menu
+            each item in categories
+              .shop-categories__item-wrapper
+                a.shop-categories__item(href= URLS.catalog)
+                  span.shop-categories__item-icon
+                    +icon(item.icon.id)(width= item.icon.w, height= item.icon.h)
+                  span.shop-categories__item-text= item.text
+                .shop-categories__submenu
+                  .shop-categories__submenu-inner
+                    .title Обучение дайвингу
+                    a(href='#', target='_blank') OWD
+                    a(href='#', target='_blank') Dry Suit Diver
+                    a(href='#', target='_blank') Advanced Adventure Open Water
+                    a(href='#', target='_blank') Ice Diver
+                    a(href='#', target='_blank') Advanced Diver Development Program
+                    a(href='#', target='_blank') Sidemount Diver
+                    a(href='#', target='_blank') Advanced Buoyancy
+                    a(href='#', target='_blank') Rescue Diver
+                    a(href='#', target='_blank') Advanced Buoyancy ext
+                    a(href='#', target='_blank') SDI Divemaster
+                    a(href='#', target='_blank') U/W Navigation
+                    a(href='#', target='_blank') Assistant Instructor
+                    a(href='#', target='_blank') Deep Diver
+                    a(href='#', target='_blank') Adult and Child Emergency Care
+                    a(href='#', target='_blank') Night Diver
+                    a(href='#', target='_blank') O2 Administrator
+        each item in categories
+          a.shop-categories__item(href= URLS.catalog)
+            span.shop-categories__item-icon
+              +icon(item.icon.id)(width= item.icon.w, height= item.icon.h)
+            span.shop-categories__item-text= item.text
+
+
+
+block main
+  article.shop-page
+    +title('Магазин', 'h1', 'visually-hidden')
+    .shop-page__hero
+      .shop-page__categories.shop-categories
+        .shop-categories__container.container
+          +title('Категории', 'h2', 'title--medium shop-categories__title')
+          .shop-categories__burger
+            +icon('burger')(width='22', height='11')
+            .shop-categories__menu
+              each item in categories
+                .shop-categories__item-wrapper
+                  a.shop-categories__item(href= URLS.catalog)
+                    span.shop-categories__item-icon
+                      +icon(item.icon.id)(width= item.icon.w, height= item.icon.h)
+                    span.shop-categories__item-text= item.text
+                  .shop-categories__submenu
+                    .title Обучение дайвингу
+                    a(href='#', target='_blank') OWD
+                    a(href='#', target='_blank') Dry Suit Diver
+                    a(href='#', target='_blank') Advanced Adventure Open Water
+                    a(href='#', target='_blank') Ice Diver
+                    a(href='#', target='_blank') Advanced Diver Development Program
+                    a(href='#', target='_blank') Sidemount Diver
+                    a(href='#', target='_blank') Advanced Buoyancy
+                    a(href='#', target='_blank') Rescue Diver
+                    a(href='#', target='_blank') Advanced Buoyancy ext
+                    a(href='#', target='_blank') SDI Divemaster
+                    a(href='#', target='_blank') U/W Navigation
+                    a(href='#', target='_blank') Assistant Instructor
+                    a(href='#', target='_blank') Deep Diver
+                    a(href='#', target='_blank') Adult and Child Emergency Care
+                    a(href='#', target='_blank') Night Diver
+                    a(href='#', target='_blank') O2 Administrator
+          each item in categories
+            a.shop-categories__item(href= URLS.catalog)
+              span.shop-categories__item-icon
+                +icon(item.icon.id)(width= item.icon.w, height= item.icon.h)
+              span.shop-categories__item-text= item.text
+      .shop-page__slider.shop-slider
+        include ../blocks/shop-slider
+
+
+
+    
+    section.products-carousel
+      .products-carousel__container.container
+        header.products-carousel__header
+          +title('Футболки', 'h2', 'title--small products-carousel__title')
+          
+          +button('Все товары', 'products-carousel__more button--angle', 'arrow-angle', URLS.catalog)
+        .products-carousel__swiper.swiper-container.__js_products-carousel
+          .swiper-wrapper 
+            each item in PRODUCTS_1
+              +product-preview(item)
+          .swiper-pagination
+          .products-carousel__navigation
+            +button('', 'products-carousel__btn button--outline button--icon __js_prev', 'chevron-left')
+            +button('', 'products-carousel__btn button--outline button--icon __js_next', 'chevron-right')
+
+    include ../blocks/tutorials
+
+    section.products-carousel
+      .products-carousel__container.container
+        header.products-carousel__header
+          +title('Снаряжение', 'h2', 'title--small products-carousel__title')
+          
+          +button('Все товары', 'products-carousel__more button--angle', 'arrow-angle', URLS.catalog)
+        .products-carousel__swiper.swiper-container.__js_products-carousel
+          .swiper-wrapper 
+            each item in PRODUCTS_1
+              +product-preview(item)
+          .products-carousel__navigation
+            +button('', 'products-carousel__btn button--outline button--icon __js_prev', 'chevron-left')
+            +button('', 'products-carousel__btn button--outline button--icon __js_next', 'chevron-right')
+        .products-carousel__pagination
+
+    section.shop-page__stock.stock.stock--bg
+      .container.stock__container
+        .stock__wrapper
+          .swiper-container.__js_stock-carousel
+            .swiper-wrapper
+              each item in CERTIFICATES 
+                +certificate-preview(item)
+          .stock__nav
+            +button('', 'button--outline button--icon slick-prev stock__prev', 'chevron-right')
+            .stock__pagination
+            +button('', 'button--outline button--icon slick-next stock__next', 'chevron-right')
+        +button('Подробнее об акциях', 'button--angle stock__more', 'arrow-angle', URLS.certificates)
+
+    section.products-carousel
+      .products-carousel__container.container
+        header.products-carousel__header
+          +title('Футболки', 'h2', 'title--small products-carousel__title')
+          
+          +button('Все товары', 'products-carousel__more button--angle', 'arrow-angle', URLS.catalog)
+        .products-carousel__swiper.swiper-container.__js_products-carousel
+          .swiper-wrapper 
+            each item in PRODUCTS_1
+              +product-preview(item)
+          .products-carousel__navigation
+            +button('', 'products-carousel__btn button--outline button--icon __js_prev', 'chevron-left')
+            +button('', 'products-carousel__btn button--outline button--icon __js_next', 'chevron-right')
+        .products-carousel__pagination
+
+    include ../blocks/info-block
+
+    section.products-carousel
+      .products-carousel__container.container
+        header.products-carousel__header
+          +title('Снаряжение', 'h2', 'title--small products-carousel__title')
+          
+          +button('Все товары', 'products-carousel__more button--angle', 'arrow-angle', URLS.catalog)
+        .products-carousel__swiper.swiper-container.__js_products-carousel
+          .swiper-wrapper 
+            each item in PRODUCTS_1
+              +product-preview(item)
+          .products-carousel__navigation
+            +button('', 'products-carousel__btn button--outline button--icon __js_prev', 'chevron-left')
+            +button('', 'products-carousel__btn button--outline button--icon __js_next', 'chevron-right')
+        .products-carousel__pagination
+
+    include ../blocks/tutorials
+
+    section.products-carousel
+      .products-carousel__container.container
+        header.products-carousel__header
+          +title('Футболки', 'h2', 'title--small products-carousel__title')
+          
+          +button('Все товары', 'products-carousel__more button--angle', 'arrow-angle', URLS.catalog)
+        .products-carousel__swiper.swiper-container.__js_products-carousel
+          .swiper-wrapper 
+            each item in PRODUCTS_1
+              +product-preview(item)
+          .products-carousel__navigation
+            +button('', 'products-carousel__btn button--outline button--icon __js_prev', 'chevron-left')
+            +button('', 'products-carousel__btn button--outline button--icon __js_next', 'chevron-right')
+        .products-carousel__pagination
+

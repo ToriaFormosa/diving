@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link href="css/main.min.css" rel="stylesheet">
+    <title>Дейли-дайвинг на Красном море</title>
+  </head>
+  <body>
+    <div class="preloader">
+      <div id="particleCanvas-White"></div>
+      <div class="preloader__outer">
+        <div class="preloader__inner"><span class="preloader__text">Loading</span></div>
+      </div>
+    </div>
+    <header class="header">
+      <div class="header__container">
+        <div class="header__logo"><a class="header__logo-tdi" href="homepage.html">
+            <svg width="85" height="26">
+              <use xlink:href="./images/sprite.svg#logo-tdi"></use>
+            </svg></a><a class="header__logo-sdi" href="homepage.html">
+            <svg width="84" height="26">
+              <use xlink:href="./images/sprite.svg#logo-sdi"></use>
+            </svg></a>
+        </div>
+        <div class="header__canvas">
+          <button class="header__canvas-close" type="button" aria-label="Скрыть меню">
+            <svg width="14" height="14">
+              <use xlink:href="./images/sprite.svg#close"></use>
+            </svg>
+          </button>
+          <div class="header__main-menu menu">
+            <ul class="menu__list"> 
+              <li class="menu__item menu__item--expand"><a class="menu__link" href="courses-page.html">Обучение дайвингу
+                  <svg width="8" height="4">
+                    <use xlink:href="./images/sprite.svg#arrow-angle-down"></use>
+                  </svg></a>
+                <div class="menu__submenu">
+                  <button class="menu__back" type="button" aria-label="Вернуться в основное меню">
+                    <svg width="30" height="30">
+                      <use xlink:href="./images/sprite.svg#back"></use>
+                    </svg>
+                  </button>
+                  <div class="menu__submenu-title">Обучение дайвингу</div>
+                  <ul class="menu__submenu-list"> 
+                    <li class="menu__submenu-item"> <a href="#">OWD</a></li>
+                    <li class="menu__submenu-item"> <a href="#">Advanced Adventure Open Water</a></li>
+                    <li class="menu__submenu-item"> <a href="#">Advanced Diver Development Program</a></li>
+                    <li class="menu__submenu-item"> <a href="#">Advanced Buoyancy</a></li>
+                    <li class="menu__submenu-item"> <a href="#">Advanced Buoyancy ext</a></li>
+                    <li class="menu__submenu-item"> <a href="#">U/W Navigation</a></li>
+                    <li class="menu__submenu-item"> <a href="#">Deep Diver</a></li>
+                    <li class="menu__submenu-item"> <a href="#">Night Diver</a></li>
+                    <li class="menu__submenu-item"> <a href="#">Dry Suit Diver</a></li>
+                    <li class="menu__submenu-item"> <a href="#">Ice Diver</a></li>
+                    <li class="menu__submenu-item"> <a href="#">Sidemount Diver</a></li>
+                    <li class="menu__submenu-item"> <a href="#">Rescue Diver</a></li>
+                    <li class="menu__submenu-item"> <a href="#">SDI Divemaster</a></li>
+                    <li class="menu__submenu-item"> <a href="#">Assistant Instructor</a></li>
+                    <li class="menu__submenu-item"> <a href="#">Adult and Child Emergency Care</a></li>
+                    <li class="menu__submenu-item"> <a href="#">O2 Administrator</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="menu__item menu__item--expand"><a class="menu__link" href="shop.html">Магазин
+                  <svg width="8" height="4">
+                    <use xlink:href="./images/sprite.svg#arrow-angle-down"></use>
+                  </svg></a>
+                <div class="menu__submenu">
+                  <button class="menu__back" type="button" aria-label="Вернуться в основное меню">
+                    <svg width="30" height="30">
+                      <use xlink:href="./images/sprite.svg#back"></use>
+                    </svg>
+                  </button>
+                  <div class="menu__submenu-title">Магазин</div>
+                  <ul class="menu__submenu-list"> 
+                    <li class="menu__submenu-item"> <a href="catalog.html">Костюмы</a></li>
+                    <li class="menu__submenu-item"> <a href="catalog.html">Аксессуары</a></li>
+                    <li class="menu__submenu-item"> <a href="catalog.html">Такелаж</a></li>
+                    <li class="menu__submenu-item"> <a href="catalog.html">Фонари</a></li>
+                    <li class="menu__submenu-item"> <a href="catalog.html">Ребризер</a></li>
+                    <li class="menu__submenu-item"> <a href="catalog.html">Подводная съемка</a></li>
+                    <li class="menu__submenu-item"> <a href="catalog.html">Ласты</a></li>
+                    <li class="menu__submenu-item"> <a href="catalog.html">Катушки и буи</a></li>
+                    <li class="menu__submenu-item"> <a href="catalog.html">Sidemount</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="menu__item"><a class="menu__link" href="certification.html">Карты сертификации</a>
+              </li>
+              <li class="menu__item"><a class="menu__link" href="trips-page.html">Клубные поездки</a>
+              </li>
+            </ul>
+          </div>
+          <div class="header__second-menu">
+            <button class="header__second-menu-toggle" type="button" aria-label="Показать дополнительное меню">
+              <svg width="22" height="11">
+                <use xlink:href="./images/sprite.svg#burger"></use>
+              </svg>
+            </button>
+            <div class="menu menu--second">
+              <ul class="menu__list"> 
+                <li class="menu__item"><a class="menu__link" href="#">Акции</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Оплата и доставка</a></li>
+                <li class="menu__item"><a class="menu__link" href="articles-page.html">Статьи</a></li>
+                <li class="menu__item"><a class="menu__link" href="contacts.html">Контакты</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="header__lang-swither"><a class="ru active">RU</a><span class="delimiter">/</span><a class="en" href="#">EN</a></div><a class="header__basket" href="cart.html">
+            <svg width="20" height="20">
+              <use xlink:href="./images/sprite.svg#cart"></use>
+            </svg><span>0</span></a>
+        </div><a class="header__profile" href="profile.html">
+          <svg width="20" height="20">
+            <use xlink:href="./images/sprite.svg#profile"></use>
+          </svg></a>
+        <button class="header__burger" type="button">
+          <svg width="22" height="11">
+            <use xlink:href="./images/sprite.svg#burger"></use>
+          </svg>
+        </button>
+      </div>
+    </header>
+    <main class="main">
+      <article class="inner-page">
+        <div class="container">
+          <div class="inner-page__breadcrumbs breadcrumbs"><a href="homepage.html">Главная</a><a href="articles-page.html">Статьи</a><span>Дейли-дайвинг на Красном море</span>
+          </div>
+        </div>
+        <div class="inner-page__banner article-banner" style="background-image: url(&quot;images/article/banner.png&quot;)">
+          <div class="container">
+            <h1 class="title--large title">Что лучше дейли-дайвинг или дайв-сафари?</h1>
+            <div class="article-banner__image"><img src="images/article/main.jpg" srcset="images/article/main.jpg 2x" width="1238" height="697" alt=""></div>
+            <div class="article-banner__meta">
+              <div class="article-banner__meta-item">
+                <svg width="20" height="20">
+                  <use xlink:href="./images/sprite.svg#date"></use>
+                </svg><span>12.08.21</span>
+              </div>
+              <div class="article-banner__meta-item">
+                <svg width="34" height="20">
+                  <use xlink:href="./images/sprite.svg#views"></use>
+                </svg><span>155</span>
+              </div>
+              <div class="article-banner__meta-item">
+                <svg width="20" height="20">
+                  <use xlink:href="./images/sprite.svg#share"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="text">
+            <h3>Заголовок 1</h3><img class="alignright" src="images/article/1.jpg" srcset="images/article/1.jpg 2x" width="397" height="434" alt="">
+            <p>Разнообразный и богатый опыт начало повседневной работы по формированию позиции в значительной степени обуславливает создание соответствующий условий активизации. Задача организации, в особенности же дальнейшее развитие различных форм деятельности требуют определения и уточнения новых предложений. Разнообразный и богатый опыт сложившаяся структура организации в значительной степени обуславливает создание системы обучения кадров, соответствует насущным потребностям.</p>
+            <p>Разнообразный и богатый опыт сложившаяся структура организации позволяет оценить значение соответствующий условий активизации. Идейные соображения высшего порядка, а также начало повседневной работы по формированию позиции способствует подготовки и реализации модели развития. Не следует, однако забывать, что реализация намеченных плановых заданий способствует подготовки и реализации системы обучения кадров, соответствует насущным потребностям. Не следует, однако забывать, что постоянное информационно-пропагандистское обеспечение нашей деятельности требуют определения и уточнения дальнейших направлений развития.</p>
+            <p>Разнообразный и богатый опыт консультация с широким активом представляет собой интересный эксперимент проверки дальнейших направлений развития. Задача организации, в особенности же консультация с широким активом позволяет выполнять важные задания по разработке модели.</p>
+            <p>Значимость этих проблем настолько очевидна, что постоянный количественный рост и сфера нашей активности способствует подготовки и реализации системы обучения кадров, соответствует насущным потребностям. С другой стороны укрепление и развитие структуры представляет собой интересный эксперимент проверки существенных финансовых и административных условий. С другой стороны сложившаяся структура организации позволяет оценить значение системы обучения кадров, соответствует насущным потребностям.</p>
+            <h3>Заголовок 2</h3><img class="aligncenter" src="images/article/2.jpg" srcset="images/article/2.jpg 2x" width="1240" height="315" alt="">
+            <p>Разнообразный и богатый опыт сложившаяся структура организации обеспечивает широкому кругу (специалистов) участие в формировании направлений прогрессивного развития. Идейные соображения высшего порядка, а также дальнейшее развитие различных форм деятельности играет важную роль формировании форм развития. Таким образом новая модель организационной деятельности играет важную роль в формировании дальнейших направлений развития. Повседневная практика показывает, что начало повседневной работы по формированию позиции в значительной степени обуславливает создание направлений прогрессивного развития.</p>
+            <ul>
+              <li>Идейные соображения высшего порядка, а также постоянный количественный рост;</li>
+              <li>И сфера нашей активности влечет за собой процесс внедрения и модернизации направлений прогрессивного развития;</li>
+              <li>Таким образом сложившаяся структура организации позволяет выполнять важные задания по разработке направлений развития;</li>
+              <li>Таким образом рамки и место обучения кадров в значительной степени обуславливает создание модели развития;</li>
+              <li>Повседневная практика показывает, что консультация с широким активом позволяет оценить значение систем массового участия.</li>
+            </ul>
+            <p>Равным образом постоянное информационно-пропагандистское обеспечение нашей деятельности способствует подготовки и реализации системы обучения кадров, соответствует насущным потребностям. Разнообразный и богатый опыт реализация намеченных плановых заданий влечет за собой процесс внедрения и модернизации систем массового участия. Равным образом реализация намеченных плановых заданий в значительной степени обуславливает создание соответствующий условий активизации. Товарищи! сложившаяся структура организации позволяет выполнять важные задания по разработке систем массового участия.</p>
+            <p>Повседневная практика показывает, что новая модель организационной деятельности позволяет оценить значение направлений прогрессивного развития. Значимость этих проблем настолько очевидна, что постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет выполнять важные задания по разработке существенных финансовых и административных условий. Разнообразный и богатый опыт консультация с широким активом влечет за собой процесс внедрения и модернизации форм развития.</p>
+            <p>Товарищи! новая модель организационной деятельности требуют определения и уточнения направлений прогрессивного развития. Значимость этих проблем настолько очевидна, что постоянный количественный рост и сфера нашей активности играет важную роль в формировании системы обучения кадров, соответствует насущным потребностям. Повседневная практика показывает, что постоянное информационно-пропагандистское обеспечение нашей деятельности в значительной степени обуславливает создание форм развития.</p>
+            <p>Значимость этих проблем настолько очевидна, что сложившаяся структура организации позволяет оценить значение дальнейших направлений развития. Повседневная практика показывает, что новая модель организационной деятельности играет важную роль в формировании системы обучения кадров, соответствует насущным потребностям. Не следует, однако забывать, что новая модель организационной деятельности требуют определения и уточнения модели развития.</p>
+            <p>Повседневная практика показывает, что рамки и место обучения кадров играет важную роль в формировании систем массового участия. Разнообразный и богатый опыт реализация намеченных плановых заданий позволяет оценить значение соответствующий условий активизации. Не следует, однако забывать, что дальнейшее развитие различных форм деятельности в значительной степени обуславливает создание направлений прогрессивного развития.</p>
+          </div>
+          <div class="article-gallery"><a href="images/article-gallery/1-full.jpg" data-fancybox><img src="images/article-gallery/1.jpg" srcset="images/article-gallery/1@2x.jpg 2x" width="310" height="293" alt=""></a><a href="images/article-gallery/2-full.jpg" data-fancybox><img src="images/article-gallery/2.jpg" srcset="images/article-gallery/2@2x.jpg 2x" width="310" height="293" alt=""></a><a href="images/article-gallery/3-full.jpg" data-fancybox><img src="images/article-gallery/3.jpg" srcset="images/article-gallery/3@2x.jpg 2x" width="310" height="293" alt=""></a><a href="images/article-gallery/4-full.jpg" data-fancybox><img src="images/article-gallery/4.jpg" srcset="images/article-gallery/4@2x.jpg 2x" width="310" height="293" alt=""></a><a href="images/article-gallery/4-full.jpg" data-fancybox><img src="images/article-gallery/4.jpg" srcset="images/article-gallery/4@2x.jpg 2x" width="310" height="293" alt=""></a><a href="images/article-gallery/1-full.jpg" data-fancybox><img src="images/article-gallery/1.jpg" srcset="images/article-gallery/1@2x.jpg 2x" width="310" height="293" alt=""></a><a href="images/article-gallery/2-full.jpg" data-fancybox><img src="images/article-gallery/2.jpg" srcset="images/article-gallery/2@2x.jpg 2x" width="310" height="293" alt=""></a><a href="images/article-gallery/3-full.jpg" data-fancybox><img src="images/article-gallery/3.jpg" srcset="images/article-gallery/3@2x.jpg 2x" width="310" height="293" alt=""></a>
+          </div>
+        </div>
+        <section class="articles articles--similar">
+          <div class="container">
+            <div class="articles__row">
+              <h2 class="title--medium articles__title title">Похожие статьи</h2>
+              <button class="button button--angle articles__all"><span>Все статьи</span>
+                <svg>
+                  <use xlink:href="./images/sprite.svg#arrow-angle"></use>
+                </svg>
+              </button>
+            </div>
+            <div class="articles__wrapper">
+              <div class="swiper-container __js_articles-carousel">
+                <div class="swiper-wrapper">
+                  <div class="articles__item articles-card swiper-slide">
+                    <div class="articles-card__image"><img src="images/homepage/articles/1.jpg" srcset="images/homepage/articles/1.jpg 2x" width="397" height="246" alt=""></div>
+                    <div class="articles-card__content">
+                      <div class="articles-card__title">Что такое дейли дайвинг <br> или сафари. Его особенности</div>
+                      <div class="articles-card__row">
+                        <button class="button button--angle articles-card__more"><span>Подробнее</span>
+                          <svg>
+                            <use xlink:href="./images/sprite.svg#arrow-angle"></use>
+                          </svg>
+                        </button>
+                        <div class="articles-card__date">20.08.2021</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="articles__item articles-card swiper-slide">
+                    <div class="articles-card__image"><img src="images/homepage/articles/2.jpg" srcset="images/homepage/articles/2.jpg 2x" width="397" height="246" alt=""></div>
+                    <div class="articles-card__content">
+                      <div class="articles-card__title">Сайдмаунт - плюсы и минусы. Сложности сборки</div>
+                      <div class="articles-card__row">
+                        <button class="button button--angle articles-card__more"><span>Подробнее</span>
+                          <svg>
+                            <use xlink:href="./images/sprite.svg#arrow-angle"></use>
+                          </svg>
+                        </button>
+                        <div class="articles-card__date">20.08.2021</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="articles__item articles-card swiper-slide">
+                    <div class="articles-card__image"><img src="images/homepage/articles/3.jpg" srcset="images/homepage/articles/3.jpg 2x" width="397" height="246" alt=""></div>
+                    <div class="articles-card__content">
+                      <div class="articles-card__title">Лучшие места для дайвинга. <br> Наша подборка</div>
+                      <div class="articles-card__row">
+                        <button class="button button--angle articles-card__more"><span>Подробнее</span>
+                          <svg>
+                            <use xlink:href="./images/sprite.svg#arrow-angle"></use>
+                          </svg>
+                        </button>
+                        <div class="articles-card__date">20.08.2021</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="articles__nav">
+                <button class="button button--outline button--icon slick-prev articles__prev"><span></span>
+                  <svg>
+                    <use xlink:href="./images/sprite.svg#chevron-right"></use>
+                  </svg>
+                </button>
+                <div class="articles__pagination"></div>
+                <button class="button button--outline button--icon slick-next articles__next"><span></span>
+                  <svg>
+                    <use xlink:href="./images/sprite.svg#chevron-right"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </article>
+    </main>
+    <footer class="footer">
+      <div class="footer__container container">
+        <div class="footer__menu footer__menu--courses"><a class="footer__menu-title" href="courses-page.html">Обучение дайвингу
+            <svg width="10" height="15">
+              <use xlink:href="./images/sprite.svg#arrow-angle"></use>
+            </svg></a>
+          <div class="footer__menu-inner">
+            <div class="footer__menu-part footer__menu-part--columns"><a class="footer__menu-subtitle" href="courses-page.html">SDI
+                <svg width="15" height="10">
+                  <use xlink:href="./images/sprite.svg#arrow-angle"></use>
+                </svg></a>
+              <div class="footer__menu-part-wrapper">
+                <ul class="footer__menu-list footer__menu-list--columns">
+                  <li class="footer__menu-item"> <a href="#">OWD</a></li>
+                  <li class="footer__menu-item"> <a href="#">Ice Diver</a></li>
+                  <li class="footer__menu-item"> <a href="#">Adventure Open Water</a></li>
+                  <li class="footer__menu-item"> <a href="#">Sidemount Diver</a></li>
+                  <li class="footer__menu-item"> <a href="#">Advanced Buoyancy</a></li>
+                  <li class="footer__menu-item"> <a href="#">Rescue Diver</a></li>
+                  <li class="footer__menu-item"> <a href="#">Advanced Buoyancy ext</a></li>
+                  <li class="footer__menu-item"> <a href="#">SDI Divemaster</a></li>
+                  <li class="footer__menu-item"> <a href="#">U/W Navigation</a></li>
+                  <li class="footer__menu-item"> <a href="#">Assistant Instructor</a></li>
+                  <li class="footer__menu-item"> <a href="#">Deep Diver</a></li>
+                  <li class="footer__menu-item"> <a href="#">SDI Advanced SCUBA Diver certification</a></li>
+                  <li class="footer__menu-item"> <a href="#">Night Diver</a></li>
+                  <li class="footer__menu-item"> <a href="#">Dry Suit Diver</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="footer__menu-part"><a class="footer__menu-subtitle" href="courses-page.html">TDI
+                <svg width="15" height="10">
+                  <use xlink:href="./images/sprite.svg#arrow-angle"></use>
+                </svg></a>
+              <div class="footer__menu-part-wrapper">
+                <ul class="footer__menu-list">
+                  <li class="footer__menu-item"> <a href="#">TDI Basic Nitrox</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="footer__menu-part"><a class="footer__menu-subtitle" href="courses-page.html">FRTI
+                <svg width="15" height="10">
+                  <use xlink:href="./images/sprite.svg#arrow-angle"></use>
+                </svg></a>
+              <div class="footer__menu-part-wrapper">
+                <ul class="footer__menu-list">
+                  <li class="footer__menu-item"> <a href="#">Adult and Child Emergency Care</a></li>
+                  <li class="footer__menu-item"> <a href="#">O2 Administrator</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__menu footer__menu--shop"><a class="footer__menu-title" href="shop.html">Каталог товаров
+            <svg width="10" height="15">
+              <use xlink:href="./images/sprite.svg#arrow-angle"></use>
+            </svg></a>
+          <div class="footer__menu-inner">
+            <ul class="footer__menu-list">
+              <li class="footer__menu-item"> <a href="catalog.html">Костюмы</a></li>
+              <li class="footer__menu-item"> <a href="catalog.html">Аксессуары</a></li>
+              <li class="footer__menu-item"> <a href="catalog.html">Такелаж</a></li>
+              <li class="footer__menu-item"> <a href="catalog.html">Фонари</a></li>
+              <li class="footer__menu-item"> <a href="catalog.html">Ребризер</a></li>
+              <li class="footer__menu-item"> <a href="catalog.html">Подводная съемка</a></li>
+              <li class="footer__menu-item"> <a href="catalog.html">Ласты</a></li>
+              <li class="footer__menu-item"> <a href="catalog.html">Катушки и буи</a></li>
+              <li class="footer__menu-item"> <a href="catalog.html">Sidemount</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__menu footer__menu--common">
+          <div class="footer__menu-title">Для клиентов
+            <svg width="10" height="15">
+              <use xlink:href="./images/sprite.svg#arrow-angle"></use>
+            </svg>
+          </div>
+          <div class="footer__menu-inner">
+            <ul class="footer__menu-list">
+              <li class="footer__menu-item"> <a href="certificates.html">Подарочные сертификаты</a></li>
+              <li class="footer__menu-item"> <a href="#">Новости</a></li>
+              <li class="footer__menu-item"> <a href="trips-page.html">Клубные поездки</a></li>
+              <li class="footer__menu-item"> <a href="#">О нас</a></li>
+              <li class="footer__menu-item"> <a href="contacts.html">Контакты</a></li>
+              <li class="footer__menu-item"> <a href="profile.html">Личный кабинет</a></li>
+              <li class="footer__menu-item"> <a href="certification.html">Сертификация</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__common"> 
+          <div class="footer__common-part footer__common-part--copyright">
+            <div class="footer__logos"><a href="homepage.html">
+                <svg width="101" height="47">
+                  <use xlink:href="./images/sprite.svg#logo-tdi"></use>
+                </svg></a><a href="homepage.html">
+                <svg width="98" height="47">
+                  <use xlink:href="./images/sprite.svg#logo-sdi"></use>
+                </svg></a>
+            </div>
+            <p>2021 © Все права защищены</p>
+          </div>
+          <div class="footer__common-part footer__common-part--social">
+            <p>Мы в соцсетях:</p>
+            <div class="socials socials--horizontal footer__socials">
+              <div class="socials__item"><a href="#" target="_blank">
+                  <svg width="30" height="30">
+                    <use xlink:href="./images/sprite.svg#tiktok"></use>
+                  </svg></a></div>
+              <div class="socials__item"><a href="#" target="_blank">
+                  <svg width="30" height="30">
+                    <use xlink:href="./images/sprite.svg#vk-fill"></use>
+                  </svg></a></div>
+              <div class="socials__item"><a href="#" target="_blank">
+                  <svg width="30" height="30">
+                    <use xlink:href="./images/sprite.svg#insta"></use>
+                  </svg></a></div>
+              <div class="socials__item"><a href="#" target="_blank">
+                  <svg width="30" height="30">
+                    <use xlink:href="./images/sprite.svg#fb"></use>
+                  </svg></a></div>
+            </div>
+          </div>
+          <div class="footer__common-part footer__common-part--info">
+            <p> <a href="#" target="_blank">Политика конфиденциальности</a></p>
+            <p> <a href="#" target="_blank">Обработка персональных данных</a></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>

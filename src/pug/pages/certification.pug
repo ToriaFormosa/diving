@@ -1,0 +1,72 @@
+extends ../layouts/default
+
+block vars
+  -
+    const page = {
+      title: 'Карты сертификации'
+    };
+
+    const bc = [
+      {text: page.title}
+    ];
+
+block main
+  article.inner-page
+    header.inner-page__header
+      .container
+        +breadcrumbs(bc, 'inner-page__breadcrumbs no-margin')
+        //-+title(page.title, 'h1', 'title--medium inner-page__title')
+    
+    .container
+      section.inner-page__certification-card.certification-card
+        .certification-card__main
+          .certification-card__image.float-left
+            img(src="images/certification/1.jpg", srcset="images/certification/1@2x.jpg 2x", width="292", height="262", alt="PADI логотип")
+          +title('PADI (PROFESSIONAL ASSOСIATION OF DIVING INSTRUCTORS)', 'h2', 'title--medium certification-card__title')
+          p Разнообразный и&nbsp;богатый опыт сложившаяся структура организации обеспечивает широкому кругу (специалистов) участие в&nbsp;формировании направлений прогрессивного развития. Идейные соображения высшего порядка, а&nbsp;также дальнейшее развитие различных форм деятельности играет важную роль формировании форм развития. Таким образом новая модель организационной деятельности играет важную роль в&nbsp;формировании дальнейших направлений развития. Повседневная практика показывает, что начало повседневной работы по&nbsp;формированию позиции в&nbsp;значительной степени обуславливает создание направлений прогрессивного развития всего в&nbsp;мире.
+
+          p Значимость этих проблем настолько очевидна, что постоянный количественный рост и&nbsp;сфера нашей активности способствует подготовки и&nbsp;реализации системы обучения кадров, соответствует насущным потребностям. С&nbsp;другой стороны укрепление и&nbsp;развитие структуры представляет собой интересный эксперимент проверки существенных финансовых и&nbsp;административных условий. С&nbsp;другой стороны сложившаяся структура организации позволяет оценить значение системы обучения кадров, соответствует насущным потребностям.
+        .certification-card__action
+          +button('Оставить заявку на обучение', 'certification-card__btn', '', '#')
+          +button('Смотреть все курсы', 'certification-card__btn button--outline', '', URLS.courses)
+      
+      section.inner-page__certification-card.certification-card
+        .certification-card__main
+          .certification-card__image.float-right
+            img(src="images/certification/2.jpg", srcset="images/certification/2@2x.jpg 2x", width="292", height="291", alt="NDL логотип")
+          +title('Национальная Дайв Лига (NDL)', 'h2', 'title--medium certification-card__title')
+          p Значимость этих проблем настолько очевидна, что сложившаяся структура организации позволяет оценить значение дальнейших направлений развития. Повседневная практика показывает, что новая модель организационной деятельности играет важную роль в&nbsp;формировании системы обучения кадров, соответствует насущным потребностям. Не&nbsp;следует, однако забывать, что новая модель организационной деятельности требуют определения и&nbsp;уточнения модели развития. Повседневная практика показывает, что рамки и&nbsp;место обучения кадров играет важную роль в&nbsp;формировании систем массового участия. 
+
+          p Разнообразный и&nbsp;богатый опыт реализация намеченных плановых заданий позволяет оценить значение соответствующий условий активизации.
+
+          p С&nbsp;другой стороны постоянное информационно-пропагандистское обеспечение нашей деятельности обеспечивает широкому кругу (специалистов) участие в&nbsp;формировании направлений прогрессивного развития. Значимость этих проблем настолько очевидна, что рамки и&nbsp;место обучения кадров представляет собой интересный эксперимент проверки существенных финансовых и&nbsp;административных условий.
+        .certification-card__action
+          +button('Оставить заявку на обучение', 'certification-card__btn', '', '#')
+          +button('Смотреть все курсы', 'certification-card__btn button--outline', '', URLS.courses)
+
+    .inner-page__contact.inner-page__contact--m-more.contact-section
+      .contact-section__container.container 
+        .contact-section__image
+          img(src="images/course/form-image.jpg", srcset="images/componentform-image@2x.jpg 2x" width="580", height="690", alt="")
+        section.contact-section__main
+          +title('Есть вопросы?', 'h2', 'title--small contact-section__title')
+          .contact-section__text Воспользуйтесь формой ниже, и мы поможем вам начать ваше путешествие
+
+          .contact-section__form.sform
+            form(action="#", method="post")
+              //- .field--valid .field--error
+              label.sform__field.sform__field--half.field
+                span.field__hint Ваше Имя*
+                input(type="text", name="name")
+              label.sform__field.sform__field--half.field
+                span.field__hint Номер телефона*
+                input(type="tel", name="phone")
+              label.sform__field.field
+                span.field__hint Email*
+                input(type="email", name="email")
+              label.sform__field.field
+                span.field__hint Что вас интересует
+                textarea(name="message")
+              .sform__bottom 
+                +button('Отправить', 'sform__send')(type="submit")
+                .sform__bottom-text Нажимая на кнопку «Отправить», вы соглашаетсь с <a href="#" target="_blank">условиями обработки персональных данных</a>

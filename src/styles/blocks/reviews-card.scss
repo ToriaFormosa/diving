@@ -1,0 +1,254 @@
+.reviews-card {
+  display: flex;
+  width: 100%;
+  min-height: 477px;
+  background-color: $white;
+  border-radius: 5px;
+  border: 1px solid $gray;
+  overflow: hidden;
+
+  @include max(md) {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  &__left {
+    display: flex;
+    align-items: flex-end;
+    width: 32%;
+    padding: 30px 35px;
+    position: relative;
+
+    @include max(md) {
+      width: 100%;
+      padding: 184px 24px 35px 24px;
+      border-radius: 0 0 5px 5px;
+      overflow: hidden;
+    }
+  }
+
+  &__right {
+    width: 68%;
+    padding: 35px 56px 20px;
+
+    @include max(md) {
+      width: 100%;
+      padding: 30px 24px 34px;
+    }
+  }
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding-bottom: 136px;
+    background-color: $blue;
+
+    @include max(md) {
+      padding-bottom: 0;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 180px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(
+        360deg,
+        #1b498e 49.16%,
+        rgba(44, 96, 174, 0) 100%
+      );
+
+      @include max(md) {
+        top: 0;
+        background: linear-gradient(
+          360deg,
+          #1b498e 25%,
+          rgba(44, 96, 174, 0) 100%
+        );
+      }
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    width: 100%;
+    position: relative;
+    color: $white;
+  }
+
+  &__place {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  &__title {
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 700;
+
+    @include max(md) {
+      font-size: 18px;
+      line-height: 22px;
+      margin-top: 9px;
+    }
+  }
+
+  &__desc {
+    font-size: 14px;
+    line-height: 22px;
+    margin-top: 10px;
+
+    @include max(md) {
+      font-size: 15px;
+      margin-top: 28px;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    line-height: 22px;
+    margin-top: 10px;
+
+    @include max(md) {
+      margin-top: 15px;
+    }
+
+    a {
+      color: $white;
+      text-decoration: underline;
+
+      @include hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  &__row {
+    position: relative;
+    display: flex;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 51.5%;
+      border-left: solid 1px $lightBlue;
+      height: 100%; //calc(100% - 118px);
+
+      @include max(md) {
+        display: none;
+      }
+    }
+  }
+
+  &__col {
+    width: calc(50% - 43px);
+
+    @include max(md) {
+      width: 100%;
+    }
+
+    &:not(:last-child) {
+      margin-right: 86px;
+
+      @include max(md) {
+        margin-right: 0;
+      }
+    }
+
+    &:last-child {
+      @include max(md) {
+        display: none;
+      }
+    }
+  }
+
+  &__person {
+    display: flex;
+    align-items: center;
+  }
+
+  &__avatar {
+    width: 58px;
+    height: 58px;
+    margin-right: 15px;
+    border-radius: 5px;
+    overflow: hidden;
+    flex-shrink: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__person-info {
+    padding-top: 4px;
+
+    @include max(md) {
+      padding-top: 0;
+    }
+
+    p {
+      &:first-child {
+        font-size: 19px;
+        line-height: 22px;
+        font-weight: 700;
+      }
+
+      &:last-child {
+        font-size: 14px;
+        line-height: 22px;
+      }
+    }
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 22px;
+    margin-top: 17px;
+
+    @include max(md) {
+      font-size: 15px;
+      margin-top: 25px;
+    }
+
+    p + p {
+      margin-top: 22px;
+    }
+  }
+
+  &__report {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 22px;
+    color: $blue;
+    text-decoration: underline;
+    margin-top: 28px;
+
+    @include max(md) {
+      margin-top: 19px;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    @include hover {
+      text-decoration: none;
+    }
+  }
+}

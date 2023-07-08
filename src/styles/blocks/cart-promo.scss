@@ -1,0 +1,87 @@
+.cart-promo {
+  border: solid 1px $gray;
+  border-radius: 5px;
+
+  &__top {
+    padding: 36px 35px;
+    border-bottom: solid 1px $gray;
+
+    @include max(xs) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    a {
+      display: inline-block;
+      vertical-align: top;
+      font-size: 15px;
+      line-height: 1.2;
+      font-weight: 500;
+      color: $blue;
+      text-decoration: underline;
+      transition: color 0.3s ease;
+
+      @include hover {
+        color: $blue-hover;
+      }
+    }
+  }
+
+  &__bottom {
+    padding: 35px;
+
+    @include max(xs) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    form {
+      display: flex;
+
+      @include max(xs) {
+        //display: block;
+      }
+    }
+  }
+
+  &__text {
+    margin-bottom: 20px;
+  }
+
+  &__field {
+    display: flex;
+
+    @include max(xs) {
+      display: block;
+    }
+
+    .field__hint {
+      margin-bottom: 0;
+      margin-right: 30px;
+      align-self: center;
+
+      @include max(xs) {
+        margin-right: 0;
+        margin-bottom: 6px;
+      }
+    }
+
+    input {
+      width: 120px;
+      padding-left: 10px;
+      padding-right: 10px;
+      color: $blue;
+      text-transform: uppercase;
+    }
+  }
+
+  &__btn {
+    margin-left: 25px;
+
+    @include max(xs) {
+      //margin-left: 0;
+      // margin-top: 25px;
+      align-self: flex-end;
+    }
+  }
+}

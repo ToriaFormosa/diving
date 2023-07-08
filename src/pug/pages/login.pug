@@ -1,0 +1,38 @@
+extends ../layouts/default
+
+block vars
+  -
+    const page = {
+      title: 'Личный кабинет'
+    };
+
+    const bc = [
+      {text: page.title}
+    ];
+
+
+
+block main
+  article.inner-page
+    header.inner-page__header
+      .container
+        +breadcrumbs(bc, 'inner-page__breadcrumbs no-margin')
+
+    .container
+      section.inner-page__form-section.form-section
+        +title('Авторизация', 'h1', 'title--medium form-section__title')
+
+        form(action="#", method="post")
+          label.form-section__field.field
+            span.field__hint Ваш логин*
+            input(type="text", name="login")
+          label.form-section__field.field
+            span.field__hint Пароль*
+            input(type="password", name="password")
+          .form-section__row
+            +custom-checkbox('rememberMe', 'Запомнить меня на этом компьютере')
+            a.form-section__link(href="#") Забыли пароль?
+          .form-section__action 
+            +button('Войти', 'form-section__btn')(type="submit")
+            +button('Регистрация', 'form-section__btn button--outline', '', URLS.cabinet.registration)
+        .form-section__text Здравствуйте! С возвращением на сайт!

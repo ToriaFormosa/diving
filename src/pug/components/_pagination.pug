@@ -1,0 +1,14 @@
+mixin pagination(className)
+	- let cl = className + ' ' || '';
+	div(class= cl + 'pagination')
+		a.pagination__control.pagination__control--back(href="#")
+			+icon('arrow-thin')
+		a.pagination__link(href="#") 1
+		a.pagination__link(href="#") 2
+		a.pagination__link.current 3
+		a.pagination__link(href="#") 4
+		a.pagination__link(href="#") 5
+		a.pagination__link ...
+		a.pagination__link(href="#") 10
+		a.pagination__control.pagination__control--next(href="#")
+			+icon('arrow-thin')

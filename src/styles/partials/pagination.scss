@@ -1,0 +1,68 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  &__control {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+
+    @include max(xs) {
+      width: 30px;
+      height: 30px;
+    }
+
+    @include hover {
+      background-color: $smoky;
+    }
+
+    svg {
+      width: 9px;
+      height: 16px;
+      align-self: center;
+    }
+
+    &--back {
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__link {
+    display: block;
+    width: 40px;
+    height: 40px;
+    font-size: 15px;
+    line-height: 40px;
+    color: $dark;
+    text-align: center;
+    border-radius: 50%;
+    align-self: center;
+    transition: background-color 0.3s ease;
+
+    @include max(xs) {
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      font-size: 14px;
+    }
+
+    &.current {
+      color: $white;
+      background-color: $blue;
+      pointer-events: none;
+    }
+
+    &[href] {
+      @include hover {
+        background-color: $smoky;
+      }
+    }
+  }
+}

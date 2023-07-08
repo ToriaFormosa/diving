@@ -1,0 +1,107 @@
+.features {
+  position: relative;
+  padding: 50px 0;
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -32px !important;
+
+    @include max(480) {
+      margin-top: 0 !important;
+      flex-wrap: nowrap;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    margin-top: 32px;
+    padding: 0 16px;
+
+    @include max(sm) {
+      width: 50%;
+    }
+
+    @include max(480) {
+      width: 100%;
+      margin-top: 0;
+    }
+
+    & > * {
+      align-self: center;
+    }
+
+    &-icon {
+      height: 61px;
+      margin-bottom: 15px;
+    }
+
+    &-title {
+      font-size: 19px;
+      line-height: (23.16 / 19);
+      color: $gray-ph;
+      font-weight: 500;
+      text-align: center;
+
+      @include max(md) {
+        font-size: 15px;
+      }
+    }
+
+    &-text {
+      margin-bottom: 5px;
+      font-size: 24px;
+      line-height: (29.26 / 24);
+      color: $dark;
+      font-weight: 500;
+      text-align: center;
+
+      @include max(md) {
+        font-size: 18px;
+      }
+    }
+  }
+
+  &__navigation {
+    display: none;
+
+    @include max(480) {
+      display: flex;
+      justify-content: space-between;
+
+      width: 100%;
+      margin-top: 10px;
+    }
+  }
+
+  &__btn {
+  }
+
+  .swiper-pagination {
+    display: none;
+
+    @include max(480) {
+      position: absolute;
+      z-index: 1;
+      bottom: 66px;
+      left: 60px;
+      right: 60px;
+      display: flex;
+      justify-content: center;
+    }
+
+    &-bullet {
+      display: block;
+      width: 20px;
+      height: 2px;
+      background-color: $lightBlue;
+      cursor: pointer;
+
+      &-active {
+        background-color: $blue;
+      }
+    }
+  }
+}

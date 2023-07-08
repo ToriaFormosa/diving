@@ -1,0 +1,11 @@
+section.info-block
+	.info-block__bg
+		img(src="images/homepage/banner-info.jpg", srcset="images/homepage/banner-info@2x.jpg 2x", width="1899", height="217", alt="")
+	.container.info-block__container
+		.info-block__image
+			picture
+				source(media="(max-width: 1079px)", srcset="images/homepage/cards-small.png 1x, images/homepage/cards-small@2x.png 2x")
+				img(src="images/homepage/cards.png", srcset="images/homepage/cards@2x.png 2x", alt="")
+		.info-block__content
+			.info-block__title Производим выпуск <br> и перевыпуск карт сертификации дайверов
+			+button('Подробнее', 'button--outline button--icon info-block__more', 'chevron-right', URLS.certification)

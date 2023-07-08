@@ -1,0 +1,39 @@
+extends ../layouts/default
+
+block vars
+  -
+    const page = {
+      title: 'Статьи'
+    };
+
+    const bc = [
+      {text: page.title}
+    ];
+
+    const articleCards = [
+      {img: '1', title: 'Что такое дейли дайвинг <br>или сафари. Его особенности', class: 'articles-grid__item'},
+      {img: '2', title: 'Сайдмаунт - плюсы и минусы. Сложности сборки', class: 'articles-grid__item'},
+      {img: '3', title: 'Лучшие места для дайвинга. <br>Наша подборка', class: 'articles-grid__item'},
+      {img: '3', title: 'Лучшие места для дайвинга. <br>Наша подборка', class: 'articles-grid__item'},
+      {img: '1', title: 'Что такое дейли дайвинг <br>или сафари. Его особенности', class: 'articles-grid__item'},
+      {img: '2', title: 'Сайдмаунт - плюсы и минусы. Сложности сборки', class: 'articles-grid__item'},
+      {img: '1', title: 'Что такое дейли дайвинг <br>или сафари. Его особенности', class: 'articles-grid__item'},
+      {img: '2', title: 'Сайдмаунт - плюсы и минусы. Сложности сборки', class: 'articles-grid__item'},
+      {img: '3', title: 'Лучшие места для дайвинга. <br> Наша подборка', class: 'articles-grid__item'}
+    ];
+
+block main
+  article.inner-page
+    header.inner-page__header
+      .container
+        +breadcrumbs(bc, 'inner-page__breadcrumbs')
+        .inner-page__header-row.inner-page__header-row--between
+          +title('Статьи', 'h1', 'title--medium articles-page__title')
+          select.inner-page__header-sort.__js_custom-select(name="select")
+            each it in ['',1,2,3,4,5,6,7]
+              option(value="by-deadline" + it) По актуальности #{it}
+    .container
+      .articles-grid 
+        each item in articleCards
+          +articles-card(item)
+      

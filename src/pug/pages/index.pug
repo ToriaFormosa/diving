@@ -1,0 +1,48 @@
+extends ../layouts/components
+
+block vars
+	-
+		const page = {
+			title: 'Проект "Дайвинг" - разводящая'
+		};
+		//урлы страниц в файле c переменными ./pug/layouts/vars.pug
+		const pages = [
+			{name: 'Главная страница', url: 'homepage.html'},
+			{name: 'Страница с компонентами', url: 'components.html'},
+			{name: 'Карточка товара', url: URLS.product},
+			{name: 'Карточка товара (нет в наличии)', url: URLS.productNo},
+			{name: 'Карточка товара (Комплект такелажа)', url: URLS.product2},
+			{name: 'Карточка товара (Ребризер)', url: URLS.product3},
+			{name: 'Магазин', url: URLS.shop},
+			{name: 'Категория магазина', url: URLS.catalog},
+			{name: 'Курсы дайвинга', url: URLS.courses},
+			{name: 'Курс подробная ', url: URLS.course},
+			{name: 'Клубные поездки', url: URLS.trips},
+			{name: 'Клубная поездка', url: URLS.trip},
+			{name: 'Сертификация дайверов', url: URLS.certification},
+			{name: 'Корзина', url: URLS.cart.main},
+			{name: 'Корзина (пусто)', url: URLS.cart.empty},
+			{name: 'Оформление заказа', url: URLS.cart.makingOrder},
+			{name: 'Личный кабинет / Данные профиля', url: URLS.cabinet.profile},
+			{name: 'Личный кабинет / История заказов', url: URLS.cabinet.history},
+			{name: 'Личный кабинет / Информация о заказе', url: URLS.cabinet.order},
+			{name: 'Личный кабинет / Заказ принят', url: URLS.cabinet.orderAccepted},
+			{name: 'Личный кабинет / Авторизация', url: URLS.cabinet.auth},
+			{name: 'Личный кабинет / Регистрация', url: URLS.cabinet.registration},
+			{name: 'Статьи', url: URLS.articles},
+			{name: 'Статья', url: URLS.article},
+			{name: '404', url: URLS.notFound},
+			{name: 'Подарочные сертификаты', url: URLS.certificates},
+			{name: 'Контакты', url: URLS.contacts},
+		]
+
+block main
+	section.start-page
+		.container
+			h1.start-page__title Проект дайвинг
+			ul
+				each item in pages
+					li
+						a(href= item.url, target="_blank")= item.name
+
+

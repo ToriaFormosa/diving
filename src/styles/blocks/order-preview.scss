@@ -1,0 +1,122 @@
+.order-preview {
+  display: flex;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-top: solid 1px $gray;
+  overflow: hidden;
+
+  @include max(sm) {
+    display: block;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  &__main {
+    width: calc(100% - 178px);
+    display: grid;
+    grid-template-columns: 26.1% 27.8% 1fr;
+    margin-top: -46px;
+
+    @include max(sm) {
+      width: 100%;
+      margin-top: -20px;
+    }
+
+    @include max(xs) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &__action {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    width: 178px;
+    margin-left: auto;
+    padding-left: 8px;
+
+    @include max(sm) {
+      width: 100%;
+      margin: 25px 0 0;
+      padding: 0;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    @include max(480) {
+      flex-direction: column;
+    }
+
+    & > * {
+      align-self: center;
+    }
+  }
+
+  &__item {
+    min-width: 114px;
+    margin-top: 46px;
+    font-size: 18px;
+    line-height: 1.22;
+    color: $gray-ph;
+
+    @include max(sm) {
+      margin-top: 20px;
+      padding-right: 4px;
+    }
+
+    &-title {
+      margin-bottom: 17px;
+
+      @include max(xs) {
+        margin-bottom: 6px;
+        font-size: 15px;
+        line-height: 1.2;
+      }
+    }
+
+    &-text {
+      color: $dark;
+      font-weight: 500;
+
+      @include max(xs) {
+        font-size: 15px;
+        line-height: 1.2;
+      }
+
+      &--blue {
+        color: $blue;
+      }
+    }
+  }
+
+  &__btn {
+    width: 100%;
+    margin-bottom: 20px;
+
+    @include max(sm) {
+      width: calc(50% - 20px);
+      margin: 0 10px 20px;
+    }
+
+    @include max(480) {
+      width: 100%;
+      margin: 0 0 20px;
+    }
+  }
+
+  &__remove {
+    font-size: 15px;
+    line-height: 1.2;
+    color: $blue;
+    transition: color 0.3s ease;
+
+    @include max(sm) {
+      margin: 0 auto;
+    }
+
+    @include hover {
+      color: $blue-hover;
+    }
+  }
+}

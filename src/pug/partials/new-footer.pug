@@ -1,0 +1,47 @@
+footer.footer
+  .footer__container.container
+    .footer__menu.footer__menu--courses
+      a.footer__menu-title(href= URLS.courses) Обучение дайвингу
+        +icon('arrow-angle')(width="10", height="15")
+      
+      .footer__menu-inner
+        +footer-menu-part('SDI', FOOTER_SDI, 'columns')
+        +footer-menu-part('TDI', FOOTER_TDI)
+        +footer-menu-part('FRTI', FOOTER_FRTI)
+
+    .footer__menu.footer__menu--shop
+      a.footer__menu-title(href= URLS.shop) Каталог товаров
+        +icon('arrow-angle')(width="10", height="15")
+      .footer__menu-inner
+        +footer-menu-list(FOOTER_CATALOG)
+
+    .footer__menu.footer__menu--common
+      .footer__menu-title Для клиентов
+        +icon('arrow-angle')(width="10", height="15")
+      .footer__menu-inner
+        +footer-menu-list(FOOTER_COMMON)
+
+    .footer__common 
+      .footer__common-part.footer__common-part--copyright
+        .footer__logos
+          if isHomepage
+            a
+              +icon('logo-tdi')(width='101', height='47')
+            a
+              +icon('logo-sdi')(width='98', height='47')
+          else
+            a(href= URLS.home)
+              +icon('logo-tdi')(width='101', height='47')
+            a(href= URLS.home)
+              +icon('logo-sdi')(width='98', height='47')
+        p 2021 © Все права защищены
+      
+      .footer__common-part.footer__common-part--social
+        p Мы в соцсетях:
+        +socials('socials--horizontal footer__socials', ['tiktok', 'vk-fill', 'insta', 'fb'])
+      
+      .footer__common-part.footer__common-part--info
+        p 
+          a(href="#", target="_blank") Политика конфиденциальности
+        p 
+          a(href="#", target="_blank") Обработка персональных данных

@@ -1,0 +1,109 @@
+extends ../layouts/default
+
+block vars
+  -
+    const page = {
+      title: 'Курсы дайвинга'
+    };
+
+    const bc = [
+      {text: page.title}
+    ];
+
+    const courses = [
+      {
+        img: {n: '1', w: '397', h: '478'},
+        title: 'SDI OWD',
+        list: ['От 10 лет', 'более 4-х часов'],
+        text: '4&nbsp;теоретических занятий, 4&nbsp;погружений в&nbsp;бассейне, экзамен, 4&nbsp;погружения в&nbsp;открытой воде, аренда оборудования включена.',
+        price: {current: 'от 25 000₽', old: 'от 55 000₽'},
+        isLabel: true,
+        cl: 'courses-grid__item'
+      },
+      {
+        img: {n: '2', w: '397', h: '325'},
+        title: 'Пробное погружение',
+        list: ['От 10 лет', 'более 4-х часов'],
+        text: '1&nbsp;погружение с&nbsp;инструктором в&nbsp;бассейне или водоеме. Аренда полного комплекта снаряжения включена',
+        price: {current: '2 500₽', old: ''},
+        cl: 'courses-grid__item'
+      },
+      {
+        img: {n: '3', w: '397', h: '341'},
+        title: 'SDI Advanced Adventure Open Water',
+        list: ['более 4-х часов'],
+        text: 'Теория, 5&nbsp;погружений в&nbsp;открытой воде с&nbsp;инструктором.',
+        price: {current: '12 000₽', old: ''},
+        cl: 'courses-grid__item'
+      },
+      {
+        img: {n: '4', w: '397', h: '350'},
+        title: 'TDI Basic Nitrox',
+        list: ['От 15 лет', '30 мин и больше'],
+        text: 'Теория, экзамен. Учебник или eLearning курс приобретается отдельно',
+        price: {current: '2 500₽', old: ''},
+        cl: 'courses-grid__item'
+      },
+      {
+        img: {n: '5', w: '397', h: '332'},
+        title: 'SDI Sidemount Diver',
+        list: ['c 15 лет', '30 мин и больше'],
+        text: 'Теория, специфика конфигурации, 2&nbsp;погружения в&nbsp;бассейне, 4&nbsp;погружения на&nbsp;открытой воде. Аренда системы Sidemount включена, остальное оборудование...',
+        price: {current: '20 000₽', old: ''},
+        cl: 'courses-grid__item'
+      },
+      {
+        img: {n: '6', w: '397', h: '337'},
+        title: 'SDI Advanced Diver certification',
+        list: ['более 4-х часов'],
+        text: 'Получение уровня SDI Advanced Diver возможно после завершения 4&nbsp;специализаций SDI',
+        price: {current: '5 000₽', old: ''},
+        cl: 'courses-grid__item'
+      },
+      {
+        img: {n: '7', w: '397', h: '363'},
+        title: 'FRTI O2 Administrator',
+        list: ['c 10 лет', '30 мин и больше'],
+        text: 'Теория и&nbsp;практика применения кислородного оборудования. Учебник или eLearning курс приобретается отдельно.',
+        price: {current: '5 000₽', old: ''},
+        cl: 'courses-grid__item'
+      },
+      {
+        img: {n: '8', w: '397', h: '363'},
+        title: 'Курс SDI Rescue Diver',
+        list: ['c 10 лет', '30 мин и больше'],
+        text: 'Теория, 1&nbsp;занятие в&nbsp;бассейне, отработка навыков в&nbsp;открытой воде, экзамен. Учебник или eLearning курс приобретается отдельно.',
+        price: {current: '20 000₽', old: ''},
+        cl: 'courses-grid__item'
+      },
+      {
+        img: {n: '9', w: '397', h: '363'},
+        title: 'FRTI Adult and Child Emergency Care',
+        list: ['30 мин и больше'],
+        text: 'Теория, практическое занятие, CPR манекен, автоматический дефибрилятор. Учебник приобретается отдельно.',
+        price: {current: '5 000₽', old: ''},
+        cl: 'courses-grid__item'
+      }
+    ];
+
+block main
+  article.inner-page
+    header.inner-page__header
+      .container
+        +breadcrumbs(bc, 'inner-page__breadcrumbs')
+        +title(page.title, 'h1', 'title--medium inner-page__title')
+        .inner-page__sort.sort-block
+          select.__js_custom-select(name="select")
+            each it in ['',1,2,3,4,5,6,7]
+              option(value="by-deadline" + it) По сроку обучения #{it}
+          
+          select.__js_custom-select(name="select2")
+            option(value="sdi") SDI
+            option(value="tdi") TDI
+          +custom-checkbox('withDiscount', 'Со скидкой')
+    .container
+      .inner-page__grid.courses-grid
+        each item in courses
+          +course-preview(item)
+        each item in courses
+          +course-preview(item)

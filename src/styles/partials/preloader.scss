@@ -1,0 +1,207 @@
+@mixin centre($axis: "both") {
+	position: fixed;
+	@if $axis == "y" {
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	@if $axis == "x" {
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	@if $axis == "both" {
+		top: 50%;
+		left: 50%;
+		transform: translate(-51%, -50%);
+	}
+}
+
+@mixin font-size($sizeValue: 1.6, $lineHeight: 2.4) {
+	font-size: $sizeValue + rem;
+	line-height: ($lineHeight * 10) + px;
+}
+
+@mixin animation($animate...) {
+	$max: length($animate);
+	$animations: '';
+
+	@for $i from 1 through $max {
+		$animations: #{$animations + nth($animate, $i)};
+
+		@if $i < $max {
+			$animations: #{$animations + ", "};
+		}
+	}
+
+	animation: $animations;
+}
+
+@mixin keyframes($animationName) {
+	@-webkit-keyframes #{$animationName} {
+		@content;
+	}
+	@-moz-keyframes #{$animationName} {
+		@content;
+	}
+	@-o-keyframes #{$animationName} {
+		@content;
+	}
+	@keyframes #{$animationName} {
+		@content;
+	}
+}
+
+@include keyframes(outerRotate1) {
+	0% {
+		transform: translate(-50%, -50%) rotate(0)
+	}
+	100% {
+		transform: translate(-50%, -50%) rotate(360deg)
+	}
+}
+
+@include keyframes(outerRotate2) {
+	0% {
+		transform: translate(-50%, -50%) rotate(0)
+	}
+	100% {
+		transform: translate(-50%, -50%) rotate(-360deg)
+	}
+}
+
+@include keyframes(textColour) {
+	0% {
+		color: $gray-22;
+	}
+	100% {
+		color: #2B60AE;
+	}
+}
+
+.preloader {
+	background-color: $white;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 1111;
+
+	&:before {
+		@include centre();
+		width: 380px;
+		height: 380px;
+		content: '';
+		display: block;
+		background-color: $white;
+		border-radius: 50%;
+		z-index: 1113;
+
+		@include max(xs) {
+			width: 300px;
+			height: 300px;
+		}
+	}
+
+	&__outer {
+		@include centre();
+		width: 240px;
+		height: 240px;
+		border: 5px solid #093981;
+		background: $white;
+		border-radius: 120px;
+		box-sizing: border-box;
+		position: relative;
+		z-index: 1113;
+
+		&:after {
+			@include centre;
+			content: " ";
+			display: block;
+			width: 100px;
+			height: 110%;
+			background: $white;
+			transform-origin: center;
+			z-index: 0;
+			@include animation('outerRotate2 30s infinite linear');
+		}
+	}
+
+	&__inner {
+		@include centre();
+		width: 200px;
+		height: 200px;
+		color: #888;
+		text-align: center;
+		border: 5px solid lighten(#093981, 15%);
+		border-radius: 100px;
+		box-sizing: border-box;
+		z-index: 20;
+		text-transform: uppercase;
+
+		&:after {
+			@include centre;
+			content: " ";
+			display: block;
+			background: $white;
+			transform-origin: center;
+			z-index: -1;
+		}
+
+		&:after {
+			width: 100px;
+			height: 106.3%;
+			@include animation('outerRotate1 15s infinite linear');
+		}
+	}
+
+	&__text {
+		@include font-size(1.4, 13);
+		@include centre();
+		@include animation('textColour 1s alternate linear infinite');
+		display: block;
+		width: 140px;
+		height: 140px;
+		text-align: center;
+		border: 5px solid lighten(#093981, 25%);
+		border-radius: 70px;
+		box-sizing: border-box;
+		z-index: 20;
+
+		&:before, &:after {
+			@include centre;
+			content: " ";
+			display: block;
+			background: $white;
+			transform-origin: center;
+			z-index: -1;
+		}
+
+		&:before {
+			width: 110%;
+			height: 40px;
+			@include animation('outerRotate2 3.5s infinite linear');
+		}
+
+		&:after {
+			width: 40px;
+			height: 110%;
+			@include animation('outerRotate1 8s infinite linear');
+		}
+	}
+}
+
+#particleCanvas-White {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1112;
+}
+
+#particleCanvas-Blue {
+	@include centre();
+	width: 300px;
+	height: 300px;
+	z-index: 1112;
+}

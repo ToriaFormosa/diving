@@ -1,0 +1,179 @@
+.button {
+  max-width: 100%;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $blue-2c;
+  border-radius: 50px;
+  padding: 11px 16px;
+  font-size: 15px;
+  line-height: (18.29 / 15);
+  font-weight: 500;
+  color: $white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  appearance: none;
+
+  @include hover {
+    background-color: $blue-hover;
+  }
+
+  &--outline {
+    padding: 10px 13px;
+    background-color: $white;
+    border: 1px solid $blue-2c;
+    color: $blue-2c;
+
+    @include hover {
+      border-color: $blue-hover;
+      color: $blue-hover;
+      background-color: $white;
+    }
+
+    &.button--disabled {
+      color: $gray-706;
+      border-color: $gray-706;
+      background-color: $white;
+    }
+  }
+
+  &--icon {
+    width: 36px;
+    height: 36px;
+    padding: 0;
+
+    @include hover {
+      svg {
+        fill: $blue-hover;
+      }
+    }
+
+    svg {
+      width: 35%;
+      height: 35%;
+      padding-left: 3px;
+      fill: $blue-2c;
+      transition: fill 0.3s ease;
+    }
+  }
+
+  &--angle {
+    background-color: transparent;
+    color: $blue-2c;
+
+    @include hover {
+      background-color: transparent;
+      color: $blue-hover;
+
+      svg {
+        fill: $blue-hover;
+      }
+    }
+
+    svg {
+      width: 12px;
+      height: 12px;
+      fill: $blue-2c;
+      margin-left: 9px;
+      transition: fill 0.3s ease;
+    }
+
+    &.button--disabled {
+      color: $gray-706;
+      border-color: $gray-706;
+      background-color: $white;
+    }
+  }
+
+  &--disabled {
+    background-color: $gray-706;
+    pointer-events: none;
+
+    svg {
+      fill: $gray-706;
+    }
+  }
+
+  &--lightblue {
+    background-color: $lightBlue2;
+  }
+
+  &--white {
+    color: $blue-hover;
+    background-color: $white;
+
+    @include hover {
+      opacity: 0.85;
+      background-color: $white;
+    }
+  }
+
+  &--more {
+    svg {
+      width: 7px;
+      height: 11px;
+      margin-left: 8px;
+      fill: $blue-hover;
+    }
+  }
+
+  &--color {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+
+    @include max(sm) {
+      width: 30px;
+      height: 30px;
+    }
+
+    @include hover {
+      opacity: 0.7;
+    }
+  }
+
+  &--to-cart {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    flex-direction: row-reverse;
+
+    svg {
+      width: 20px;
+      height: 20px;
+      margin-right: 9px;
+      fill: $white;
+    }
+
+    @include hover {
+      svg {
+        fill: $white;
+      }
+    }
+  }
+
+  &--order {
+    min-width: 140px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    color: $dark;
+    background-color: $lightBlue3;
+
+    svg {
+      width: 20px;
+      height: 20px;
+      margin-right: 9px;
+      //fill: $white;
+    }
+
+    @include hover {
+      background-color: darken($lightBlue3, 10%);
+      svg {
+        // fill: $white;
+      }
+    }
+  }
+}

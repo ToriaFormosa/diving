@@ -1,0 +1,62 @@
+section.products-carousel
+	.products-carousel__container.container
+		header.products-carousel__header
+			+title('Товары с клубной символикой', 'h2', 'title--small products-carousel__title')
+
+			+button('Все товары', 'products-carousel__more button--angle', 'arrow-angle', URLS.catalog)
+		.products-carousel__swiper.swiper-container.__js_products-carousel
+			.swiper-wrapper 
+				each item in CLUB_SYMBOLS_PRODUCTS
+					+product-preview(item)
+			.products-carousel__navigation
+				+button('', 'products-carousel__btn button--outline button--icon __js_prev', 'chevron-left')
+				+button('', 'products-carousel__btn button--outline button--icon __js_next', 'chevron-right')
+		.products-carousel__pagination
+//-section.products
+	.container
+		.products__row
+			+title('Товары с клубной символикой', '', 'title--small products__title')
+			+button('Все товары', 'button--angle products__more', 'arrow-angle')
+		.products__wrapper
+			.swiper-container.__js_products-carousel-2
+				.swiper-wrapper
+					.products__item.product-preview.swiper-slide
+						.product-preview__image
+							img(src="images/homepage/products/1.jpg", srcset="images/homepage/products/1@2x.jpg 2x", width="140", height="186", alt="")
+						h3.product-preview__title
+							a(href="#") SDI OWD
+						.product-preview__text Open Water Diver. Учебное пособие по дайвингу
+						.product-preview__bottom
+							+button('В корзину', 'product-preview__btn', 'cart', '#')
+							.product-preview__price 1 200₽
+					.products__item.product-preview.swiper-slide
+						.product-preview__image
+							img(src="images/homepage/products/2.jpg", srcset="images/homepage/products/2@2x.jpg 2x", width="171", height="195", alt="")
+						h3.product-preview__title
+							a(href="#") SDI ночной дайвинг
+						.product-preview__text Ночной дайвинг. Подводная навигация и погружения
+						.product-preview__bottom
+							+button('В корзину', 'product-preview__btn', 'cart', '#')
+							.product-preview__price 1 200₽
+					.products__item.product-preview.swiper-slide
+						.product-preview__image
+							img(src="images/homepage/products/3.jpg", srcset="images/homepage/products/3@2x.jpg 2x", width="106", height="193", alt="")
+						h3.product-preview__title
+							a(href="#") FRTI пособие
+						.product-preview__text Экстренная медицинская помощь для взрослых и детей
+						.product-preview__bottom
+							+button('В корзину', 'product-preview__btn', 'cart', '#')
+							.product-preview__price 1 200₽
+					.products__item.product-preview.swiper-slide
+						.product-preview__image
+							img(src="images/homepage/products/4.jpg", srcset="images/homepage/products/4@2x.jpg 2x", width="112", height="201", alt="")
+						h3.product-preview__title
+							a(href="#") Стивен Барски Dry Suit
+						.product-preview__text Дайвинг в сухом костюме. История, обзор теории, уход.
+						.product-preview__bottom
+							+button('В корзину', 'product-preview__btn', 'cart', '#')
+							.product-preview__price 1 200₽
+			.products__nav
+				+button('', 'button--outline button--icon slick-prev products__prev', 'chevron-right')
+				.products__pagination
+				+button('', 'button--outline button--icon slick-next products__next', 'chevron-right')

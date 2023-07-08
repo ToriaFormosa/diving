@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link href="css/main.min.css" rel="stylesheet">
+    <title>Корзина</title>
+  </head>
+  <body>
+    <div class="preloader">
+      <div id="particleCanvas-White"></div>
+      <div class="preloader__outer">
+        <div class="preloader__inner"><span class="preloader__text">Loading</span></div>
+      </div>
+    </div>
+    <header class="header">
+      <div class="header__container">
+        <div class="header__logo"><a class="header__logo-tdi" href="homepage.html">
+            <svg width="85" height="26">
+              <use xlink:href="./images/sprite.svg#logo-tdi"></use>
+            </svg></a><a class="header__logo-sdi" href="homepage.html">
+            <svg width="84" height="26">
+              <use xlink:href="./images/sprite.svg#logo-sdi"></use>
+            </svg></a>
+        </div>
+        <div class="header__canvas">
+          <button class="header__canvas-close" type="button" aria-label="Скрыть меню">
+            <svg width="14" height="14">
+              <use xlink:href="./images/sprite.svg#close"></use>
+            </svg>
+          </button>
+          <div class="header__main-menu menu">
+            <ul class="menu__list"> 
+              <li class="menu__item menu__item--expand"><a class="menu__link" href="courses-page.html">Обучение дайвингу
+                  <svg width="8" height="4">
+                    <use xlink:href="./images/sprite.svg#arrow-angle-down"></use>
+                  </svg></a>
+                <div class="menu__submenu">
+                  <button class="menu__back" type="button" aria-label="Вернуться в основное меню">
+                    <svg width="30" height="30">
+                      <use xlink:href="./images/sprite.svg#back"></use>
+                    </svg>
+                  </button>
+                  <div class="menu__submenu-title">Обучение дайвингу</div>
+                  <ul class="menu__submenu-list"> 
+                    <li class="menu__submenu-item"> <a href="#">OWD</a></li>
+                    <li class="menu__submenu-item"> <a href="#">Advanced Adventure Open Water</a></li>
+                    <li class="menu__submenu-item"> <a href="#">Advanced Diver Development Program</a></li>
+                    <li class="menu__submenu-item"> <a href="#">Advanced Buoyancy</a></li>
+                    <li class="menu__submenu-item"> <a href="#">Advanced Buoyancy ext</a></li>
+                    <li class="menu__submenu-item"> <a href="#">U/W Navigation</a></li>
+                    <li class="menu__submenu-item"> <a href="#">Deep Diver</a></li>
+                    <li class="menu__submenu-item"> <a href="#">Night Diver</a></li>
+                    <li class="menu__submenu-item"> <a href="#">Dry Suit Diver</a></li>
+                    <li class="menu__submenu-item"> <a href="#">Ice Diver</a></li>
+                    <li class="menu__submenu-item"> <a href="#">Sidemount Diver</a></li>
+                    <li class="menu__submenu-item"> <a href="#">Rescue Diver</a></li>
+                    <li class="menu__submenu-item"> <a href="#">SDI Divemaster</a></li>
+                    <li class="menu__submenu-item"> <a href="#">Assistant Instructor</a></li>
+                    <li class="menu__submenu-item"> <a href="#">Adult and Child Emergency Care</a></li>
+                    <li class="menu__submenu-item"> <a href="#">O2 Administrator</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="menu__item menu__item--expand"><a class="menu__link" href="shop.html">Магазин
+                  <svg width="8" height="4">
+                    <use xlink:href="./images/sprite.svg#arrow-angle-down"></use>
+                  </svg></a>
+                <div class="menu__submenu">
+                  <button class="menu__back" type="button" aria-label="Вернуться в основное меню">
+                    <svg width="30" height="30">
+                      <use xlink:href="./images/sprite.svg#back"></use>
+                    </svg>
+                  </button>
+                  <div class="menu__submenu-title">Магазин</div>
+                  <ul class="menu__submenu-list"> 
+                    <li class="menu__submenu-item"> <a href="catalog.html">Костюмы</a></li>
+                    <li class="menu__submenu-item"> <a href="catalog.html">Аксессуары</a></li>
+                    <li class="menu__submenu-item"> <a href="catalog.html">Такелаж</a></li>
+                    <li class="menu__submenu-item"> <a href="catalog.html">Фонари</a></li>
+                    <li class="menu__submenu-item"> <a href="catalog.html">Ребризер</a></li>
+                    <li class="menu__submenu-item"> <a href="catalog.html">Подводная съемка</a></li>
+                    <li class="menu__submenu-item"> <a href="catalog.html">Ласты</a></li>
+                    <li class="menu__submenu-item"> <a href="catalog.html">Катушки и буи</a></li>
+                    <li class="menu__submenu-item"> <a href="catalog.html">Sidemount</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="menu__item"><a class="menu__link" href="certification.html">Карты сертификации</a>
+              </li>
+              <li class="menu__item"><a class="menu__link" href="trips-page.html">Клубные поездки</a>
+              </li>
+            </ul>
+          </div>
+          <div class="header__second-menu">
+            <button class="header__second-menu-toggle" type="button" aria-label="Показать дополнительное меню">
+              <svg width="22" height="11">
+                <use xlink:href="./images/sprite.svg#burger"></use>
+              </svg>
+            </button>
+            <div class="menu menu--second">
+              <ul class="menu__list"> 
+                <li class="menu__item"><a class="menu__link" href="#">Акции</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Оплата и доставка</a></li>
+                <li class="menu__item"><a class="menu__link" href="articles-page.html">Статьи</a></li>
+                <li class="menu__item"><a class="menu__link" href="contacts.html">Контакты</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="header__lang-swither"><a class="ru active">RU</a><span class="delimiter">/</span><a class="en" href="#">EN</a></div><a class="header__basket" href="cart.html">
+            <svg width="20" height="20">
+              <use xlink:href="./images/sprite.svg#cart"></use>
+            </svg><span>0</span></a>
+        </div><a class="header__profile" href="profile.html">
+          <svg width="20" height="20">
+            <use xlink:href="./images/sprite.svg#profile"></use>
+          </svg></a>
+        <button class="header__burger" type="button">
+          <svg width="22" height="11">
+            <use xlink:href="./images/sprite.svg#burger"></use>
+          </svg>
+        </button>
+      </div>
+    </header>
+    <main class="main">
+      <article class="inner-page">
+        <header class="inner-page__header">
+          <div class="container">
+            <div class="inner-page__breadcrumbs breadcrumbs"><a href="homepage.html">Главная</a><span>Корзина</span>
+            </div>
+            <div class="inner-page__header-row">
+              <h1 class="title--medium inner-page__title title">Оформление заказа</h1>
+            </div>
+          </div>
+        </header>
+        <div class="container"> 
+          <section class="inner-page__cart-promo cart-promo"> 
+            <div class="cart-promo__top">Есть купон? <a href="#">Нажмите, чтобы ввести</a></div>
+            <div class="cart-promo__bottom">
+              <div class="cart-promo__text">Если у вас есть код купона, укажите его ниже.</div>
+              <form action="#" method="post">
+                <label class="cart-promo__field field"><span class="field__hint">Промокод</span>
+                  <input type="text" name="promocode">
+                </label>
+                <button class="button cart-promo__btn" type="submit"><span>Применить</span>
+                </button>
+              </form>
+            </div>
+          </section>
+          <div class="inner-page__order-form sform">
+            <form action="#" method="post">
+              <div class="sform__part sform__part--small">
+                <div class="title--small sform__part-title title">Детали оплаты</div>
+                <div class="sform__bg-wrapper">
+                  <label class="sform__field sform__field--half field"><span class="field__hint">Ваше Имя*</span>
+                    <input type="text" name="name" required>
+                  </label>
+                  <label class="sform__field sform__field--half field"><span class="field__hint">Ваше Фамилия*</span>
+                    <input type="text" name="surname" required>
+                  </label>
+                  <label class="sform__field field field--select"><span class="field__hint">Страна/регион*</span>
+                    <select class="__js_custom-select" name="country">
+                      <option value="Russia">Россия</option>
+                      <option value="Ukraine">Украина</option>
+                      <option value="Kazahstan">Казахстан</option>
+                    </select>
+                  </label>
+                  <label class="sform__field field"><span class="field__hint">Адрес*</span>
+                    <input type="text" name="address" required>
+                  </label>
+                  <label class="sform__field field"><span class="field__hint">Населенный пункт*</span>
+                    <input type="text" name="city" required>
+                  </label>
+                  <label class="sform__field field"><span class="field__hint">Область/район*</span>
+                    <input type="text" name="region" required>
+                  </label>
+                  <label class="sform__field sform__field--half field"><span class="field__hint">Почтовый индекс*</span>
+                    <input type="text" name="postzip" required>
+                  </label>
+                  <label class="sform__field sform__field--half field"><span class="field__hint">Номер телефона*</span>
+                    <input type="tel" name="phone">
+                  </label>
+                  <label class="sform__field field"><span class="field__hint">Email*</span>
+                    <input type="email" name="email">
+                  </label>
+                  <div class="sform__fieldset">
+                    <div class="sform__legend">Доставка</div>
+                    <div class="custom-radio--inline custom-radio">
+                      <label class="custom-radio__item">
+                        <input class="visually-hidden" type="radio" name="delivery-type" value="1"><span class="custom-radio__text">Самовывоз</span>
+                      </label>
+                      <label class="custom-radio__item">
+                        <input class="visually-hidden" type="radio" name="delivery-type" value="2" checked><span class="custom-radio__text">Единая ставка</span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="sform__fieldset sform__fieldset--bg">
+                    <div class="sform__legend">Способ оплаты</div>
+                    <div class="custom-radio">
+                      <label class="custom-radio__item">
+                        <input class="visually-hidden" type="radio" name="payment-method" value="1"><span class="custom-radio__text">Прямой банковский перевод</span>
+                      </label>
+                      <label class="custom-radio__item">
+                        <input class="visually-hidden" type="radio" name="payment-method" value="2" checked><span class="custom-radio__text">Оплата при доставке</span>
+                      </label>
+                    </div>
+                    <div class="sform__fieldset-notice">Оплата наличными при доставке заказа.</div>
+                  </div>
+                </div>
+                <div class="sform__bg-mobile-wrapper">
+                  <label class="custom-checkbox">
+                    <input class="visually-hidden" type="checkbox" name="anotherDiliveryAddress"><span class="custom-checkbox__text">Доставка по другому адресу?</span>
+                  </label>
+                  <label class="sform__field field"><span class="field__hint">Примечание к заказу (необязательно)</span>
+                    <textarea name="message"></textarea>
+                  </label>
+                  <div class="sform__cart-result cart-result">
+                    <div class="cart-result__footer"> 
+                      <div class="cart-result__row">
+                        <div class="cart-result__hint">Итого</div>
+                        <div class="cart-result__val"> 999&nbsp;000₽</div>
+                      </div>
+                      <div class="cart-result__action"><a class="cart-result__clear" href="#">Очистить</a><a class="button cart-result__send" href="order-accepted.html"><span>Подтвердить заказ</span></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="sform__part sform__part--large">
+                <div class="title--small sform__part-title title">Ваш заказ</div>
+                <div class="sform__cart-result cart-result">
+                  <div class="cart-result__header"> 
+                    <div class="cart-result__title">Товар</div>
+                    <div class="cart-result__title">Стоимость</div>
+                  </div>
+                  <div class="cart-result__body">
+                    <div class="cart-result__row">
+                      <div class="cart-result__hint">Стивен Барски Dry Suit х1</div>
+                      <div class="cart-result__val">999&nbsp;200₽</div>
+                    </div>
+                    <div class="cart-result__row">
+                      <div class="cart-result__hint">Скидка</div>
+                      <div class="cart-result__val">-200₽</div>
+                    </div>
+                  </div>
+                  <div class="cart-result__footer"> 
+                    <div class="cart-result__row">
+                      <div class="cart-result__hint">Итого</div>
+                      <div class="cart-result__val"> 999&nbsp;200₽</div>
+                    </div>
+                    <div class="cart-result__action"><a class="cart-result__clear" href="#">Очистить</a>
+                      <button class="button cart-result__send" type="submit"><span>Подтвердить заказ</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </article>
+    </main>
+    <footer class="footer">
+      <div class="footer__container container">
+        <div class="footer__menu footer__menu--courses"><a class="footer__menu-title" href="courses-page.html">Обучение дайвингу
+            <svg width="10" height="15">
+              <use xlink:href="./images/sprite.svg#arrow-angle"></use>
+            </svg></a>
+          <div class="footer__menu-inner">
+            <div class="footer__menu-part footer__menu-part--columns"><a class="footer__menu-subtitle" href="courses-page.html">SDI
+                <svg width="15" height="10">
+                  <use xlink:href="./images/sprite.svg#arrow-angle"></use>
+                </svg></a>
+              <div class="footer__menu-part-wrapper">
+                <ul class="footer__menu-list footer__menu-list--columns">
+                  <li class="footer__menu-item"> <a href="#">OWD</a></li>
+                  <li class="footer__menu-item"> <a href="#">Ice Diver</a></li>
+                  <li class="footer__menu-item"> <a href="#">Adventure Open Water</a></li>
+                  <li class="footer__menu-item"> <a href="#">Sidemount Diver</a></li>
+                  <li class="footer__menu-item"> <a href="#">Advanced Buoyancy</a></li>
+                  <li class="footer__menu-item"> <a href="#">Rescue Diver</a></li>
+                  <li class="footer__menu-item"> <a href="#">Advanced Buoyancy ext</a></li>
+                  <li class="footer__menu-item"> <a href="#">SDI Divemaster</a></li>
+                  <li class="footer__menu-item"> <a href="#">U/W Navigation</a></li>
+                  <li class="footer__menu-item"> <a href="#">Assistant Instructor</a></li>
+                  <li class="footer__menu-item"> <a href="#">Deep Diver</a></li>
+                  <li class="footer__menu-item"> <a href="#">SDI Advanced SCUBA Diver certification</a></li>
+                  <li class="footer__menu-item"> <a href="#">Night Diver</a></li>
+                  <li class="footer__menu-item"> <a href="#">Dry Suit Diver</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="footer__menu-part"><a class="footer__menu-subtitle" href="courses-page.html">TDI
+                <svg width="15" height="10">
+                  <use xlink:href="./images/sprite.svg#arrow-angle"></use>
+                </svg></a>
+              <div class="footer__menu-part-wrapper">
+                <ul class="footer__menu-list">
+                  <li class="footer__menu-item"> <a href="#">TDI Basic Nitrox</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="footer__menu-part"><a class="footer__menu-subtitle" href="courses-page.html">FRTI
+                <svg width="15" height="10">
+                  <use xlink:href="./images/sprite.svg#arrow-angle"></use>
+                </svg></a>
+              <div class="footer__menu-part-wrapper">
+                <ul class="footer__menu-list">
+                  <li class="footer__menu-item"> <a href="#">Adult and Child Emergency Care</a></li>
+                  <li class="footer__menu-item"> <a href="#">O2 Administrator</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__menu footer__menu--shop"><a class="footer__menu-title" href="shop.html">Каталог товаров
+            <svg width="10" height="15">
+              <use xlink:href="./images/sprite.svg#arrow-angle"></use>
+            </svg></a>
+          <div class="footer__menu-inner">
+            <ul class="footer__menu-list">
+              <li class="footer__menu-item"> <a href="catalog.html">Костюмы</a></li>
+              <li class="footer__menu-item"> <a href="catalog.html">Аксессуары</a></li>
+              <li class="footer__menu-item"> <a href="catalog.html">Такелаж</a></li>
+              <li class="footer__menu-item"> <a href="catalog.html">Фонари</a></li>
+              <li class="footer__menu-item"> <a href="catalog.html">Ребризер</a></li>
+              <li class="footer__menu-item"> <a href="catalog.html">Подводная съемка</a></li>
+              <li class="footer__menu-item"> <a href="catalog.html">Ласты</a></li>
+              <li class="footer__menu-item"> <a href="catalog.html">Катушки и буи</a></li>
+              <li class="footer__menu-item"> <a href="catalog.html">Sidemount</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__menu footer__menu--common">
+          <div class="footer__menu-title">Для клиентов
+            <svg width="10" height="15">
+              <use xlink:href="./images/sprite.svg#arrow-angle"></use>
+            </svg>
+          </div>
+          <div class="footer__menu-inner">
+            <ul class="footer__menu-list">
+              <li class="footer__menu-item"> <a href="certificates.html">Подарочные сертификаты</a></li>
+              <li class="footer__menu-item"> <a href="#">Новости</a></li>
+              <li class="footer__menu-item"> <a href="trips-page.html">Клубные поездки</a></li>
+              <li class="footer__menu-item"> <a href="#">О нас</a></li>
+              <li class="footer__menu-item"> <a href="contacts.html">Контакты</a></li>
+              <li class="footer__menu-item"> <a href="profile.html">Личный кабинет</a></li>
+              <li class="footer__menu-item"> <a href="certification.html">Сертификация</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__common"> 
+          <div class="footer__common-part footer__common-part--copyright">
+            <div class="footer__logos"><a href="homepage.html">
+                <svg width="101" height="47">
+                  <use xlink:href="./images/sprite.svg#logo-tdi"></use>
+                </svg></a><a href="homepage.html">
+                <svg width="98" height="47">
+                  <use xlink:href="./images/sprite.svg#logo-sdi"></use>
+                </svg></a>
+            </div>
+            <p>2021 © Все права защищены</p>
+          </div>
+          <div class="footer__common-part footer__common-part--social">
+            <p>Мы в соцсетях:</p>
+            <div class="socials socials--horizontal footer__socials">
+              <div class="socials__item"><a href="#" target="_blank">
+                  <svg width="30" height="30">
+                    <use xlink:href="./images/sprite.svg#tiktok"></use>
+                  </svg></a></div>
+              <div class="socials__item"><a href="#" target="_blank">
+                  <svg width="30" height="30">
+                    <use xlink:href="./images/sprite.svg#vk-fill"></use>
+                  </svg></a></div>
+              <div class="socials__item"><a href="#" target="_blank">
+                  <svg width="30" height="30">
+                    <use xlink:href="./images/sprite.svg#insta"></use>
+                  </svg></a></div>
+              <div class="socials__item"><a href="#" target="_blank">
+                  <svg width="30" height="30">
+                    <use xlink:href="./images/sprite.svg#fb"></use>
+                  </svg></a></div>
+            </div>
+          </div>
+          <div class="footer__common-part footer__common-part--info">
+            <p> <a href="#" target="_blank">Политика конфиденциальности</a></p>
+            <p> <a href="#" target="_blank">Обработка персональных данных</a></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>
